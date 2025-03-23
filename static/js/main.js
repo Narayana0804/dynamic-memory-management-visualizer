@@ -51,16 +51,43 @@ function initEventListeners() {
  * Start a new memory simulation
  */
 async function startSimulation() {
+    // Get form values with validation
     const technique = document.getElementById('technique').value;
-    const memorySize = parseInt(document.getElementById('memory-size').value);
-    const pageSize = parseInt(document.getElementById('page-size').value);
+    
+    let memorySize = 1024; // Default
+    const memorySizeInput = document.getElementById('memory-size');
+    if (memorySizeInput && memorySizeInput.value) {
+        memorySize = parseInt(memorySizeInput.value);
+    }
+    
+    let pageSize = 64; // Default
+    const pageSizeInput = document.getElementById('page-size');
+    if (pageSizeInput && pageSizeInput.value) {
+        pageSize = parseInt(pageSizeInput.value);
+    }
+    
     const algorithm = document.getElementById('algorithm').value;
     
     // Validate input
+    if (isNaN(memorySize) || memorySize <= 0) {
+        showAlert('Memory size must be a positive number', 'danger');
+        return;
+    }
+    
+    if (isNaN(pageSize) || pageSize <= 0) {
+        showAlert('Page size must be a positive number', 'danger');
+        return;
+    }
+    
     if (memorySize % pageSize !== 0) {
         showAlert('Memory size must be a multiple of page size', 'danger');
         return;
     }
+    
+    // Find the start button and set loading state
+    const startButton = simulationForm.querySelector('button[type="submit"]');
+    startButton.disabled = true;
+    startButton.innerHTML = '<i class="fas fa-spinner fa-spin me-1"></i> Starting...';
     
     try {
         const response = await fetch('/api/start_simulation', {
@@ -75,6 +102,15 @@ async function startSimulation() {
                 algorithm
             })
         });
+        
+        // Reset button state
+        startButton.disabled = false;
+        startButton.innerHTML = '<i class="fas fa-play me-1"></i> Start Simulation';
+        
+        if (!response.ok) {
+            const errorText = await response.text();
+            throw new Error(`Server responded with ${response.status}: ${errorText}`);
+        }
         
         const data = await response.json();
         
@@ -101,6 +137,10 @@ async function startSimulation() {
             showAlert(`Error: ${data.message}`, 'danger');
         }
     } catch (error) {
+        // Reset button state
+        startButton.disabled = false;
+        startButton.innerHTML = '<i class="fas fa-play me-1"></i> Start Simulation';
+        
         showAlert(`Error starting simulation: ${error.message}`, 'danger');
         console.error('Error starting simulation:', error);
     }
@@ -116,10 +156,32 @@ async function executeOperation() {
     }
     
     const operation = operationSelect.value;
-    const size = operation === 'allocate' ? parseInt(document.getElementById('size').value) : null;
-    const address = operation !== 'allocate' ? parseInt(document.getElementById('address').value) : null;
+    
+    // Get size if allocating, otherwise default to null
+    let size = null;
+    if (operation === 'allocate') {
+        const sizeInput = document.getElementById('size');
+        if (sizeInput && sizeInput.value) {
+            size = parseInt(sizeInput.value);
+        } else {
+            size = 64; // Default size
+        }
+    }
+    
+    // Get address if deallocating or accessing, otherwise default to 0
+    let address = 0;
+    if (operation !== 'allocate') {
+        const addressInput = document.getElementById('address');
+        if (addressInput && addressInput.value) {
+            address = parseInt(addressInput.value);
+        }
+    }
     
     try {
+        // Set button to loading state
+        executeBtn.disabled = true;
+        executeBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-1"></i> Processing...';
+        
         const response = await fetch('/api/next_step', {
             method: 'POST',
             headers: {
@@ -131,6 +193,15 @@ async function executeOperation() {
                 address
             })
         });
+        
+        // Reset button state
+        executeBtn.disabled = false;
+        executeBtn.innerHTML = '<i class="fas fa-cog me-1"></i> Execute Operation';
+        
+        if (!response.ok) {
+            const errorText = await response.text();
+            throw new Error(`Server responded with ${response.status}: ${errorText}`);
+        }
         
         const data = await response.json();
         
@@ -153,6 +224,10 @@ async function executeOperation() {
             showAlert(`Error: ${data.message}`, 'danger');
         }
     } catch (error) {
+        // Reset button state
+        executeBtn.disabled = false;
+        executeBtn.innerHTML = '<i class="fas fa-cog me-1"></i> Execute Operation';
+        
         showAlert(`Error executing operation: ${error.message}`, 'danger');
         console.error('Error executing operation:', error);
     }
@@ -162,10 +237,23 @@ async function executeOperation() {
  * Reset the current simulation
  */
 async function resetSimulation() {
+    // Set button to loading state
+    resetBtn.disabled = true;
+    resetBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-1"></i> Resetting...';
+    
     try {
         const response = await fetch('/api/reset_simulation', {
             method: 'POST'
         });
+        
+        // Reset button state
+        resetBtn.disabled = false;
+        resetBtn.innerHTML = '<i class="fas fa-redo me-1"></i> Reset Simulation';
+        
+        if (!response.ok) {
+            const errorText = await response.text();
+            throw new Error(`Server responded with ${response.status}: ${errorText}`);
+        }
         
         const data = await response.json();
         
@@ -177,12 +265,15 @@ async function resetSimulation() {
             executeBtn.disabled = true;
             showAlert('Simulation reset successfully', 'success');
             
-            document.getElementById('memory-grid').innerHTML = `
-                <div class="text-center py-5 text-muted">
-                    <i class="fas fa-memory fa-3x mb-3"></i>
-                    <p>Start a simulation to visualize memory</p>
-                </div>
-            `;
+            const gridElement = document.getElementById('memory-grid');
+            if (gridElement) {
+                gridElement.innerHTML = `
+                    <div class="text-center py-5 text-muted">
+                        <i class="fas fa-memory fa-3x mb-3"></i>
+                        <p>Start a simulation to visualize memory</p>
+                    </div>
+                `;
+            }
             
             clearAnalytics();
             clearOperationLog();
@@ -196,6 +287,10 @@ async function resetSimulation() {
             showAlert(`Error: ${data.message}`, 'danger');
         }
     } catch (error) {
+        // Reset button state
+        resetBtn.disabled = false;
+        resetBtn.innerHTML = '<i class="fas fa-redo me-1"></i> Reset Simulation';
+        
         showAlert(`Error resetting simulation: ${error.message}`, 'danger');
         console.error('Error resetting simulation:', error);
     }

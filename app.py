@@ -62,15 +62,16 @@ def next_step():
     
     data = request.json
     operation = data.get('operation', 'allocate')
-    size = int(data.get('size', 64)) if 'size' in data else None
-    address = int(data.get('address', 0)) if 'address' in data else None
     
     try:
         if operation == 'allocate':
+            size = int(data.get('size', 64))
             memory_manager.allocate_memory(size)
         elif operation == 'deallocate':
+            address = int(data.get('address', 0))
             memory_manager.deallocate_memory(address)
         elif operation == 'access':
+            address = int(data.get('address', 0))
             memory_manager.access_memory(address)
         else:
             return jsonify({
@@ -85,6 +86,7 @@ def next_step():
             'state': new_state
         })
     except Exception as e:
+        logging.error(f"Error in next_step: {str(e)}")
         return jsonify({
             'status': 'error',
             'message': str(e)

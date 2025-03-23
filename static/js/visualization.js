@@ -10,6 +10,11 @@ function initializeMemoryGrid(state) {
     if (!state) return;
     
     const gridElement = document.getElementById('memory-grid');
+    if (!gridElement) {
+        console.error('Could not find memory-grid element');
+        return;
+    }
+    
     gridElement.innerHTML = '';
     
     const gridContainer = document.createElement('div');
@@ -53,6 +58,11 @@ function updateMemoryVisualization(state) {
     if (!state) return;
     
     const cells = document.querySelectorAll('.memory-cell');
+    if (cells.length === 0) {
+        // If no cells exist, reinitialize the grid
+        initializeMemoryGrid(state);
+        return;
+    }
     
     // Update each cell
     state.memory.forEach((frame, index) => {
