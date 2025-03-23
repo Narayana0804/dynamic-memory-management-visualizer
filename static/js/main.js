@@ -208,17 +208,50 @@ async function executeOperation() {
         if (data.status === 'success') {
             memoryState = data.state;
             
-            // Update UI
-            updateMemoryVisualization(memoryState);
-            updateMemoryInfo(memoryState);
-            updateAnalytics(memoryState);
-            updateUtilizationChart(memoryState);
-            updateOperationLog(memoryState.operations);
+            // Update UI with error handling for each component
+            try {
+                updateMemoryVisualization(memoryState);
+            } catch (e) {
+                console.error('Error updating memory visualization:', e);
+            }
+            
+            try {
+                updateMemoryInfo(memoryState);
+            } catch (e) {
+                console.error('Error updating memory info:', e);
+            }
+            
+            try {
+                updateAnalytics(memoryState);
+            } catch (e) {
+                console.error('Error updating analytics:', e);
+            }
+            
+            try {
+                updateUtilizationChart(memoryState);
+            } catch (e) {
+                console.error('Error updating utilization chart:', e);
+            }
+            
+            try {
+                if (memoryState.operations) {
+                    updateOperationLog(memoryState.operations);
+                }
+            } catch (e) {
+                console.error('Error updating operation log:', e);
+            }
             
             // Check for page fault and show indicator
-            const lastOperation = memoryState.operations[memoryState.operations.length - 1];
-            if (lastOperation && lastOperation.type === 'access' && lastOperation.result === 'fault') {
-                showPageFaultIndicator();
+            try {
+                const lastOperation = memoryState.operations && memoryState.operations.length > 0 
+                    ? memoryState.operations[memoryState.operations.length - 1] 
+                    : null;
+                
+                if (lastOperation && lastOperation.type === 'access' && lastOperation.result === 'fault') {
+                    showPageFaultIndicator();
+                }
+            } catch (e) {
+                console.error('Error checking for page fault:', e);
             }
         } else {
             showAlert(`Error: ${data.message}`, 'danger');
