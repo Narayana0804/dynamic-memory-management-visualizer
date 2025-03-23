@@ -102,7 +102,20 @@
 {% endblock %}
 
 {% block content %}
-<div class="row">
+<div class="container-fluid py-3">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1>Memory Simulation Dashboard</h1>
+        <div>
+            <a href="/" class="btn btn-outline-secondary me-2">
+                <i class="fas fa-home me-1"></i> Home
+            </a>
+            <a href="/tutorials" class="btn btn-outline-success">
+                <i class="fas fa-graduation-cap me-1"></i> Guided Tutorials
+            </a>
+        </div>
+    </div>
+
+    <div class="row">
     <!-- Left Panel - User Input Form -->
     <div class="col-md-4">
         <div class="card mb-4">

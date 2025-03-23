@@ -2,6 +2,7 @@ import os
 import logging
 from flask import Flask, render_template, request, jsonify
 from memory_manager import MemoryManager
+from tutorial_manager import TutorialManager
 
 # Configure logging
 logging.basicConfig(level=logging.DEBUG)
@@ -10,8 +11,9 @@ logging.basicConfig(level=logging.DEBUG)
 app = Flask(__name__)
 app.secret_key = os.environ.get("SESSION_SECRET", "memory-visualizer-secret")
 
-# Global memory manager instance
+# Global instances
 memory_manager = None
+tutorial_manager = TutorialManager()
 
 @app.route('/')
 def index():
@@ -271,3 +273,239 @@ def reset_simulation():
         'status': 'success',
         'message': 'Simulation reset successfully'
     })
+
+# Tutorial API Routes
+@app.route('/tutorials')
+def tutorials_page():
+    """Render the tutorials page"""
+    return render_template('tutorials.html')
+
+@app.route('/api/tutorials', methods=['GET'])
+def get_tutorials():
+    """Get list of available tutorials"""
+    global tutorial_manager
+    
+    tutorials = tutorial_manager.get_tutorial_list()
+    
+    return jsonify({
+        'status': 'success',
+        'tutorials': tutorials
+    })
+
+@app.route('/api/tutorials/start', methods=['POST'])
+def start_tutorial():
+    """Start a specific tutorial"""
+    global tutorial_manager, memory_manager
+    
+    try:
+        data = request.json
+        
+        if not data or 'tutorial_id' not in data:
+            return jsonify({
+                'status': 'error',
+                'message': 'Tutorial ID is required'
+            }), 400
+            
+        tutorial_id = data['tutorial_id']
+        
+        # Start the tutorial
+        step_data = tutorial_manager.start_tutorial(tutorial_id)
+        
+        if 'error' in step_data and step_data['error']:
+            return jsonify({
+                'status': 'error',
+                'message': step_data['message']
+            }), 404
+            
+        # Create a memory manager with the tutorial's initial configuration if needed
+        if 'step' in step_data and 'config' in step_data['step'] and step_data['step']['config']:
+            config = step_data['step']['config']
+            
+            if 'memory_size' in config and 'page_size' in config:
+                memory_manager = MemoryManager(
+                    technique=config.get('technique', 'paging'),
+                    memory_size=config.get('memory_size', 1024),
+                    page_size=config.get('page_size', 64),
+                    algorithm=config.get('algorithm', 'FIFO')
+                )
+                
+                logging.info(f"Tutorial memory manager initialized with config: {config}")
+                
+                # Add the memory state to the step data
+                step_data['memory_state'] = memory_manager.get_current_state()
+        
+        return jsonify({
+            'status': 'success',
+            'tutorial_step': step_data
+        })
+    
+    except Exception as e:
+        logging.error(f"Error starting tutorial: {str(e)}")
+        return jsonify({
+            'status': 'error',
+            'message': f'Failed to start tutorial: {str(e)}'
+        }), 500
+
+@app.route('/api/tutorials/next', methods=['POST'])
+def tutorial_next_step():
+    """Advance to the next step in the tutorial"""
+    global tutorial_manager, memory_manager
+    
+    try:
+        # Check if an operation was performed (for verification)
+        data = request.json or {}
+        operation_data = data.get('operation_data', {})
+        
+        # Verify step if operation data provided
+        if operation_data:
+            if not tutorial_manager.verify_step_completed(operation_data):
+                return jsonify({
+                    'status': 'error',
+                    'message': 'Please complete the current step\'s task before proceeding'
+                }), 400
+        
+        # Advance to next step
+        step_data = tutorial_manager.next_step()
+        
+        if 'error' in step_data and step_data['error']:
+            return jsonify({
+                'status': 'error',
+                'message': step_data['message']
+            }), 400
+            
+        # If tutorial completed
+        if 'completed' in step_data and step_data['completed']:
+            return jsonify({
+                'status': 'success',
+                'completed': True,
+                'message': step_data['message']
+            })
+            
+        # Initialize memory manager with step config if needed
+        if 'step' in step_data and 'config' in step_data['step'] and step_data['step']['config']:
+            config = step_data['step']['config']
+            
+            if config and 'technique' in config:
+                memory_manager = MemoryManager(
+                    technique=config.get('technique', 'paging'),
+                    memory_size=config.get('memory_size', 1024),
+                    page_size=config.get('page_size', 64),
+                    algorithm=config.get('algorithm', 'FIFO')
+                )
+                
+                logging.info(f"Tutorial step memory manager initialized with config: {config}")
+                
+                # Add the memory state to the step data
+                step_data['memory_state'] = memory_manager.get_current_state()
+        
+        return jsonify({
+            'status': 'success',
+            'tutorial_step': step_data
+        })
+    
+    except Exception as e:
+        logging.error(f"Error advancing tutorial: {str(e)}")
+        return jsonify({
+            'status': 'error',
+            'message': f'Failed to advance tutorial: {str(e)}'
+        }), 500
+
+@app.route('/api/tutorials/previous', methods=['POST'])
+def tutorial_previous_step():
+    """Go back to the previous step in the tutorial"""
+    global tutorial_manager, memory_manager
+    
+    try:
+        step_data = tutorial_manager.previous_step()
+        
+        if 'error' in step_data and step_data['error']:
+            return jsonify({
+                'status': 'error',
+                'message': step_data['message']
+            }), 400
+            
+        # Initialize memory manager with step config if needed
+        if 'step' in step_data and 'config' in step_data['step'] and step_data['step']['config']:
+            config = step_data['step']['config']
+            
+            if config and ('memory_size' in config or 'technique' in config):
+                memory_manager = MemoryManager(
+                    technique=config.get('technique', 'paging'),
+                    memory_size=config.get('memory_size', 1024),
+                    page_size=config.get('page_size', 64),
+                    algorithm=config.get('algorithm', 'FIFO')
+                )
+                
+                logging.info(f"Tutorial step memory manager initialized with config: {config}")
+                
+                # Add the memory state to the step data
+                step_data['memory_state'] = memory_manager.get_current_state()
+        
+        return jsonify({
+            'status': 'success',
+            'tutorial_step': step_data
+        })
+        
+    except Exception as e:
+        logging.error(f"Error going to previous tutorial step: {str(e)}")
+        return jsonify({
+            'status': 'error',
+            'message': f'Failed to go to previous step: {str(e)}'
+        }), 500
+
+@app.route('/api/tutorials/end', methods=['POST'])
+def end_tutorial():
+    """End the current tutorial"""
+    global tutorial_manager
+    
+    try:
+        result = tutorial_manager.end_tutorial()
+        
+        if 'error' in result and result['error']:
+            return jsonify({
+                'status': 'error',
+                'message': result['message']
+            }), 400
+            
+        return jsonify({
+            'status': 'success',
+            'message': 'Tutorial ended successfully',
+            'tutorial_id': result.get('tutorial_id')
+        })
+        
+    except Exception as e:
+        logging.error(f"Error ending tutorial: {str(e)}")
+        return jsonify({
+            'status': 'error',
+            'message': f'Failed to end tutorial: {str(e)}'
+        }), 500
+
+@app.route('/api/tutorials/current', methods=['GET'])
+def get_current_tutorial_step():
+    """Get the current tutorial step"""
+    global tutorial_manager, memory_manager
+    
+    try:
+        step_data = tutorial_manager.get_current_step()
+        
+        if 'error' in step_data and step_data['error']:
+            return jsonify({
+                'status': 'error',
+                'message': step_data['message']
+            }), 400
+        
+        # Add current memory state if available
+        if memory_manager:
+            step_data['memory_state'] = memory_manager.get_current_state()
+        
+        return jsonify({
+            'status': 'success',
+            'tutorial_step': step_data
+        })
+        
+    except Exception as e:
+        logging.error(f"Error getting current tutorial step: {str(e)}")
+        return jsonify({
+            'status': 'error',
+            'message': f'Failed to get tutorial step: {str(e)}'
+        }), 500
