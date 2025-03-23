@@ -28,26 +28,79 @@ def start_simulation():
     """Initialize the memory simulation with user parameters"""
     global memory_manager
     
-    data = request.json
-    technique = data.get('technique', 'paging')
-    memory_size = int(data.get('memory_size', 1024))
-    page_size = int(data.get('page_size', 64))
-    algorithm = data.get('algorithm', 'FIFO')
-    
-    memory_manager = MemoryManager(
-        technique=technique,
-        memory_size=memory_size,
-        page_size=page_size,
-        algorithm=algorithm
-    )
-    
-    initial_state = memory_manager.get_current_state()
-    
-    return jsonify({
-        'status': 'success',
-        'message': 'Simulation started successfully',
-        'initial_state': initial_state
-    })
+    try:
+        # Validate request
+        if not request.is_json:
+            logging.error("Invalid request format: not JSON")
+            return jsonify({
+                'status': 'error',
+                'message': 'Invalid request format. Expected JSON.'
+            }), 400
+        
+        data = request.json
+        
+        # Extract and validate parameters
+        try:
+            technique = data.get('technique', 'paging')
+            if technique not in ['paging', 'segmentation']:
+                raise ValueError(f"Invalid technique: {technique}")
+            
+            memory_size = int(data.get('memory_size', 1024))
+            if memory_size <= 0 or memory_size > 4096:
+                raise ValueError(f"Invalid memory size: {memory_size}")
+            
+            page_size = int(data.get('page_size', 64))
+            if page_size <= 0 or page_size > 512:
+                raise ValueError(f"Invalid page size: {page_size}")
+            
+            algorithm = data.get('algorithm', 'FIFO')
+            if algorithm not in ['FIFO', 'LRU']:
+                raise ValueError(f"Invalid algorithm: {algorithm}")
+            
+            # Validate that memory size is a multiple of page size
+            if memory_size % page_size != 0:
+                raise ValueError("Memory size must be a multiple of page size")
+            
+        except ValueError as e:
+            logging.error(f"Parameter validation error: {str(e)}")
+            return jsonify({
+                'status': 'error',
+                'message': f"Parameter validation error: {str(e)}"
+            }), 400
+        
+        # Initialize memory manager
+        try:
+            memory_manager = MemoryManager(
+                technique=technique,
+                memory_size=memory_size,
+                page_size=page_size,
+                algorithm=algorithm
+            )
+            
+            initial_state = memory_manager.get_current_state()
+            
+            # Log success
+            logging.info(f"Simulation started with: technique={technique}, memory_size={memory_size}, page_size={page_size}, algorithm={algorithm}")
+            
+            return jsonify({
+                'status': 'success',
+                'message': 'Simulation started successfully',
+                'initial_state': initial_state
+            })
+            
+        except Exception as e:
+            logging.error(f"Error initializing memory manager: {str(e)}")
+            return jsonify({
+                'status': 'error',
+                'message': f"Error initializing simulation: {str(e)}"
+            }), 500
+            
+    except Exception as e:
+        logging.error(f"Unexpected error in start_simulation: {str(e)}")
+        return jsonify({
+            'status': 'error',
+            'message': 'An unexpected error occurred'
+        }), 500
 
 @app.route('/api/next_step', methods=['POST'])
 def next_step():

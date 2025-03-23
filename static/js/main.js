@@ -122,12 +122,61 @@ async function startSimulation() {
             executeBtn.disabled = false;
             showAlert('Simulation started successfully', 'success');
             
-            // Initialize visualization
-            initializeMemoryGrid(memoryState);
-            updateMemoryInfo(memoryState);
-            updateAnalytics(memoryState);
-            initUtilizationChart();
-            clearOperationLog();
+            // Initialize visualization with error handling
+            try {
+                if (!memoryState) {
+                    console.error('Memory state is null or undefined');
+                    document.getElementById('memory-grid').innerHTML = `
+                        <div class="alert alert-danger">
+                            <i class="fas fa-exclamation-triangle me-2"></i>
+                            Error: Invalid memory state received from server.
+                        </div>
+                    `;
+                } else if (!memoryState.memory) {
+                    console.error('Memory state has no memory array:', memoryState);
+                    document.getElementById('memory-grid').innerHTML = `
+                        <div class="alert alert-danger">
+                            <i class="fas fa-exclamation-triangle me-2"></i>
+                            Error: Invalid memory structure received from server.
+                        </div>
+                    `;
+                } else {
+                    console.log('Initializing memory grid with state:', memoryState);
+                    initializeMemoryGrid(memoryState);
+                }
+            } catch (e) {
+                console.error('Error initializing memory grid:', e);
+                document.getElementById('memory-grid').innerHTML = `
+                    <div class="alert alert-danger">
+                        <i class="fas fa-exclamation-triangle me-2"></i>
+                        Error initializing visualization: ${e.message}
+                    </div>
+                `;
+            }
+            
+            try {
+                updateMemoryInfo(memoryState);
+            } catch (e) {
+                console.error('Error updating memory info:', e);
+            }
+            
+            try {
+                updateAnalytics(memoryState);
+            } catch (e) {
+                console.error('Error updating analytics:', e);
+            }
+            
+            try {
+                initUtilizationChart();
+            } catch (e) {
+                console.error('Error initializing utilization chart:', e);
+            }
+            
+            try {
+                clearOperationLog();
+            } catch (e) {
+                console.error('Error clearing operation log:', e);
+            }
             
             // Disable simulation settings
             Array.from(simulationForm.elements).forEach(element => {

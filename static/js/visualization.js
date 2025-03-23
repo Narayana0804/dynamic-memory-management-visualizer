@@ -7,7 +7,10 @@
  * @param {Object} state - Initial memory state
  */
 function initializeMemoryGrid(state) {
-    if (!state) return;
+    if (!state) {
+        console.error('Cannot initialize memory grid: state is null or undefined');
+        return;
+    }
     
     const gridElement = document.getElementById('memory-grid');
     if (!gridElement) {
@@ -15,19 +18,41 @@ function initializeMemoryGrid(state) {
         return;
     }
     
+    console.log('Initializing memory grid with state:', state);
     gridElement.innerHTML = '';
     
     const gridContainer = document.createElement('div');
     gridContainer.className = 'memory-grid-container';
     
-    // Create memory cells
-    for (let i = 0; i < state.memory.length; i++) {
-        const frame = state.memory[i];
-        const cell = createMemoryCell(i, frame);
-        gridContainer.appendChild(cell);
+    try {
+        // Create memory cells
+        if (!state.memory || !Array.isArray(state.memory)) {
+            throw new Error('Invalid memory structure: memory is not an array');
+        }
+        
+        console.log(`Creating ${state.memory.length} memory cells`);
+        
+        for (let i = 0; i < state.memory.length; i++) {
+            let frame = state.memory[i];
+            if (!frame) {
+                console.warn(`Frame at index ${i} is undefined, using default empty frame`);
+                frame = { status: 'free', id: null };
+            }
+            const cell = createMemoryCell(i, frame);
+            gridContainer.appendChild(cell);
+        }
+        
+        gridElement.appendChild(gridContainer);
+        console.log('Memory grid initialization complete');
+    } catch (error) {
+        console.error('Error creating memory grid:', error);
+        gridElement.innerHTML = `
+            <div class="alert alert-danger">
+                <i class="fas fa-exclamation-triangle me-2"></i>
+                Error creating memory grid: ${error.message}
+            </div>
+        `;
     }
-    
-    gridElement.appendChild(gridContainer);
 }
 
 /**
