@@ -19,16 +19,22 @@ function initializeMemoryGrid(state) {
     }
     
     console.log('Initializing memory grid with state:', state);
-    gridElement.innerHTML = '';
     
-    const gridContainer = document.createElement('div');
-    gridContainer.className = 'memory-grid-container';
+    // Clear any previous content
+    gridElement.innerHTML = '';
     
     try {
         // Create memory cells
         if (!state.memory || !Array.isArray(state.memory)) {
             throw new Error('Invalid memory structure: memory is not an array');
         }
+        
+        const gridContainer = document.createElement('div');
+        gridContainer.className = 'memory-grid-container';
+        gridContainer.style.display = 'flex';
+        gridContainer.style.flexWrap = 'wrap';
+        gridContainer.style.gap = '3px';
+        gridContainer.style.padding = '10px';
         
         console.log(`Creating ${state.memory.length} memory cells`);
         
@@ -42,7 +48,42 @@ function initializeMemoryGrid(state) {
             gridContainer.appendChild(cell);
         }
         
+        // Add debug info for development
+        const debugInfo = document.createElement('div');
+        debugInfo.className = 'memory-debug-info text-muted small mt-2';
+        debugInfo.textContent = `Memory size: ${state.memory_size} bytes, Page size: ${state.page_size} bytes, Frames: ${state.memory.length}`;
+        
+        // Add grid container to the DOM
         gridElement.appendChild(gridContainer);
+        gridElement.appendChild(debugInfo);
+        
+        // Add direct styles to ensure visibility
+        const cells = gridElement.querySelectorAll('.memory-cell');
+        cells.forEach(cell => {
+            // Ensure cells are visible with inline styles
+            cell.style.display = 'inline-block';
+            cell.style.width = '30px';
+            cell.style.height = '30px';
+            cell.style.margin = '2px';
+            cell.style.textAlign = 'center';
+            cell.style.lineHeight = '30px';
+            cell.style.fontWeight = 'bold';
+            cell.style.fontSize = '0.8rem';
+            cell.style.borderRadius = '3px';
+            
+            // Apply color based on class
+            if (cell.classList.contains('free')) {
+                cell.style.backgroundColor = '#495057'; // gray-700
+                cell.style.color = '#adb5bd';
+            } else if (cell.classList.contains('allocated')) {
+                cell.style.backgroundColor = '#198754'; // success
+                cell.style.color = 'white';
+            } else if (cell.classList.contains('fault')) {
+                cell.style.backgroundColor = '#dc3545'; // danger
+                cell.style.color = 'white';
+            }
+        });
+        
         console.log('Memory grid initialization complete');
     } catch (error) {
         console.error('Error creating memory grid:', error);
@@ -85,19 +126,27 @@ function updateMemoryVisualization(state) {
         return;
     }
     
+    console.log('Updating memory visualization with state:', state);
+    
+    // Check if we need to completely reinitialize the grid
+    const gridContainer = document.querySelector('.memory-grid-container');
     const cells = document.querySelectorAll('.memory-cell');
-    if (cells.length === 0) {
-        // If no cells exist, reinitialize the grid
+    
+    // If the grid doesn't exist or cell count doesn't match,
+    // reinitialize the entire grid
+    if (!gridContainer || cells.length !== state.memory.length) {
         try {
+            console.log('Memory grid missing or size mismatch, reinitializing...');
             initializeMemoryGrid(state);
+            return;
         } catch (error) {
             console.error('Failed to initialize memory grid:', error);
+            return;
         }
-        return;
     }
     
     try {
-        // Update each cell
+        // Update each cell with direct styling to ensure visibility
         state.memory.forEach((frame, index) => {
             if (index < cells.length) {
                 const cell = cells[index];
@@ -107,19 +156,43 @@ function updateMemoryVisualization(state) {
                 const oldStatus = cell.className.replace('memory-cell ', '').replace(' fault', '').replace(' pulse', '');
                 const newStatus = frame.status || 'free';
                 
+                // Always update to ensure styles are applied
+                // Update class and content
+                cell.className = `memory-cell ${newStatus}`;
+                cell.textContent = newStatus === 'allocated' ? (frame.id || '') : '';
+                
+                // Ensure styles are applied directly
+                cell.style.display = 'inline-block';
+                cell.style.width = '30px';
+                cell.style.height = '30px';
+                cell.style.margin = '2px';
+                cell.style.textAlign = 'center';
+                cell.style.lineHeight = '30px';
+                cell.style.fontWeight = 'bold';
+                cell.style.fontSize = '0.8rem';
+                cell.style.borderRadius = '3px';
+                
+                // Apply color based on class
+                if (cell.classList.contains('free')) {
+                    cell.style.backgroundColor = '#495057'; // gray-700
+                    cell.style.color = '#adb5bd';
+                } else if (cell.classList.contains('allocated')) {
+                    cell.style.backgroundColor = '#198754'; // success
+                    cell.style.color = 'white';
+                } else if (cell.classList.contains('fault')) {
+                    cell.style.backgroundColor = '#dc3545'; // danger
+                    cell.style.color = 'white';
+                }
+                
+                // Animation for state change (only if state changed)
                 if (oldStatus !== newStatus || 
                     (newStatus === 'allocated' && cell.textContent != frame.id)) {
-                    
-                    // Update class and content
-                    cell.className = `memory-cell ${newStatus}`;
-                    cell.textContent = newStatus === 'allocated' ? (frame.id || '') : '';
-                    
-                    // Animation for state change
-                    cell.classList.add('pulse');
+                    // Add a temporary border for visual indicator of change
+                    cell.style.border = '2px solid #fff';
                     setTimeout(() => {
                         try {
-                            if (cell && cell.classList) {
-                                cell.classList.remove('pulse');
+                            if (cell) {
+                                cell.style.border = 'none';
                             }
                         } catch (e) {
                             // Ignore errors in setTimeout callbacks
@@ -128,6 +201,12 @@ function updateMemoryVisualization(state) {
                 }
             }
         });
+        
+        // Update memory debug info
+        const debugInfo = document.querySelector('.memory-debug-info');
+        if (debugInfo) {
+            debugInfo.textContent = `Memory size: ${state.memory_size} bytes, Page size: ${state.page_size} bytes, Frames: ${state.memory.length}`;
+        }
         
         // Check for page faults in the last operation
         const operations = state.operations;
@@ -140,11 +219,19 @@ function updateMemoryVisualization(state) {
                 // Highlight the frame where the fault occurred
                 const frameNum = Math.floor(lastOp.address / state.page_size);
                 if (frameNum >= 0 && frameNum < cells.length && cells[frameNum]) {
-                    cells[frameNum].classList.add('fault');
+                    cells[frameNum].style.backgroundColor = '#dc3545'; // danger
+                    cells[frameNum].style.color = 'white';
+                    cells[frameNum].style.animation = 'blink 1s ease-in-out';
+                    
                     setTimeout(() => {
                         try {
-                            if (cells[frameNum] && cells[frameNum].classList) {
-                                cells[frameNum].classList.remove('fault');
+                            if (cells[frameNum]) {
+                                if (cells[frameNum].classList.contains('allocated')) {
+                                    cells[frameNum].style.backgroundColor = '#198754'; // success
+                                } else {
+                                    cells[frameNum].style.backgroundColor = '#495057'; // gray-700
+                                }
+                                cells[frameNum].style.animation = 'none';
                             }
                         } catch (e) {
                             // Ignore errors in setTimeout callbacks
@@ -153,8 +240,16 @@ function updateMemoryVisualization(state) {
                 }
             }
         }
+        
+        console.log('Memory visualization updated successfully');
     } catch (error) {
         console.error('Error updating memory visualization:', error);
+        // Try to recover by reinitializing the grid
+        try {
+            initializeMemoryGrid(state);
+        } catch (e) {
+            console.error('Failed to reinitialize grid after error:', e);
+        }
     }
 }
 
