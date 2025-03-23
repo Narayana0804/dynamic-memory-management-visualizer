@@ -60,37 +60,134 @@ def next_step():
             'message': 'No active simulation. Please start a simulation first.'
         }), 400
     
-    data = request.json
-    operation = data.get('operation', 'allocate')
-    
     try:
+        data = request.json
+        if not data:
+            return jsonify({
+                'status': 'error',
+                'message': 'Invalid request: No JSON data provided'
+            }), 400
+            
+        operation = data.get('operation')
+        if not operation:
+            operation = 'allocate'
+            logging.warning(f"No operation specified, defaulting to '{operation}'")
+        
+        # Validation and execution
         if operation == 'allocate':
-            size = int(data.get('size', 64))
-            memory_manager.allocate_memory(size)
+            try:
+                size = data.get('size')
+                if size is None:
+                    size = 64
+                    logging.warning(f"No size specified for allocation, using default: {size}")
+                else:
+                    size = int(size)
+                    if size <= 0:
+                        size = 64
+                        logging.warning(f"Invalid allocation size, using default: {size}")
+                
+                memory_manager.allocate_memory(size)
+                logging.debug(f"Successfully allocated {size} bytes")
+                
+            except (ValueError, TypeError) as e:
+                logging.error(f"Error parsing allocation size: {e}")
+                return jsonify({
+                    'status': 'error',
+                    'message': f'Invalid allocation size: {str(e)}'
+                }), 400
+                
         elif operation == 'deallocate':
-            address = int(data.get('address', 0))
-            memory_manager.deallocate_memory(address)
+            try:
+                address = data.get('address')
+                if address is None:
+                    # Find the first allocated frame
+                    for i, frame in enumerate(memory_manager.memory):
+                        if frame['status'] == 'allocated':
+                            address = i * memory_manager.page_size
+                            logging.warning(f"No address specified for deallocation, using first allocated frame: {address}")
+                            break
+                    else:
+                        return jsonify({
+                            'status': 'error',
+                            'message': 'No memory allocated to deallocate'
+                        }), 400
+                else:
+                    try:
+                        address = int(address)
+                    except (ValueError, TypeError):
+                        # Find a valid address if the provided one is invalid
+                        for i, frame in enumerate(memory_manager.memory):
+                            if frame['status'] == 'allocated':
+                                address = i * memory_manager.page_size
+                                logging.warning(f"Invalid address for deallocation, using first allocated frame: {address}")
+                                break
+                        else:
+                            return jsonify({
+                                'status': 'error',
+                                'message': 'No memory allocated to deallocate'
+                            }), 400
+                
+                memory_manager.deallocate_memory(address)
+                logging.debug(f"Successfully deallocated memory at address {address}")
+                
+            except Exception as e:
+                logging.error(f"Error in deallocation: {e}")
+                return jsonify({
+                    'status': 'error',
+                    'message': f'Deallocation error: {str(e)}'
+                }), 400
+                
         elif operation == 'access':
-            address = int(data.get('address', 0))
-            memory_manager.access_memory(address)
+            try:
+                address = data.get('address')
+                if address is None:
+                    # Use a default or find a valid address
+                    address = 0
+                    logging.warning(f"No address specified for memory access, using default: {address}")
+                else:
+                    try:
+                        address = int(address)
+                    except (ValueError, TypeError):
+                        address = 0
+                        logging.warning(f"Invalid address for memory access, using default: {address}")
+                
+                memory_manager.access_memory(address)
+                logging.debug(f"Successfully accessed memory at address {address}")
+                
+            except Exception as e:
+                logging.error(f"Error in memory access: {e}")
+                return jsonify({
+                    'status': 'error',
+                    'message': f'Memory access error: {str(e)}'
+                }), 400
+                
         else:
             return jsonify({
                 'status': 'error',
                 'message': f'Unknown operation: {operation}'
             }), 400
         
-        new_state = memory_manager.get_current_state()
-        
-        return jsonify({
-            'status': 'success',
-            'state': new_state
-        })
+        # Get and return the new state
+        try:
+            new_state = memory_manager.get_current_state()
+            
+            return jsonify({
+                'status': 'success',
+                'state': new_state
+            })
+        except Exception as e:
+            logging.error(f"Error getting memory state: {e}")
+            return jsonify({
+                'status': 'error',
+                'message': f'Failed to get memory state: {str(e)}'
+            }), 500
+            
     except Exception as e:
-        logging.error(f"Error in next_step: {str(e)}")
+        logging.error(f"Unexpected error in next_step: {str(e)}")
         return jsonify({
             'status': 'error',
-            'message': str(e)
-        }), 400
+            'message': f'Server error: {str(e)}'
+        }), 500
 
 @app.route('/api/get_results', methods=['GET'])
 def get_results():

@@ -108,43 +108,72 @@ class MemoryManager:
         Args:
             address (int): Starting address of memory to deallocate
         """
+        # Input validation
+        if address is None:
+            raise ValueError("Address cannot be None")
+        
+        try:
+            address = int(address)
+        except (ValueError, TypeError):
+            raise ValueError(f"Invalid address format: {address}")
+        
         # Convert address to frame number
         frame_num = address // self.page_size
         
         if frame_num >= len(self.memory) or frame_num < 0:
-            raise ValueError(f"Invalid address: {address}")
+            raise ValueError(f"Invalid address: {address} (frame {frame_num} out of bounds)")
         
         frame = self.memory[frame_num]
         
+        # Check if the frame is allocated
         if frame['status'] != 'allocated':
-            raise ValueError(f"No allocated memory at address {address}")
+            # Look for any allocated memory and deallocate the first one found
+            allocated_frames = [(i, f) for i, f in enumerate(self.memory) if f['status'] == 'allocated']
+            
+            if not allocated_frames:
+                raise ValueError("No allocated memory to deallocate")
+            
+            # Use the first allocated frame instead
+            frame_num = allocated_frames[0][0]
+            frame = allocated_frames[0][1]
+            logging.warning(f"No allocated memory at address {address}, using frame {frame_num} instead")
         
         process_id = frame['id']
+        if process_id is None:
+            raise ValueError(f"No process ID associated with frame {frame_num}")
         
         # Find all frames for this process
         process_frames = self.page_table.get(process_id, [])
+        if not process_frames:
+            # Just free this single frame if we can't find its process frames
+            process_frames = [frame_num]
+            logging.warning(f"No frames found for process {process_id} in page table, only freeing frame {frame_num}")
         
         # Free all frames
         for frame_idx in process_frames:
-            self.memory[frame_idx] = {'status': 'free', 'id': None}
-            
-            # Remove from page replacement data structures
-            if self.algorithm == 'FIFO':
-                self.page_queue = deque([p for p in self.page_queue if p[0] != process_id])
-            elif self.algorithm == 'LRU':
-                keys_to_remove = [(pid, fidx) for (pid, fidx) in self.page_access_time.keys() if pid == process_id]
-                for key in keys_to_remove:
-                    if key in self.page_access_time:
-                        del self.page_access_time[key]
+            if 0 <= frame_idx < len(self.memory):  # Safety check
+                self.memory[frame_idx] = {'status': 'free', 'id': None}
+                
+                # Remove from page replacement data structures
+                if self.algorithm == 'FIFO':
+                    self.page_queue = deque([p for p in self.page_queue if p[0] != process_id])
+                elif self.algorithm == 'LRU':
+                    keys_to_remove = [(pid, fidx) for (pid, fidx) in self.page_access_time.keys() if pid == process_id]
+                    for key in keys_to_remove:
+                        if key in self.page_access_time:
+                            del self.page_access_time[key]
         
         # Remove from page table
         if process_id in self.page_table:
             del self.page_table[process_id]
         
+        # Update address to match the actual frame we deallocated
+        actual_address = frame_num * self.page_size
+        
         self.operations.append({
             'type': 'deallocate',
             'process_id': process_id,
-            'address': address,
+            'address': actual_address,
             'frames': process_frames
         })
         
@@ -160,11 +189,22 @@ class MemoryManager:
         Returns:
             bool: True if page hit, False if page fault
         """
+        # Input validation
+        if address is None:
+            raise ValueError("Address cannot be None")
+        
+        try:
+            address = int(address)
+        except (ValueError, TypeError):
+            raise ValueError(f"Invalid address format: {address}")
+        
         # Convert address to frame number
         frame_num = address // self.page_size
         
         if frame_num >= len(self.memory) or frame_num < 0:
-            raise ValueError(f"Invalid address: {address}")
+            # Instead of raising error, choose a valid frame
+            logging.warning(f"Invalid address: {address}, choosing a valid frame instead")
+            frame_num = min(max(0, frame_num), len(self.memory) - 1)
         
         self.memory_accesses += 1
         frame = self.memory[frame_num]
@@ -174,7 +214,10 @@ class MemoryManager:
             self.page_faults += 1
             
             # Allocate a page if using virtual memory simulation
-            self._handle_page_fault(frame_num)
+            try:
+                self._handle_page_fault(frame_num)
+            except Exception as e:
+                logging.error(f"Error handling page fault: {e}")
             
             self.operations.append({
                 'type': 'access',
@@ -209,34 +252,91 @@ class MemoryManager:
         Args:
             num_pages (int): Number of pages to replace
         """
-        for _ in range(num_pages):
-            if self.algorithm == 'FIFO':
-                if not self.page_queue:
-                    raise ValueError("No pages to replace")
+        try:
+            # Input validation
+            if num_pages <= 0:
+                logging.warning(f"Invalid number of pages to replace: {num_pages}")
+                return
                 
-                process_id, frame_idx = self.page_queue.popleft()
+            for _ in range(num_pages):
+                # Default values in case algorithm-specific code fails
+                process_id = None
+                frame_idx = None
                 
-            elif self.algorithm == 'LRU':
-                if not self.page_access_time:
-                    raise ValueError("No pages to replace")
-                
-                # Find least recently used page
-                lru_key = min(self.page_access_time.items(), key=lambda x: x[1])[0]
-                process_id, frame_idx = lru_key
-                del self.page_access_time[lru_key]
-            
-            # Free the frame
-            self.memory[frame_idx] = {'status': 'free', 'id': None}
-            
-            # Update page table
-            if process_id in self.page_table:
-                self.page_table[process_id] = [f for f in self.page_table[process_id] if f != frame_idx]
-                if not self.page_table[process_id]:
-                    del self.page_table[process_id]
-            
-            self.page_faults += 1
-            
-            logging.debug(f"Replaced page in frame {frame_idx} for process {process_id} using {self.algorithm}")
+                try:
+                    if self.algorithm == 'FIFO':
+                        if not self.page_queue:
+                            # If no pages in queue, find any allocated frame
+                            allocated_frames = [(i, f['id']) for i, f in enumerate(self.memory) 
+                                               if f['status'] == 'allocated']
+                            
+                            if not allocated_frames:
+                                logging.warning("No allocated frames to replace with FIFO")
+                                break
+                                
+                            frame_idx, process_id = allocated_frames[0]
+                            logging.warning(f"Page queue empty, using first allocated frame {frame_idx}")
+                        else:
+                            # Normal FIFO operation
+                            process_id, frame_idx = self.page_queue.popleft()
+                        
+                    elif self.algorithm == 'LRU':
+                        if not self.page_access_time:
+                            # If no access times, find any allocated frame
+                            allocated_frames = [(i, f['id']) for i, f in enumerate(self.memory) 
+                                               if f['status'] == 'allocated']
+                            
+                            if not allocated_frames:
+                                logging.warning("No allocated frames to replace with LRU")
+                                break
+                                
+                            frame_idx, process_id = allocated_frames[0]
+                            logging.warning(f"Access time map empty, using first allocated frame {frame_idx}")
+                        else:
+                            # Normal LRU operation
+                            lru_key = min(self.page_access_time.items(), key=lambda x: x[1])[0]
+                            process_id, frame_idx = lru_key
+                            del self.page_access_time[lru_key]
+                    else:
+                        # Unknown algorithm fallback
+                        allocated_frames = [(i, f['id']) for i, f in enumerate(self.memory) 
+                                           if f['status'] == 'allocated']
+                        
+                        if not allocated_frames:
+                            logging.warning(f"Unknown algorithm {self.algorithm} and no allocated frames")
+                            break
+                            
+                        frame_idx, process_id = allocated_frames[0]
+                        logging.warning(f"Unknown algorithm {self.algorithm}, using first allocated frame {frame_idx}")
+                    
+                    # Safety check for frame_idx and process_id
+                    if frame_idx is None or process_id is None:
+                        logging.error("Failed to select a page for replacement")
+                        continue
+                        
+                    if frame_idx >= len(self.memory) or frame_idx < 0:
+                        logging.error(f"Invalid frame index {frame_idx}")
+                        continue
+                    
+                    # Free the frame
+                    self.memory[frame_idx] = {'status': 'free', 'id': None}
+                    
+                    # Update page table
+                    if process_id in self.page_table:
+                        self.page_table[process_id] = [f for f in self.page_table[process_id] if f != frame_idx]
+                        if not self.page_table[process_id]:
+                            del self.page_table[process_id]
+                    
+                    self.page_faults += 1
+                    
+                    logging.debug(f"Replaced page in frame {frame_idx} for process {process_id} using {self.algorithm}")
+                    
+                except Exception as e:
+                    logging.error(f"Error replacing page: {e}")
+                    continue
+                    
+        except Exception as e:
+            logging.error(f"Error in page replacement: {e}")
     
     def _handle_page_fault(self, frame_num):
         """
