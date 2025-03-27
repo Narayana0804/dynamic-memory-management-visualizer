@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+
+{% block title %}Dynamic Memory Management Visualizer | Home{% endblock %}
+
+{% block content %}
+<div class="px-4 py-5 my-5 text-center">
+    <h1 class="display-5 fw-bold text-body-emphasis">Dynamic Memory Management Visualizer</h1>
+    <div class="col-lg-8 mx-auto">
+        <p class="lead mb-4">
+            Simulate paging, segmentation, and virtual memory techniques with real-time visualization.
+            Understand memory management algorithms through interactive visualizations.
+        </p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <a href="{{ url_for('dashboard') }}" class="btn btn-primary btn-lg px-4 gap-3">
+                <i class="fas fa-play me-2"></i> Start Simulation
+            </a>
+            <a href="{{ url_for('tutorials_page') }}" class="btn btn-success btn-lg px-4 gap-3">
+                <i class="fas fa-graduation-cap me-2"></i> Guided Tutorials
+            </a>
+            <button type="button" class="btn btn-outline-secondary btn-lg px-4" data-bs-toggle="modal" data-bs-target="#learnMoreModal">
+                <i class="fas fa-info-circle me-2"></i> Learn More
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="container px-4 py-5">
+    <h2 class="pb-2 border-bottom">Key Features</h2>
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+        <div class="col d-flex align-items-start">
+            <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                <i class="fas fa-layer-group"></i>
+            </div>
+            <div>
+                <h3 class="fs-4">Memory Management Techniques</h3>
+                <p>Simulate different memory management techniques such as paging and segmentation.</p>
+            </div>
+        </div>
+        <div class="col d-flex align-items-start">
+            <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                <i class="fas fa-chart-bar"></i>
+            </div>
+            <div>
+                <h3 class="fs-4">Real-time Visualization</h3>
+                <p>Watch memory allocation, deallocation, and page faults happen in real-time with color-coded visualization.</p>
+            </div>
+        </div>
+        <div class="col d-flex align-items-start">
+            <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                <i class="fas fa-cogs"></i>
+            </div>
+            <div>
+                <h3 class="fs-4">Page Replacement Algorithms</h3>
+                <p>Compare the performance of FIFO and LRU page replacement algorithms.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Learn More Modal -->
+<div class="modal fade" id="learnMoreModal" tabindex="-1" aria-labelledby="learnMoreModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="learnMoreModalLabel">About Memory Management Visualization</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h5>Memory Management Techniques</h5>
+                <p><strong>Paging:</strong> A memory management scheme that eliminates the need for contiguous allocation of physical memory. In this scheme, the operating system retrieves data from secondary storage in same-sized blocks called pages.</p>
+                
+                <p><strong>Segmentation:</strong> A memory management technique that divides programs into segments of different sizes. Each segment is a logical grouping of the program's code or data.</p>
+                
+                <p><strong>Virtual Memory:</strong> A memory management capability that uses hardware and software to allow a computer to compensate for physical memory shortages by temporarily transferring data from random access memory (RAM) to disk storage.</p>
+                
+                <h5>Page Replacement Algorithms</h5>
+                <p><strong>FIFO (First-In-First-Out):</strong> The oldest page in memory is the first one to be replaced.</p>
+                
+                <p><strong>LRU (Least Recently Used):</strong> The page that has not been accessed for the longest period of time is replaced.</p>
+                
+                <h5>Key Metrics</h5>
+                <ul>
+                    <li><strong>Page Fault:</strong> Occurs when a program accesses a page that is not currently in the main memory, requiring the operating system to fetch it from disk.</li>
+                    <li><strong>Hit Ratio:</strong> The percentage of memory accesses that found the desired page in memory.</li>
+                    <li><strong>Memory Utilization:</strong> The percentage of total memory that is currently allocated.</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <a href="{{ url_for('dashboard') }}" class="btn btn-primary">Start Simulation</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
