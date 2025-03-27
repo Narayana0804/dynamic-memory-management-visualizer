@@ -1,0 +1,43 @@
+[33m8694875[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m Moved index.html to root for GitHub Pages
+[33m0e95017[m Initial commit - Dynamic Memory Management Visualizer
+[33mf326f48[m Agent checkpoint
+[33mc3d9344[m Agent checkpoint
+[33m70fa9d2[m Implement user-guided memory optimization tutorial mode, adding new routes, templates, and a tutorial manager to guide users through interactive memory management lessons.
+[33mf72899c[m Enhance memory visualization: Improve grid rendering and add debug information.  Fixes display issues and ensures consistent visualization updates.
+[33m4804432[m Fix: Restore missing memory utilization chart and ensure Chart.js library is loaded.
+[33m8fc9e5b[m Agent checkpoint
+[33m65c656e[m Improve error handling and input validation in simulation start and visualization.
+[33m7231caa[m Improve input validation and error handling for allocation and deallocation operations.  Add logging for debugging and improved default handling of missing input parameters.
+[33maab5072[m Improve error handling in UI updates during memory simulation.  Added try-catch blocks to prevent crashes from invalid or missing data.
+[33m99132b8[m Enhance memory management visualization: Add input validation, default values, and error handling; improve user experience.
+[33m77def4c[m Implement initial web application for visualizing dynamic memory management techniques (paging, segmentation, virtual memory).
+[33m7feb430[m Checkpoint after starting plan
+[33mbd4615a[m Initial commit
+[33m19b3a46[m Delete visualization.js
+[33m4911be5[m Delete uv.lock
+[33me4fb6dd[m Delete tutorials.html
+[33mb3a0cb4[m Delete tutorial_manager.py
+[33mf23210c[m Delete tutorial_manager.cpython-311.pyc
+[33mdfcc120[m Delete styles.css
+[33m8824551[m Delete requirements.txt
+[33md118d1a[m Delete pyproject.toml
+[33mbecadeb[m Delete memory_manager.py
+[33mba1c4dd[m Delete memory_manager.cpython-311.pyc
+[33m3bfec6e[m Delete main.py
+[33m2bd3aee[m Delete main.js
+[33m3e7d4db[m Delete index.html
+[33m0a0341c[m Delete dashboard.html
+[33m7510df0[m Delete charts.js
+[33mbac6e63[m Delete base.html
+[33mcd9332a[m Delete app.py
+[33md0bb0a2[m Delete app.log
+[33ma09cb45[m Delete app.cpython-311.pyc
+[33ma5c45db[m Merge pull request #1 from Narayana0804/Narayana0804-patch-1
+[33m4043cd9[m Add files via upload
+[33m5379678[m Add files via upload
+[33m0d15e5d[m Delete MemoryMaster directory
+[33me2f5eb9[m Update README.md
+[33m2af056b[m Update README.md
+[33ma1e09e4[m Update README.md
+[33m313141c[m Add files via upload
+[33m177a80a[m Initial commit
