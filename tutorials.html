@@ -1,0 +1,663 @@
+{% extends 'base.html' %}
+
+{% block title %}Memory Management Tutorials{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row mb-4">
+        <div class="col-12">
+            <h1 class="mb-4">Memory Management Tutorials</h1>
+            <p class="lead">
+                Learn about memory management concepts step-by-step through interactive guided tutorials.
+            </p>
+            <div class="d-flex mb-4">
+                <a href="/" class="btn btn-outline-secondary me-2">
+                    <i class="fas fa-home me-1"></i> Home
+                </a>
+                <a href="/dashboard" class="btn btn-outline-primary">
+                    <i class="fas fa-tachometer-alt me-1"></i> Dashboard
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Tutorial List Section -->
+    <div class="row" id="tutorial-list-section">
+        <div class="col-12">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h3 class="mb-0"><i class="fas fa-graduation-cap me-2"></i>Available Tutorials</h3>
+                </div>
+                <div class="card-body">
+                    <div id="tutorial-list-container" class="row row-cols-1 row-cols-md-2 g-4">
+                        <div class="col">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body">
+                                    <h4 class="card-title">Loading tutorials...</h4>
+                                    <p class="card-text text-muted">Please wait while we fetch available tutorials.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Tutorial Content Section (hidden initially) -->
+    <div class="row mt-4 d-none" id="tutorial-content-section">
+        <div class="col-md-4">
+            <!-- Tutorial Information -->
+            <div class="card shadow-sm mb-4">
+                <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+                    <h3 class="mb-0" id="tutorial-title">Tutorial Title</h3>
+                    <button id="end-tutorial-btn" class="btn btn-sm btn-light" title="End Tutorial">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex justify-content-between mb-3">
+                        <span class="badge bg-info" id="step-indicator">Step 1 of 5</span>
+                        <span class="badge bg-secondary" id="tutorial-id">tutorial-id</span>
+                    </div>
+                    <h4 id="step-title">Step Title</h4>
+                    <div id="step-content" class="mb-4">
+                        Step content goes here.
+                    </div>
+                    <div class="alert alert-info">
+                        <strong>Task:</strong> <span id="step-task">Complete this task.</span>
+                    </div>
+                    
+                    <div class="d-flex justify-content-between mt-4">
+                        <button id="prev-step-btn" class="btn btn-outline-secondary">
+                            <i class="fas fa-arrow-left me-1"></i> Previous
+                        </button>
+                        <button id="next-step-btn" class="btn btn-primary">
+                            Next <i class="fas fa-arrow-right ms-1"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-8">
+            <!-- Memory Management Simulation -->
+            <div class="card shadow-sm">
+                <div class="card-header bg-dark text-white">
+                    <h3 class="mb-0">Memory Simulation</h3>
+                </div>
+                <div class="card-body">
+                    <!-- Memory Visualization -->
+                    <div class="card mb-4">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <h4 class="mb-0">Memory Visualization</h4>
+                            <div>
+                                <span class="badge bg-info" id="tutorial-technique">Paging</span>
+                                <span class="badge bg-secondary" id="tutorial-memory-size">1024 bytes</span>
+                                <span class="badge bg-secondary" id="tutorial-page-size">64 bytes</span>
+                                <span class="badge bg-secondary" id="tutorial-algorithm">FIFO</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-3 d-flex justify-content-between">
+                                <div class="memory-legend d-flex gap-2">
+                                    <div>
+                                        <span class="memory-cell free"></span> Free
+                                    </div>
+                                    <div>
+                                        <span class="memory-cell allocated"></span> Allocated
+                                    </div>
+                                    <div>
+                                        <span class="memory-cell fault"></span> Page Fault
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <span class="badge bg-primary" id="tutorial-memory-info">Memory: 0/0 bytes</span>
+                                </div>
+                            </div>
+                            
+                            <div id="tutorial-memory-grid" class="mb-3 p-2 border rounded">
+                                <div class="text-center py-5 text-muted">
+                                    <i class="fas fa-memory fa-3x mb-3"></i>
+                                    <p>Start a tutorial to visualize memory</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Memory Operations -->
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h4 class="mb-0">Memory Operations</h4>
+                        </div>
+                        <div class="card-body">
+                            <form id="tutorial-operation-form" class="mb-3">
+                                <div class="mb-3">
+                                    <label for="tutorial-operation" class="form-label">Operation</label>
+                                    <select class="form-select" id="tutorial-operation" required>
+                                        <option value="allocate" selected>Allocate Memory</option>
+                                        <option value="deallocate">Deallocate Memory</option>
+                                        <option value="access">Access Memory</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="mb-3 tutorial-allocate-input">
+                                    <label for="tutorial-size" class="form-label">Size to Allocate (bytes)</label>
+                                    <input type="number" class="form-control" id="tutorial-size" min="16" max="1024" value="64">
+                                </div>
+                                
+                                <div class="mb-3 tutorial-address-input d-none">
+                                    <label for="tutorial-address" class="form-label">Memory Address</label>
+                                    <input type="number" class="form-control" id="tutorial-address" min="0" value="0">
+                                </div>
+                                
+                                <button type="submit" class="btn btn-success w-100">
+                                    <i class="fas fa-cog me-1"></i> Execute Operation
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <!-- Operation Log -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="mb-0">Operation Log</h4>
+                        </div>
+                        <div class="card-body">
+                            <div id="tutorial-operation-log" class="small" style="max-height: 200px; overflow-y: auto;">
+                                <div class="text-muted text-center py-3">
+                                    <i class="fas fa-clipboard-list fa-2x mb-2"></i>
+                                    <p>No operations performed yet</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1"></script>
+<script src="/static/js/visualization.js"></script>
+<script src="/static/js/charts.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // State variables
+    let currentTutorial = null;
+    let currentStep = null;
+    let memoryState = null;
+    
+    // DOM Elements
+    const tutorialListSection = document.getElementById('tutorial-list-section');
+    const tutorialContentSection = document.getElementById('tutorial-content-section');
+    const tutorialListContainer = document.getElementById('tutorial-list-container');
+    
+    const tutorialTitle = document.getElementById('tutorial-title');
+    const tutorialId = document.getElementById('tutorial-id');
+    const stepIndicator = document.getElementById('step-indicator');
+    const stepTitle = document.getElementById('step-title');
+    const stepContent = document.getElementById('step-content');
+    const stepTask = document.getElementById('step-task');
+    
+    const prevStepBtn = document.getElementById('prev-step-btn');
+    const nextStepBtn = document.getElementById('next-step-btn');
+    const endTutorialBtn = document.getElementById('end-tutorial-btn');
+    
+    const tutorialTechnique = document.getElementById('tutorial-technique');
+    const tutorialMemorySize = document.getElementById('tutorial-memory-size');
+    const tutorialPageSize = document.getElementById('tutorial-page-size');
+    const tutorialAlgorithm = document.getElementById('tutorial-algorithm');
+    const tutorialMemoryInfo = document.getElementById('tutorial-memory-info');
+    const tutorialMemoryGrid = document.getElementById('tutorial-memory-grid');
+    
+    const tutorialOperationForm = document.getElementById('tutorial-operation-form');
+    const tutorialOperation = document.getElementById('tutorial-operation');
+    const tutorialSize = document.getElementById('tutorial-size');
+    const tutorialAddress = document.getElementById('tutorial-address');
+    const tutorialOperationLog = document.getElementById('tutorial-operation-log');
+    
+    // Load available tutorials
+    async function loadTutorials() {
+        try {
+            const response = await fetch('/api/tutorials');
+            const data = await response.json();
+            
+            if (data.status === 'success' && data.tutorials) {
+                displayTutorialList(data.tutorials);
+            } else {
+                showError('Failed to load tutorials');
+            }
+        } catch (error) {
+            console.error('Error loading tutorials:', error);
+            showError('Error loading tutorials. Please try again.');
+        }
+    }
+    
+    // Display the list of available tutorials
+    function displayTutorialList(tutorials) {
+        tutorialListContainer.innerHTML = '';
+        
+        if (tutorials.length === 0) {
+            tutorialListContainer.innerHTML = `
+                <div class="col-12">
+                    <div class="alert alert-info">
+                        <i class="fas fa-info-circle me-2"></i> No tutorials available at this time.
+                    </div>
+                </div>
+            `;
+            return;
+        }
+        
+        tutorials.forEach(tutorial => {
+            const card = document.createElement('div');
+            card.className = 'col';
+            card.innerHTML = `
+                <div class="card h-100 ${tutorial.completed ? 'border-success' : 'border-primary'} shadow-sm">
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            ${tutorial.title}
+                            ${tutorial.completed ? '<span class="badge bg-success ms-2"><i class="fas fa-check"></i> Completed</span>' : ''}
+                        </h4>
+                        <p class="card-text">${tutorial.description}</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-top-0">
+                        <button class="btn btn-${tutorial.completed ? 'outline-success' : 'primary'} w-100 start-tutorial-btn" 
+                            data-tutorial-id="${tutorial.id}">
+                            ${tutorial.completed ? 'Replay Tutorial' : 'Start Tutorial'}
+                        </button>
+                    </div>
+                </div>
+            `;
+            
+            tutorialListContainer.appendChild(card);
+        });
+        
+        // Add event listeners to the start buttons
+        document.querySelectorAll('.start-tutorial-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const tutorialId = this.dataset.tutorialId;
+                startTutorial(tutorialId);
+            });
+        });
+    }
+    
+    // Start a tutorial
+    async function startTutorial(tutorialId) {
+        try {
+            const response = await fetch('/api/tutorials/start', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ tutorial_id: tutorialId })
+            });
+            
+            const data = await response.json();
+            
+            if (data.status === 'success' && data.tutorial_step) {
+                showTutorial(data.tutorial_step);
+                if (data.tutorial_step.memory_state) {
+                    updateMemoryVisualization(data.tutorial_step.memory_state);
+                }
+            } else {
+                showError(data.message || 'Failed to start tutorial');
+            }
+        } catch (error) {
+            console.error('Error starting tutorial:', error);
+            showError('Error starting tutorial. Please try again.');
+        }
+    }
+    
+    // Show the tutorial content
+    function showTutorial(stepData) {
+        currentTutorial = stepData.tutorial_id;
+        currentStep = stepData.step_index;
+        
+        // Update tutorial info
+        tutorialTitle.textContent = stepData.tutorial_title;
+        tutorialId.textContent = stepData.tutorial_id;
+        stepIndicator.textContent = `Step ${stepData.step_index + 1} of ${stepData.total_steps}`;
+        stepTitle.textContent = stepData.step.title;
+        stepContent.textContent = stepData.step.content;
+        stepTask.textContent = stepData.step.task;
+        
+        // Update button states
+        prevStepBtn.disabled = stepData.is_first_step;
+        nextStepBtn.textContent = stepData.is_last_step ? 'Finish Tutorial' : 'Next';
+        
+        // Update simulation config if available
+        if (stepData.step.config) {
+            const config = stepData.step.config;
+            if (config.technique) {
+                tutorialTechnique.textContent = config.technique.charAt(0).toUpperCase() + config.technique.slice(1);
+            }
+            if (config.memory_size) {
+                tutorialMemorySize.textContent = `${config.memory_size} bytes`;
+            }
+            if (config.page_size) {
+                tutorialPageSize.textContent = `${config.page_size} bytes`;
+            }
+            if (config.algorithm) {
+                tutorialAlgorithm.textContent = config.algorithm;
+            }
+        }
+        
+        // Show tutorial content, hide list
+        tutorialListSection.classList.add('d-none');
+        tutorialContentSection.classList.remove('d-none');
+    }
+    
+    // Move to the next tutorial step
+    async function nextTutorialStep(operationData = null) {
+        try {
+            const requestData = operationData ? { operation_data: operationData } : {};
+            
+            const response = await fetch('/api/tutorials/next', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(requestData)
+            });
+            
+            const data = await response.json();
+            
+            if (data.status === 'success') {
+                if (data.completed) {
+                    // Tutorial completed
+                    endCurrentTutorial(data.message);
+                } else if (data.tutorial_step) {
+                    // Show next step
+                    showTutorial(data.tutorial_step);
+                    if (data.tutorial_step.memory_state) {
+                        updateMemoryVisualization(data.tutorial_step.memory_state);
+                    }
+                }
+            } else {
+                showError(data.message || 'Failed to advance tutorial');
+            }
+        } catch (error) {
+            console.error('Error advancing tutorial:', error);
+            showError('Error advancing tutorial. Please try again.');
+        }
+    }
+    
+    // Move to the previous tutorial step
+    async function previousTutorialStep() {
+        try {
+            const response = await fetch('/api/tutorials/previous', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+            
+            const data = await response.json();
+            
+            if (data.status === 'success' && data.tutorial_step) {
+                showTutorial(data.tutorial_step);
+                if (data.tutorial_step.memory_state) {
+                    updateMemoryVisualization(data.tutorial_step.memory_state);
+                }
+            } else {
+                showError(data.message || 'Failed to go back');
+            }
+        } catch (error) {
+            console.error('Error going to previous step:', error);
+            showError('Error going to previous step. Please try again.');
+        }
+    }
+    
+    // End the current tutorial
+    async function endCurrentTutorial(message = null) {
+        try {
+            const response = await fetch('/api/tutorials/end', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+            
+            const data = await response.json();
+            
+            // Regardless of response, go back to tutorial list
+            tutorialContentSection.classList.add('d-none');
+            tutorialListSection.classList.remove('d-none');
+            
+            // Clear tutorial memory grid
+            tutorialMemoryGrid.innerHTML = `
+                <div class="text-center py-5 text-muted">
+                    <i class="fas fa-memory fa-3x mb-3"></i>
+                    <p>Start a tutorial to visualize memory</p>
+                </div>
+            `;
+            
+            // Clear tutorial operation log
+            tutorialOperationLog.innerHTML = `
+                <div class="text-muted text-center py-3">
+                    <i class="fas fa-clipboard-list fa-2x mb-2"></i>
+                    <p>No operations performed yet</p>
+                </div>
+            `;
+            
+            // Reset current tutorial
+            currentTutorial = null;
+            currentStep = null;
+            
+            // Show completion message if provided
+            if (message) {
+                showSuccess(message);
+            }
+            
+            // Reload tutorials to update completion status
+            loadTutorials();
+            
+        } catch (error) {
+            console.error('Error ending tutorial:', error);
+            showError('Error ending tutorial. Please try again.');
+        }
+    }
+    
+    // Execute a memory operation in tutorial mode
+    async function executeOperation() {
+        try {
+            const operationType = tutorialOperation.value;
+            
+            // Prepare operation data
+            const operationData = {
+                type: operationType
+            };
+            
+            if (operationType === 'allocate') {
+                operationData.size = parseInt(tutorialSize.value);
+            } else if (operationType === 'deallocate' || operationType === 'access') {
+                operationData.address = parseInt(tutorialAddress.value);
+            }
+            
+            // Update memory through the normal API
+            const response = await fetch('/api/next_step', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    operation: operationType,
+                    size: operationData.size,
+                    address: operationData.address
+                })
+            });
+            
+            const data = await response.json();
+            
+            if (data.status === 'success' && data.state) {
+                // Update memory visualization
+                updateMemoryVisualization(data.state);
+                
+                // Add operation to log
+                const operationTypeText = operationType.charAt(0).toUpperCase() + operationType.slice(1);
+                const operationDetailsText = operationType === 'allocate' 
+                    ? `${operationData.size} bytes` 
+                    : `address ${operationData.address}`;
+                
+                const logEntry = document.createElement('div');
+                logEntry.className = 'log-entry mb-1';
+                logEntry.innerHTML = `
+                    <span class="timestamp text-muted">[${new Date().toLocaleTimeString()}]</span> 
+                    <span class="text-success">${operationTypeText}: ${operationDetailsText}</span>
+                `;
+                
+                // Check if the log has the initial "no operations" message
+                if (tutorialOperationLog.querySelector('.text-muted')) {
+                    tutorialOperationLog.innerHTML = '';
+                }
+                
+                // Add to the log (newest at top)
+                tutorialOperationLog.insertBefore(logEntry, tutorialOperationLog.firstChild);
+                
+                // Check if this operation completes the current step task
+                const currentStepObj = getCurrentStepInfo();
+                if (currentStepObj && currentStepObj.expected_operation) {
+                    const expectedOp = currentStepObj.expected_operation;
+                    
+                    // Check if operation type matches
+                    if (expectedOp.type === operationData.type) {
+                        // For allocate, check size
+                        if (operationData.type === 'allocate' && 'size' in expectedOp) {
+                            if (operationData.size === expectedOp.size) {
+                                showSuccess('Task completed successfully!');
+                                // Auto-advance to next step after a brief delay
+                                setTimeout(() => nextTutorialStep(operationData), 1500);
+                            }
+                        }
+                        // For access, check address
+                        else if (operationData.type === 'access' && 'address' in expectedOp) {
+                            if (operationData.address === expectedOp.address) {
+                                showSuccess('Task completed successfully!');
+                                setTimeout(() => nextTutorialStep(operationData), 1500);
+                            }
+                        }
+                        // For deallocate, any deallocate works for the tutorial
+                        else if (operationData.type === 'deallocate') {
+                            showSuccess('Task completed successfully!');
+                            setTimeout(() => nextTutorialStep(operationData), 1500);
+                        }
+                    }
+                }
+            } else {
+                showError(data.message || 'Failed to execute operation');
+            }
+        } catch (error) {
+            console.error('Error executing operation:', error);
+            showError('Error executing operation. Please try again.');
+        }
+    }
+    
+    // Update the memory visualization for the tutorial
+    function updateMemoryVisualization(state) {
+        memoryState = state;
+        
+        // Update memory info
+        const allocatedMemory = state.allocated_bytes || 0;
+        const totalMemory = state.memory_size || 0;
+        const utilization = totalMemory > 0 ? Math.round((allocatedMemory / totalMemory) * 100) : 0;
+        
+        tutorialMemoryInfo.textContent = `Memory: ${allocatedMemory}/${totalMemory} bytes (${utilization}% used)`;
+        
+        // Update memory grid
+        if (state.memory) {
+            initializeMemoryGrid(state, tutorialMemoryGrid);
+        }
+    }
+    
+    // Get the current step info
+    function getCurrentStepInfo() {
+        return currentStep !== null && currentTutorial 
+            ? document.getElementById('step-task').dataset.stepInfo 
+            : null;
+    }
+    
+    // Update the form based on operation type
+    function updateOperationForm() {
+        const operation = tutorialOperation.value;
+        
+        if (operation === 'allocate') {
+            document.querySelector('.tutorial-allocate-input').classList.remove('d-none');
+            document.querySelector('.tutorial-address-input').classList.add('d-none');
+        } else {
+            document.querySelector('.tutorial-allocate-input').classList.add('d-none');
+            document.querySelector('.tutorial-address-input').classList.remove('d-none');
+        }
+    }
+    
+    // Show a success message
+    function showSuccess(message) {
+        const alertDiv = document.createElement('div');
+        alertDiv.className = 'alert alert-success alert-dismissible fade show';
+        alertDiv.innerHTML = `
+            <i class="fas fa-check-circle me-2"></i> ${message}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        `;
+        
+        document.querySelector('.container').prepend(alertDiv);
+        
+        // Auto-dismiss after 5 seconds
+        setTimeout(() => {
+            if (alertDiv.parentElement) {
+                alertDiv.classList.remove('show');
+                setTimeout(() => alertDiv.remove(), 150);
+            }
+        }, 5000);
+    }
+    
+    // Show an error message
+    function showError(message) {
+        const alertDiv = document.createElement('div');
+        alertDiv.className = 'alert alert-danger alert-dismissible fade show';
+        alertDiv.innerHTML = `
+            <i class="fas fa-exclamation-circle me-2"></i> ${message}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        `;
+        
+        document.querySelector('.container').prepend(alertDiv);
+        
+        // Auto-dismiss after 5 seconds
+        setTimeout(() => {
+            if (alertDiv.parentElement) {
+                alertDiv.classList.remove('show');
+                setTimeout(() => alertDiv.remove(), 150);
+            }
+        }, 5000);
+    }
+    
+    // Event Listeners
+    tutorialOperation.addEventListener('change', updateOperationForm);
+    
+    tutorialOperationForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        executeOperation();
+    });
+    
+    nextStepBtn.addEventListener('click', function() {
+        nextTutorialStep();
+    });
+    
+    prevStepBtn.addEventListener('click', function() {
+        previousTutorialStep();
+    });
+    
+    endTutorialBtn.addEventListener('click', function() {
+        if (confirm('Are you sure you want to end this tutorial?')) {
+            endCurrentTutorial();
+        }
+    });
+    
+    // Initialize the page
+    loadTutorials();
+    updateOperationForm();
+});
+</script>
+{% endblock %}
