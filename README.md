@@ -107,24 +107,3 @@ Color-coded memory visualization showing real-time page faults and memory alloca
 A Flask API backend that computes and returns step-by-step memory states to the frontend.
 
 Charts and tables for analyzing memory performance (hit/miss ratio, memory utilization).
-
-🚀 How to Run the Project
-
-1️⃣ Clone the Repository
-
-git clone https://github.com/yourusername/dynamic-memory-management-visualizer.git
-cd dynamic-memory-management-visualizer
-
-2️⃣ Install Dependencies
-
-pip install -r requirements.txt
-
-3️⃣ Run the Flask Backend
-
-python app.py
-
-4️⃣ Open Frontend in Browser
-
-Open index.html in any modern browser.
-
-
