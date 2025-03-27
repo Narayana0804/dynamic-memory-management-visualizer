@@ -1,0 +1,435 @@
+2025-03-25 10:22:59,540 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-25 10:22:59,540 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-25 10:22:59,540 - INFO -  * Restarting with stat
+2025-03-25 10:22:59,787 - WARNING -  * Debugger is active!
+2025-03-25 10:22:59,787 - INFO -  * Debugger PIN: 123-794-879
+2025-03-25 10:34:17,269 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-25 10:34:17,269 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-25 10:34:17,274 - INFO -  * Restarting with stat
+2025-03-25 10:34:17,494 - WARNING -  * Debugger is active!
+2025-03-25 10:34:17,494 - INFO -  * Debugger PIN: 123-794-879
+2025-03-25 10:34:47,127 - INFO - 127.0.0.1 - - [25/Mar/2025 10:34:47] "GET / HTTP/1.1" 200 -
+2025-03-25 10:34:47,270 - INFO - 127.0.0.1 - - [25/Mar/2025 10:34:47] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-03-25 10:34:48,121 - INFO - 127.0.0.1 - - [25/Mar/2025 10:34:48] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-25 10:34:56,860 - INFO - 127.0.0.1 - - [25/Mar/2025 10:34:56] "GET /dashboard HTTP/1.1" 200 -
+2025-03-25 10:34:57,077 - INFO - 127.0.0.1 - - [25/Mar/2025 10:34:57] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-25 10:34:57,145 - INFO - 127.0.0.1 - - [25/Mar/2025 10:34:57] "GET /static/js/charts.js HTTP/1.1" 200 -
+2025-03-25 10:34:57,195 - INFO - 127.0.0.1 - - [25/Mar/2025 10:34:57] "GET /static/js/visualization.js HTTP/1.1" 200 -
+2025-03-25 10:34:57,196 - INFO - 127.0.0.1 - - [25/Mar/2025 10:34:57] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-03-25 10:35:08,382 - DEBUG - Memory Manager initialized with paging, size: 2048, page size: 64, algorithm: FIFO
+2025-03-25 10:35:08,383 - INFO - Simulation started with: technique=paging, memory_size=2048, page_size=64, algorithm=FIFO
+2025-03-25 10:35:08,384 - INFO - 127.0.0.1 - - [25/Mar/2025 10:35:08] "POST /api/start_simulation HTTP/1.1" 200 -
+2025-03-25 10:35:13,670 - DEBUG - Allocated 64 bytes (1 pages) for process 1 in frames [0]
+2025-03-25 10:35:13,670 - DEBUG - Successfully allocated 64 bytes
+2025-03-25 10:35:13,670 - INFO - 127.0.0.1 - - [25/Mar/2025 10:35:13] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-25 10:35:30,822 - DEBUG - Handled page fault by allocating frame 2 to process 2
+2025-03-25 10:35:30,823 - DEBUG - Page fault on address 128 (frame 2)
+2025-03-25 10:35:30,823 - DEBUG - Successfully accessed memory at address 128
+2025-03-25 10:35:30,823 - INFO - 127.0.0.1 - - [25/Mar/2025 10:35:30] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-25 10:35:58,975 - WARNING - Invalid address: 2048, choosing a valid frame instead
+2025-03-25 10:35:58,975 - DEBUG - Handled page fault by allocating frame 31 to process 3
+2025-03-25 10:35:58,975 - DEBUG - Page fault on address 2048 (frame 31)
+2025-03-25 10:35:58,975 - DEBUG - Successfully accessed memory at address 2048
+2025-03-25 10:35:58,975 - INFO - 127.0.0.1 - - [25/Mar/2025 10:35:58] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-25 10:36:18,224 - DEBUG - Page hit on address 2047 (frame 31)
+2025-03-25 10:36:18,224 - DEBUG - Successfully accessed memory at address 2047
+2025-03-25 10:36:18,225 - INFO - 127.0.0.1 - - [25/Mar/2025 10:36:18] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-25 10:36:25,477 - DEBUG - Page hit on address 2046 (frame 31)
+2025-03-25 10:36:25,477 - DEBUG - Successfully accessed memory at address 2046
+2025-03-25 10:36:25,477 - INFO - 127.0.0.1 - - [25/Mar/2025 10:36:25] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-25 10:36:39,496 - INFO - 127.0.0.1 - - [25/Mar/2025 10:36:39] "POST /api/reset_simulation HTTP/1.1" 200 -
+2025-03-25 10:36:40,822 - INFO - 127.0.0.1 - - [25/Mar/2025 10:36:40] "POST /api/reset_simulation HTTP/1.1" 200 -
+2025-03-25 10:36:43,006 - INFO - 127.0.0.1 - - [25/Mar/2025 10:36:43] "GET /dashboard HTTP/1.1" 200 -
+2025-03-25 10:36:43,026 - INFO - 127.0.0.1 - - [25/Mar/2025 10:36:43] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-25 10:36:43,483 - INFO - 127.0.0.1 - - [25/Mar/2025 10:36:43] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2025-03-25 10:36:43,539 - INFO - 127.0.0.1 - - [25/Mar/2025 10:36:43] "[36mGET /static/js/visualization.js HTTP/1.1[0m" 304 -
+2025-03-25 10:36:43,622 - INFO - 127.0.0.1 - - [25/Mar/2025 10:36:43] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-25 10:36:49,258 - INFO -  * Detected change in 'C:\\Users\\laksh\\onedrive\\desktop\\memorymaster\\app.py', reloading
+2025-03-25 10:36:49,300 - INFO -  * Restarting with stat
+2025-03-25 10:36:49,685 - WARNING -  * Debugger is active!
+2025-03-25 10:36:49,685 - INFO -  * Debugger PIN: 123-794-879
+2025-03-25 10:37:05,582 - INFO - 127.0.0.1 - - [25/Mar/2025 10:37:05] "GET / HTTP/1.1" 200 -
+2025-03-25 10:37:05,741 - INFO - 127.0.0.1 - - [25/Mar/2025 10:37:05] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-25 10:37:05,817 - INFO - 127.0.0.1 - - [25/Mar/2025 10:37:05] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-25 10:38:46,041 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-25 10:38:46,041 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-25 10:38:46,046 - INFO -  * Restarting with stat
+2025-03-25 10:38:46,251 - WARNING -  * Debugger is active!
+2025-03-25 10:38:46,251 - INFO -  * Debugger PIN: 123-794-879
+2025-03-25 10:39:00,931 - INFO - 127.0.0.1 - - [25/Mar/2025 10:39:00] "GET / HTTP/1.1" 200 -
+2025-03-25 10:39:01,071 - INFO - 127.0.0.1 - - [25/Mar/2025 10:39:01] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-25 10:39:01,179 - INFO - 127.0.0.1 - - [25/Mar/2025 10:39:01] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-25 10:59:18,351 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-25 10:59:18,351 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-25 10:59:18,351 - INFO -  * Restarting with stat
+2025-03-25 10:59:18,618 - WARNING -  * Debugger is active!
+2025-03-25 10:59:18,681 - INFO -  * Debugger PIN: 123-794-879
+2025-03-25 10:59:39,271 - INFO - 127.0.0.1 - - [25/Mar/2025 10:59:39] "GET / HTTP/1.1" 200 -
+2025-03-25 10:59:39,444 - INFO - 127.0.0.1 - - [25/Mar/2025 10:59:39] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-25 10:59:40,711 - INFO - 127.0.0.1 - - [25/Mar/2025 10:59:40] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-25 10:59:45,841 - INFO - 127.0.0.1 - - [25/Mar/2025 10:59:45] "GET /dashboard HTTP/1.1" 200 -
+2025-03-25 10:59:46,124 - INFO - 127.0.0.1 - - [25/Mar/2025 10:59:46] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-25 10:59:46,173 - INFO - 127.0.0.1 - - [25/Mar/2025 10:59:46] "[36mGET /static/js/visualization.js HTTP/1.1[0m" 304 -
+2025-03-25 10:59:46,173 - INFO - 127.0.0.1 - - [25/Mar/2025 10:59:46] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-25 10:59:46,173 - INFO - 127.0.0.1 - - [25/Mar/2025 10:59:46] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2025-03-25 10:59:53,424 - DEBUG - Memory Manager initialized with paging, size: 2048, page size: 64, algorithm: FIFO
+2025-03-25 10:59:53,424 - INFO - Simulation started with: technique=paging, memory_size=2048, page_size=64, algorithm=FIFO
+2025-03-25 10:59:53,424 - INFO - 127.0.0.1 - - [25/Mar/2025 10:59:53] "POST /api/start_simulation HTTP/1.1" 200 -
+2025-03-25 10:59:55,878 - DEBUG - Allocated 64 bytes (1 pages) for process 1 in frames [0]
+2025-03-25 10:59:55,879 - DEBUG - Successfully allocated 64 bytes
+2025-03-25 10:59:55,880 - INFO - 127.0.0.1 - - [25/Mar/2025 10:59:55] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-25 11:00:10,019 - DEBUG - Allocated 128 bytes (2 pages) for process 2 in frames [1, 2]
+2025-03-25 11:00:10,019 - DEBUG - Successfully allocated 128 bytes
+2025-03-25 11:00:10,019 - INFO - 127.0.0.1 - - [25/Mar/2025 11:00:10] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-25 11:00:29,526 - INFO - 127.0.0.1 - - [25/Mar/2025 11:00:29] "GET /tutorials HTTP/1.1" 200 -
+2025-03-25 11:00:29,827 - INFO - 127.0.0.1 - - [25/Mar/2025 11:00:29] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-25 11:00:29,888 - INFO - 127.0.0.1 - - [25/Mar/2025 11:00:29] "[36mGET /static/js/visualization.js HTTP/1.1[0m" 304 -
+2025-03-25 11:00:29,890 - INFO - 127.0.0.1 - - [25/Mar/2025 11:00:29] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2025-03-25 11:00:30,400 - INFO - 127.0.0.1 - - [25/Mar/2025 11:00:30] "GET /api/tutorials HTTP/1.1" 200 -
+2025-03-25 11:00:32,429 - INFO - Started tutorial: intro
+2025-03-25 11:00:32,429 - DEBUG - Memory Manager initialized with paging, size: 512, page size: 64, algorithm: FIFO
+2025-03-25 11:00:32,429 - INFO - Tutorial memory manager initialized with config: {'memory_size': 512, 'page_size': 64, 'technique': 'paging', 'algorithm': 'FIFO'}
+2025-03-25 11:00:32,429 - INFO - 127.0.0.1 - - [25/Mar/2025 11:00:32] "POST /api/tutorials/start HTTP/1.1" 200 -
+2025-03-25 11:00:51,894 - INFO - 127.0.0.1 - - [25/Mar/2025 11:00:51] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-03-25 11:00:53,073 - INFO - 127.0.0.1 - - [25/Mar/2025 11:00:53] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-03-25 11:00:54,623 - INFO - 127.0.0.1 - - [25/Mar/2025 11:00:54] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-03-25 11:00:54,912 - INFO - 127.0.0.1 - - [25/Mar/2025 11:00:54] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-03-25 11:00:56,630 - INFO - 127.0.0.1 - - [25/Mar/2025 11:00:56] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-03-25 11:00:56,893 - INFO - Ended tutorial: intro
+2025-03-25 11:00:56,893 - INFO - 127.0.0.1 - - [25/Mar/2025 11:00:56] "POST /api/tutorials/end HTTP/1.1" 200 -
+2025-03-25 11:00:56,941 - INFO - 127.0.0.1 - - [25/Mar/2025 11:00:56] "GET /api/tutorials HTTP/1.1" 200 -
+2025-03-25 11:00:59,613 - INFO - Started tutorial: fragmentation
+2025-03-25 11:00:59,613 - DEBUG - Memory Manager initialized with segmentation, size: 1024, page size: 128, algorithm: FIFO
+2025-03-25 11:00:59,613 - INFO - Tutorial memory manager initialized with config: {'memory_size': 1024, 'page_size': 128, 'technique': 'segmentation', 'algorithm': 'FIFO'}
+2025-03-25 11:00:59,613 - INFO - 127.0.0.1 - - [25/Mar/2025 11:00:59] "POST /api/tutorials/start HTTP/1.1" 200 -
+2025-03-25 11:01:02,047 - INFO - 127.0.0.1 - - [25/Mar/2025 11:01:02] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-03-25 11:01:03,177 - INFO - 127.0.0.1 - - [25/Mar/2025 11:01:03] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-03-25 11:01:05,275 - INFO - 127.0.0.1 - - [25/Mar/2025 11:01:05] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-03-25 11:01:06,438 - INFO - 127.0.0.1 - - [25/Mar/2025 11:01:06] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-03-25 11:01:07,953 - INFO - 127.0.0.1 - - [25/Mar/2025 11:01:07] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-03-25 11:01:09,425 - INFO - 127.0.0.1 - - [25/Mar/2025 11:01:09] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-03-25 11:01:12,169 - INFO - 127.0.0.1 - - [25/Mar/2025 11:01:12] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-03-25 11:01:12,424 - INFO - Ended tutorial: fragmentation
+2025-03-25 11:01:12,424 - INFO - 127.0.0.1 - - [25/Mar/2025 11:01:12] "POST /api/tutorials/end HTTP/1.1" 200 -
+2025-03-25 11:01:12,490 - INFO - 127.0.0.1 - - [25/Mar/2025 11:01:12] "GET /api/tutorials HTTP/1.1" 200 -
+2025-03-25 11:01:57,896 - INFO - Started tutorial: page_replacement
+2025-03-25 11:01:57,898 - DEBUG - Memory Manager initialized with paging, size: 512, page size: 64, algorithm: FIFO
+2025-03-25 11:01:57,899 - INFO - Tutorial memory manager initialized with config: {'memory_size': 512, 'page_size': 64, 'technique': 'paging', 'algorithm': 'FIFO'}
+2025-03-25 11:01:57,900 - INFO - 127.0.0.1 - - [25/Mar/2025 11:01:57] "POST /api/tutorials/start HTTP/1.1" 200 -
+2025-03-25 11:01:59,903 - INFO - 127.0.0.1 - - [25/Mar/2025 11:01:59] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-03-25 11:02:00,037 - INFO - 127.0.0.1 - - [25/Mar/2025 11:02:00] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-03-25 11:02:00,173 - INFO - 127.0.0.1 - - [25/Mar/2025 11:02:00] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-03-25 11:02:01,610 - INFO - 127.0.0.1 - - [25/Mar/2025 11:02:01] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-03-25 11:02:02,536 - INFO - 127.0.0.1 - - [25/Mar/2025 11:02:02] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-03-25 11:02:02,930 - INFO - 127.0.0.1 - - [25/Mar/2025 11:02:02] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-03-25 11:02:04,335 - INFO - 127.0.0.1 - - [25/Mar/2025 11:02:04] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-03-25 11:02:04,590 - INFO - Ended tutorial: page_replacement
+2025-03-25 11:02:04,590 - INFO - 127.0.0.1 - - [25/Mar/2025 11:02:04] "POST /api/tutorials/end HTTP/1.1" 200 -
+2025-03-25 11:02:04,659 - INFO - 127.0.0.1 - - [25/Mar/2025 11:02:04] "GET /api/tutorials HTTP/1.1" 200 -
+2025-03-25 11:02:05,862 - INFO - Started tutorial: optimization
+2025-03-25 11:02:05,863 - DEBUG - Memory Manager initialized with paging, size: 1024, page size: 64, algorithm: LRU
+2025-03-25 11:02:05,863 - INFO - Tutorial memory manager initialized with config: {'memory_size': 1024, 'page_size': 64, 'technique': 'paging', 'algorithm': 'LRU'}
+2025-03-25 11:02:05,863 - INFO - 127.0.0.1 - - [25/Mar/2025 11:02:05] "POST /api/tutorials/start HTTP/1.1" 200 -
+2025-03-25 11:02:07,718 - INFO - 127.0.0.1 - - [25/Mar/2025 11:02:07] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-03-25 11:02:08,861 - INFO - 127.0.0.1 - - [25/Mar/2025 11:02:08] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-03-25 11:02:11,051 - INFO - 127.0.0.1 - - [25/Mar/2025 11:02:11] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-03-25 11:02:11,641 - INFO - 127.0.0.1 - - [25/Mar/2025 11:02:11] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-03-25 11:02:13,049 - INFO - 127.0.0.1 - - [25/Mar/2025 11:02:13] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-03-25 11:02:14,260 - INFO - 127.0.0.1 - - [25/Mar/2025 11:02:14] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-03-25 11:02:15,415 - INFO - 127.0.0.1 - - [25/Mar/2025 11:02:15] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-03-25 11:02:15,682 - INFO - Ended tutorial: optimization
+2025-03-25 11:02:15,682 - INFO - 127.0.0.1 - - [25/Mar/2025 11:02:15] "POST /api/tutorials/end HTTP/1.1" 200 -
+2025-03-25 11:02:15,737 - INFO - 127.0.0.1 - - [25/Mar/2025 11:02:15] "GET /api/tutorials HTTP/1.1" 200 -
+2025-03-25 11:02:49,883 - INFO - 127.0.0.1 - - [25/Mar/2025 11:02:49] "GET /dashboard HTTP/1.1" 200 -
+2025-03-25 11:02:50,184 - INFO - 127.0.0.1 - - [25/Mar/2025 11:02:50] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-25 11:02:50,233 - INFO - 127.0.0.1 - - [25/Mar/2025 11:02:50] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-25 11:02:50,241 - INFO - 127.0.0.1 - - [25/Mar/2025 11:02:50] "[36mGET /static/js/visualization.js HTTP/1.1[0m" 304 -
+2025-03-25 11:02:50,241 - INFO - 127.0.0.1 - - [25/Mar/2025 11:02:50] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2025-03-26 14:54:12,125 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-26 14:54:12,125 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-26 14:54:12,135 - INFO -  * Restarting with stat
+2025-03-26 14:54:12,409 - WARNING -  * Debugger is active!
+2025-03-26 14:54:12,425 - INFO -  * Debugger PIN: 123-794-879
+2025-03-26 14:54:41,537 - INFO - 127.0.0.1 - - [26/Mar/2025 14:54:41] "GET / HTTP/1.1" 200 -
+2025-03-26 14:54:41,837 - INFO - 127.0.0.1 - - [26/Mar/2025 14:54:41] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-26 14:54:43,112 - INFO - 127.0.0.1 - - [26/Mar/2025 14:54:43] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-26 14:55:06,304 - INFO - 127.0.0.1 - - [26/Mar/2025 14:55:06] "GET /dashboard HTTP/1.1" 200 -
+2025-03-26 14:55:06,339 - INFO - 127.0.0.1 - - [26/Mar/2025 14:55:06] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-26 14:55:06,552 - INFO - 127.0.0.1 - - [26/Mar/2025 14:55:06] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2025-03-26 14:55:06,656 - INFO - 127.0.0.1 - - [26/Mar/2025 14:55:06] "[36mGET /static/js/visualization.js HTTP/1.1[0m" 304 -
+2025-03-26 14:55:06,657 - INFO - 127.0.0.1 - - [26/Mar/2025 14:55:06] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-26 14:55:34,173 - INFO - 127.0.0.1 - - [26/Mar/2025 14:55:34] "GET /dashboard HTTP/1.1" 200 -
+2025-03-26 14:55:34,468 - INFO - 127.0.0.1 - - [26/Mar/2025 14:55:34] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-26 14:55:34,527 - INFO - 127.0.0.1 - - [26/Mar/2025 14:55:34] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-26 14:55:34,532 - INFO - 127.0.0.1 - - [26/Mar/2025 14:55:34] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2025-03-26 14:55:34,533 - INFO - 127.0.0.1 - - [26/Mar/2025 14:55:34] "[36mGET /static/js/visualization.js HTTP/1.1[0m" 304 -
+2025-03-26 14:55:41,485 - DEBUG - Memory Manager initialized with paging, size: 1024, page size: 64, algorithm: FIFO
+2025-03-26 14:55:41,486 - INFO - Simulation started with: technique=paging, memory_size=1024, page_size=64, algorithm=FIFO
+2025-03-26 14:55:41,487 - INFO - 127.0.0.1 - - [26/Mar/2025 14:55:41] "POST /api/start_simulation HTTP/1.1" 200 -
+2025-03-26 14:55:50,782 - DEBUG - Memory Manager initialized with paging, size: 1024, page size: 64, algorithm: LRU
+2025-03-26 14:55:50,783 - INFO - Simulation started with: technique=paging, memory_size=1024, page_size=64, algorithm=LRU
+2025-03-26 14:55:50,783 - INFO - 127.0.0.1 - - [26/Mar/2025 14:55:50] "POST /api/start_simulation HTTP/1.1" 200 -
+2025-03-26 14:55:53,717 - DEBUG - Allocated 64 bytes (1 pages) for process 1 in frames [0]
+2025-03-26 14:55:53,717 - DEBUG - Successfully allocated 64 bytes
+2025-03-26 14:55:53,717 - INFO - 127.0.0.1 - - [26/Mar/2025 14:55:53] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 16:47:04,636 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-26 16:47:04,636 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-26 16:47:04,637 - INFO -  * Restarting with stat
+2025-03-26 16:47:04,875 - WARNING -  * Debugger is active!
+2025-03-26 16:47:04,877 - INFO -  * Debugger PIN: 123-794-879
+2025-03-26 16:47:22,550 - INFO - 127.0.0.1 - - [26/Mar/2025 16:47:22] "GET / HTTP/1.1" 200 -
+2025-03-26 16:47:22,778 - INFO - 127.0.0.1 - - [26/Mar/2025 16:47:22] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-26 16:47:24,105 - INFO - 127.0.0.1 - - [26/Mar/2025 16:47:24] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-26 16:47:28,781 - INFO - 127.0.0.1 - - [26/Mar/2025 16:47:28] "GET /dashboard HTTP/1.1" 200 -
+2025-03-26 16:47:29,008 - INFO - 127.0.0.1 - - [26/Mar/2025 16:47:29] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-26 16:47:29,073 - INFO - 127.0.0.1 - - [26/Mar/2025 16:47:29] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2025-03-26 16:47:29,149 - INFO - 127.0.0.1 - - [26/Mar/2025 16:47:29] "[36mGET /static/js/visualization.js HTTP/1.1[0m" 304 -
+2025-03-26 16:47:29,154 - INFO - 127.0.0.1 - - [26/Mar/2025 16:47:29] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-26 16:47:46,578 - DEBUG - Memory Manager initialized with segmentation, size: 2048, page size: 64, algorithm: LRU
+2025-03-26 16:47:46,579 - INFO - Simulation started with: technique=segmentation, memory_size=2048, page_size=64, algorithm=LRU
+2025-03-26 16:47:46,580 - INFO - 127.0.0.1 - - [26/Mar/2025 16:47:46] "POST /api/start_simulation HTTP/1.1" 200 -
+2025-03-26 16:47:55,685 - DEBUG - Allocated 1024 bytes (16 pages) for process 1 in frames [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+2025-03-26 16:47:55,686 - DEBUG - Successfully allocated 1024 bytes
+2025-03-26 16:47:55,688 - INFO - 127.0.0.1 - - [26/Mar/2025 16:47:55] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 16:48:11,950 - DEBUG - Allocated 64 bytes (1 pages) for process 2 in frames [16]
+2025-03-26 16:48:11,952 - DEBUG - Successfully allocated 64 bytes
+2025-03-26 16:48:11,953 - INFO - 127.0.0.1 - - [26/Mar/2025 16:48:11] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:36:43,498 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-26 21:36:43,498 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-26 21:36:43,504 - INFO -  * Restarting with stat
+2025-03-26 21:36:43,898 - WARNING -  * Debugger is active!
+2025-03-26 21:36:43,898 - INFO -  * Debugger PIN: 123-794-879
+2025-03-26 21:37:08,435 - INFO - 127.0.0.1 - - [26/Mar/2025 21:37:08] "GET / HTTP/1.1" 200 -
+2025-03-26 21:37:08,687 - INFO - 127.0.0.1 - - [26/Mar/2025 21:37:08] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-26 21:37:08,893 - INFO - 127.0.0.1 - - [26/Mar/2025 21:37:08] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-26 21:37:14,900 - INFO - 127.0.0.1 - - [26/Mar/2025 21:37:14] "GET /dashboard HTTP/1.1" 200 -
+2025-03-26 21:37:15,005 - INFO - 127.0.0.1 - - [26/Mar/2025 21:37:15] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-26 21:37:15,416 - INFO - 127.0.0.1 - - [26/Mar/2025 21:37:15] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2025-03-26 21:37:15,460 - INFO - 127.0.0.1 - - [26/Mar/2025 21:37:15] "[36mGET /static/js/visualization.js HTTP/1.1[0m" 304 -
+2025-03-26 21:37:15,477 - INFO - 127.0.0.1 - - [26/Mar/2025 21:37:15] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-26 21:37:23,443 - DEBUG - Memory Manager initialized with segmentation, size: 1024, page size: 64, algorithm: FIFO
+2025-03-26 21:37:23,443 - INFO - Simulation started with: technique=segmentation, memory_size=1024, page_size=64, algorithm=FIFO
+2025-03-26 21:37:23,443 - INFO - 127.0.0.1 - - [26/Mar/2025 21:37:23] "POST /api/start_simulation HTTP/1.1" 200 -
+2025-03-26 21:37:25,749 - DEBUG - Allocated 64 bytes (1 pages) for process 1 in frames [0]
+2025-03-26 21:37:25,749 - DEBUG - Successfully allocated 64 bytes
+2025-03-26 21:37:25,751 - INFO - 127.0.0.1 - - [26/Mar/2025 21:37:25] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:37:44,163 - WARNING - No allocated memory at address 128, using frame 0 instead
+2025-03-26 21:37:44,164 - DEBUG - Deallocated memory for process 1 from frames [0]
+2025-03-26 21:37:44,164 - DEBUG - Successfully deallocated memory at address 128
+2025-03-26 21:37:44,165 - INFO - 127.0.0.1 - - [26/Mar/2025 21:37:44] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:38:03,962 - DEBUG - Allocated 64 bytes (1 pages) for process 2 in frames [0]
+2025-03-26 21:38:03,962 - DEBUG - Successfully allocated 64 bytes
+2025-03-26 21:38:03,963 - INFO - 127.0.0.1 - - [26/Mar/2025 21:38:03] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:38:06,619 - DEBUG - Allocated 64 bytes (1 pages) for process 3 in frames [1]
+2025-03-26 21:38:06,619 - DEBUG - Successfully allocated 64 bytes
+2025-03-26 21:38:06,619 - INFO - 127.0.0.1 - - [26/Mar/2025 21:38:06] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:38:07,013 - DEBUG - Allocated 64 bytes (1 pages) for process 4 in frames [2]
+2025-03-26 21:38:07,014 - DEBUG - Successfully allocated 64 bytes
+2025-03-26 21:38:07,014 - INFO - 127.0.0.1 - - [26/Mar/2025 21:38:07] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:38:08,038 - DEBUG - Allocated 64 bytes (1 pages) for process 5 in frames [3]
+2025-03-26 21:38:08,038 - DEBUG - Successfully allocated 64 bytes
+2025-03-26 21:38:08,038 - INFO - 127.0.0.1 - - [26/Mar/2025 21:38:08] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:38:08,312 - DEBUG - Allocated 64 bytes (1 pages) for process 6 in frames [4]
+2025-03-26 21:38:08,312 - DEBUG - Successfully allocated 64 bytes
+2025-03-26 21:38:08,312 - INFO - 127.0.0.1 - - [26/Mar/2025 21:38:08] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:38:08,962 - DEBUG - Allocated 64 bytes (1 pages) for process 7 in frames [5]
+2025-03-26 21:38:08,963 - DEBUG - Successfully allocated 64 bytes
+2025-03-26 21:38:08,965 - INFO - 127.0.0.1 - - [26/Mar/2025 21:38:08] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:38:09,287 - DEBUG - Allocated 64 bytes (1 pages) for process 8 in frames [6]
+2025-03-26 21:38:09,287 - DEBUG - Successfully allocated 64 bytes
+2025-03-26 21:38:09,290 - INFO - 127.0.0.1 - - [26/Mar/2025 21:38:09] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:38:09,994 - DEBUG - Allocated 64 bytes (1 pages) for process 9 in frames [7]
+2025-03-26 21:38:09,994 - DEBUG - Successfully allocated 64 bytes
+2025-03-26 21:38:09,994 - INFO - 127.0.0.1 - - [26/Mar/2025 21:38:09] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:38:24,072 - DEBUG - Deallocated memory for process 2 from frames [0]
+2025-03-26 21:38:24,072 - DEBUG - Successfully deallocated memory at address 32
+2025-03-26 21:38:24,073 - INFO - 127.0.0.1 - - [26/Mar/2025 21:38:24] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:38:32,019 - WARNING - No allocated memory at address 48, using frame 1 instead
+2025-03-26 21:38:32,020 - DEBUG - Deallocated memory for process 3 from frames [1]
+2025-03-26 21:38:32,020 - DEBUG - Successfully deallocated memory at address 48
+2025-03-26 21:38:32,020 - INFO - 127.0.0.1 - - [26/Mar/2025 21:38:32] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:38:56,167 - DEBUG - Page hit on address 128 (frame 2)
+2025-03-26 21:38:56,167 - DEBUG - Successfully accessed memory at address 128
+2025-03-26 21:38:56,169 - INFO - 127.0.0.1 - - [26/Mar/2025 21:38:56] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:39:09,810 - DEBUG - Handled page fault by allocating frame 1 to process 10
+2025-03-26 21:39:09,810 - DEBUG - Page fault on address 64 (frame 1)
+2025-03-26 21:39:09,810 - DEBUG - Successfully accessed memory at address 64
+2025-03-26 21:39:09,810 - INFO - 127.0.0.1 - - [26/Mar/2025 21:39:09] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:39:24,510 - DEBUG - Handled page fault by allocating frame 0 to process 11
+2025-03-26 21:39:24,510 - DEBUG - Page fault on address 32 (frame 0)
+2025-03-26 21:39:24,510 - DEBUG - Successfully accessed memory at address 32
+2025-03-26 21:39:24,511 - INFO - 127.0.0.1 - - [26/Mar/2025 21:39:24] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:39:39,074 - DEBUG - Page hit on address 10 (frame 0)
+2025-03-26 21:39:39,074 - DEBUG - Successfully accessed memory at address 10
+2025-03-26 21:39:39,075 - INFO - 127.0.0.1 - - [26/Mar/2025 21:39:39] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:39:48,550 - DEBUG - Page hit on address 11 (frame 0)
+2025-03-26 21:39:48,550 - DEBUG - Successfully accessed memory at address 11
+2025-03-26 21:39:48,550 - INFO - 127.0.0.1 - - [26/Mar/2025 21:39:48] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:39:56,368 - DEBUG - Page hit on address 15 (frame 0)
+2025-03-26 21:39:56,368 - DEBUG - Successfully accessed memory at address 15
+2025-03-26 21:39:56,371 - INFO - 127.0.0.1 - - [26/Mar/2025 21:39:56] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:40:01,562 - DEBUG - Page hit on address 50 (frame 0)
+2025-03-26 21:40:01,562 - DEBUG - Successfully accessed memory at address 50
+2025-03-26 21:40:01,563 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:01] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:40:06,238 - DEBUG - Page hit on address 80 (frame 1)
+2025-03-26 21:40:06,240 - DEBUG - Successfully accessed memory at address 80
+2025-03-26 21:40:06,240 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:06] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:40:08,459 - DEBUG - Page hit on address 80 (frame 1)
+2025-03-26 21:40:08,459 - DEBUG - Successfully accessed memory at address 80
+2025-03-26 21:40:08,460 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:08] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:40:09,569 - DEBUG - Page hit on address 80 (frame 1)
+2025-03-26 21:40:09,569 - DEBUG - Successfully accessed memory at address 80
+2025-03-26 21:40:09,569 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:09] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:40:09,867 - DEBUG - Page hit on address 80 (frame 1)
+2025-03-26 21:40:09,867 - DEBUG - Successfully accessed memory at address 80
+2025-03-26 21:40:09,867 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:09] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:40:10,100 - DEBUG - Page hit on address 80 (frame 1)
+2025-03-26 21:40:10,101 - DEBUG - Successfully accessed memory at address 80
+2025-03-26 21:40:10,101 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:10] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:40:10,266 - DEBUG - Page hit on address 80 (frame 1)
+2025-03-26 21:40:10,266 - DEBUG - Successfully accessed memory at address 80
+2025-03-26 21:40:10,266 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:10] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:40:10,450 - DEBUG - Page hit on address 80 (frame 1)
+2025-03-26 21:40:10,450 - DEBUG - Successfully accessed memory at address 80
+2025-03-26 21:40:10,450 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:10] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:40:10,628 - DEBUG - Page hit on address 80 (frame 1)
+2025-03-26 21:40:10,628 - DEBUG - Successfully accessed memory at address 80
+2025-03-26 21:40:10,628 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:10] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:40:10,811 - DEBUG - Page hit on address 80 (frame 1)
+2025-03-26 21:40:10,811 - DEBUG - Successfully accessed memory at address 80
+2025-03-26 21:40:10,816 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:10] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:40:10,966 - DEBUG - Page hit on address 80 (frame 1)
+2025-03-26 21:40:10,966 - DEBUG - Successfully accessed memory at address 80
+2025-03-26 21:40:10,966 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:10] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:40:11,252 - DEBUG - Page hit on address 80 (frame 1)
+2025-03-26 21:40:11,252 - DEBUG - Successfully accessed memory at address 80
+2025-03-26 21:40:11,252 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:11] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:40:11,425 - DEBUG - Page hit on address 80 (frame 1)
+2025-03-26 21:40:11,425 - DEBUG - Successfully accessed memory at address 80
+2025-03-26 21:40:11,425 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:11] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:40:11,594 - DEBUG - Page hit on address 80 (frame 1)
+2025-03-26 21:40:11,594 - DEBUG - Successfully accessed memory at address 80
+2025-03-26 21:40:11,595 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:11] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:40:12,061 - DEBUG - Page hit on address 80 (frame 1)
+2025-03-26 21:40:12,061 - DEBUG - Successfully accessed memory at address 80
+2025-03-26 21:40:12,066 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:12] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:40:12,316 - DEBUG - Page hit on address 80 (frame 1)
+2025-03-26 21:40:12,316 - DEBUG - Successfully accessed memory at address 80
+2025-03-26 21:40:12,316 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:12] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:40:12,524 - DEBUG - Page hit on address 80 (frame 1)
+2025-03-26 21:40:12,524 - DEBUG - Successfully accessed memory at address 80
+2025-03-26 21:40:12,524 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:12] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:40:12,998 - DEBUG - Page hit on address 80 (frame 1)
+2025-03-26 21:40:12,998 - DEBUG - Successfully accessed memory at address 80
+2025-03-26 21:40:12,998 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:12] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:40:13,267 - DEBUG - Page hit on address 80 (frame 1)
+2025-03-26 21:40:13,267 - DEBUG - Successfully accessed memory at address 80
+2025-03-26 21:40:13,268 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:13] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:40:13,388 - DEBUG - Page hit on address 80 (frame 1)
+2025-03-26 21:40:13,388 - DEBUG - Successfully accessed memory at address 80
+2025-03-26 21:40:13,388 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:13] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:40:13,883 - DEBUG - Page hit on address 80 (frame 1)
+2025-03-26 21:40:13,883 - DEBUG - Successfully accessed memory at address 80
+2025-03-26 21:40:13,883 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:13] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:40:14,141 - DEBUG - Page hit on address 80 (frame 1)
+2025-03-26 21:40:14,141 - DEBUG - Successfully accessed memory at address 80
+2025-03-26 21:40:14,141 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:14] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:40:14,359 - DEBUG - Page hit on address 80 (frame 1)
+2025-03-26 21:40:14,359 - DEBUG - Successfully accessed memory at address 80
+2025-03-26 21:40:14,360 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:14] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:40:15,182 - DEBUG - Page hit on address 80 (frame 1)
+2025-03-26 21:40:15,183 - DEBUG - Successfully accessed memory at address 80
+2025-03-26 21:40:15,184 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:15] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:40:15,647 - DEBUG - Page hit on address 80 (frame 1)
+2025-03-26 21:40:15,647 - DEBUG - Successfully accessed memory at address 80
+2025-03-26 21:40:15,648 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:15] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:40:16,581 - DEBUG - Page hit on address 80 (frame 1)
+2025-03-26 21:40:16,581 - DEBUG - Successfully accessed memory at address 80
+2025-03-26 21:40:16,585 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:16] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:40:16,781 - DEBUG - Page hit on address 80 (frame 1)
+2025-03-26 21:40:16,781 - DEBUG - Successfully accessed memory at address 80
+2025-03-26 21:40:16,781 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:16] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:40:17,032 - DEBUG - Page hit on address 80 (frame 1)
+2025-03-26 21:40:17,032 - DEBUG - Successfully accessed memory at address 80
+2025-03-26 21:40:17,032 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:17] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:40:17,249 - DEBUG - Page hit on address 80 (frame 1)
+2025-03-26 21:40:17,249 - DEBUG - Successfully accessed memory at address 80
+2025-03-26 21:40:17,249 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:17] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:40:17,414 - DEBUG - Page hit on address 80 (frame 1)
+2025-03-26 21:40:17,414 - DEBUG - Successfully accessed memory at address 80
+2025-03-26 21:40:17,414 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:17] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:40:17,610 - DEBUG - Page hit on address 80 (frame 1)
+2025-03-26 21:40:17,610 - DEBUG - Successfully accessed memory at address 80
+2025-03-26 21:40:17,610 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:17] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:40:17,790 - DEBUG - Page hit on address 80 (frame 1)
+2025-03-26 21:40:17,790 - DEBUG - Successfully accessed memory at address 80
+2025-03-26 21:40:17,790 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:17] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:40:17,964 - DEBUG - Page hit on address 80 (frame 1)
+2025-03-26 21:40:17,964 - DEBUG - Successfully accessed memory at address 80
+2025-03-26 21:40:17,964 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:17] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:40:18,181 - DEBUG - Page hit on address 80 (frame 1)
+2025-03-26 21:40:18,181 - DEBUG - Successfully accessed memory at address 80
+2025-03-26 21:40:18,181 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:18] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:40:18,338 - DEBUG - Page hit on address 80 (frame 1)
+2025-03-26 21:40:18,338 - DEBUG - Successfully accessed memory at address 80
+2025-03-26 21:40:18,338 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:18] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:40:18,530 - DEBUG - Page hit on address 80 (frame 1)
+2025-03-26 21:40:18,530 - DEBUG - Successfully accessed memory at address 80
+2025-03-26 21:40:18,530 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:18] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:40:18,878 - DEBUG - Page hit on address 80 (frame 1)
+2025-03-26 21:40:18,878 - DEBUG - Successfully accessed memory at address 80
+2025-03-26 21:40:18,879 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:18] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:40:19,226 - DEBUG - Page hit on address 80 (frame 1)
+2025-03-26 21:40:19,226 - DEBUG - Successfully accessed memory at address 80
+2025-03-26 21:40:19,226 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:19] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:40:19,464 - DEBUG - Page hit on address 80 (frame 1)
+2025-03-26 21:40:19,464 - DEBUG - Successfully accessed memory at address 80
+2025-03-26 21:40:19,464 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:19] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:40:19,559 - DEBUG - Page hit on address 80 (frame 1)
+2025-03-26 21:40:19,559 - DEBUG - Successfully accessed memory at address 80
+2025-03-26 21:40:19,559 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:19] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:40:19,846 - DEBUG - Page hit on address 80 (frame 1)
+2025-03-26 21:40:19,846 - DEBUG - Successfully accessed memory at address 80
+2025-03-26 21:40:19,846 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:19] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:40:20,909 - DEBUG - Page hit on address 80 (frame 1)
+2025-03-26 21:40:20,909 - DEBUG - Successfully accessed memory at address 80
+2025-03-26 21:40:20,909 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:20] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:40:21,455 - DEBUG - Page hit on address 80 (frame 1)
+2025-03-26 21:40:21,455 - DEBUG - Successfully accessed memory at address 80
+2025-03-26 21:40:21,455 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:21] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:40:21,796 - DEBUG - Page hit on address 80 (frame 1)
+2025-03-26 21:40:21,796 - DEBUG - Successfully accessed memory at address 80
+2025-03-26 21:40:21,796 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:21] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:40:21,921 - DEBUG - Page hit on address 80 (frame 1)
+2025-03-26 21:40:21,921 - DEBUG - Successfully accessed memory at address 80
+2025-03-26 21:40:21,922 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:21] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:40:22,426 - DEBUG - Page hit on address 80 (frame 1)
+2025-03-26 21:40:22,427 - DEBUG - Successfully accessed memory at address 80
+2025-03-26 21:40:22,428 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:22] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:40:22,677 - DEBUG - Page hit on address 80 (frame 1)
+2025-03-26 21:40:22,723 - DEBUG - Successfully accessed memory at address 80
+2025-03-26 21:40:22,723 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:22] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:40:22,862 - DEBUG - Page hit on address 80 (frame 1)
+2025-03-26 21:40:22,862 - DEBUG - Successfully accessed memory at address 80
+2025-03-26 21:40:22,862 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:22] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:40:23,343 - DEBUG - Page hit on address 80 (frame 1)
+2025-03-26 21:40:23,343 - DEBUG - Successfully accessed memory at address 80
+2025-03-26 21:40:23,346 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:23] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:40:23,614 - DEBUG - Page hit on address 80 (frame 1)
+2025-03-26 21:40:23,614 - DEBUG - Successfully accessed memory at address 80
+2025-03-26 21:40:23,615 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:23] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:40:29,960 - DEBUG - Page hit on address 120 (frame 1)
+2025-03-26 21:40:29,960 - DEBUG - Successfully accessed memory at address 120
+2025-03-26 21:40:29,960 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:29] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-26 21:40:36,558 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:36] "GET /dashboard HTTP/1.1" 200 -
+2025-03-26 21:40:36,778 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:36] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-26 21:40:36,825 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:36] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2025-03-26 21:40:36,908 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:36] "[36mGET /static/js/visualization.js HTTP/1.1[0m" 304 -
+2025-03-26 21:40:36,913 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:36] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -

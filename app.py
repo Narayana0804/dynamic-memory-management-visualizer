@@ -5,15 +5,17 @@ from memory_manager import MemoryManager
 from tutorial_manager import TutorialManager
 
 # Configure logging
-logging.basicConfig(level=logging.DEBUG)
+logging.basicConfig(filename="app.log", level=logging.DEBUG, format="%(asctime)s - %(levelname)s - %(message)s")
 
 # Create Flask app
-app = Flask(__name__)
+app = Flask(__name__, static_folder="static", template_folder="templates")
 app.secret_key = os.environ.get("SESSION_SECRET", "memory-visualizer-secret")
 
 # Global instances
 memory_manager = None
 tutorial_manager = TutorialManager()
+if __name__ == "__main__":
+    app.run(debug=True, host="127.0.0.1", port=5000)
 
 @app.route('/')
 def index():
@@ -509,3 +511,5 @@ def get_current_tutorial_step():
             'status': 'error',
             'message': f'Failed to get tutorial step: {str(e)}'
         }), 500
+if __name__ == "__main__":
+    app.run(debug=True, host="127.0.0.1", port=5000)

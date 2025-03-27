@@ -1,3 +1,4 @@
+import logging
 """
 Tutorial manager for the Memory Management Visualizer
 Provides step-by-step guidance for memory optimization concepts
@@ -258,6 +259,7 @@ class TutorialManager:
         
         self.current_tutorial = tutorial_id
         self.current_step = 0
+        logging.info(f"Started tutorial: {tutorial_id}")
         
         return self.get_current_step()
     
@@ -317,6 +319,7 @@ class TutorialManager:
         Returns:
             dict: Current step information
         """
+
         if not self.current_tutorial:
             return {
                 'error': True,
@@ -415,6 +418,7 @@ class TutorialManager:
         tutorial_id = self.current_tutorial
         self.current_tutorial = None
         self.current_step = 0
+        logging.info(f"Ended tutorial: {tutorial_id}")
         
         return {
             'error': False,

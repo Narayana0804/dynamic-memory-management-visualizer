@@ -42,7 +42,15 @@ class MemoryManager:
         # Next process/page ID (incremental)
         self.next_id = 1
         
+        
+        logging.basicConfig(
+        filename="memory_manager.log",
+        level=logging.DEBUG,
+        format="%(asctime)s - %(levelname)s - %(message)s"
+        )
         logging.debug(f"Memory Manager initialized with {technique}, size: {memory_size}, page size: {page_size}, algorithm: {algorithm}")
+
+
     
     def allocate_memory(self, size):
         """
