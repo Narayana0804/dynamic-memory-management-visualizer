@@ -97,6 +97,12 @@ def reset_simulation():
     return jsonify({'status': 'success', 'message': 'Simulation reset successfully'})
 
 # Add any additional endpoints, e.g. for tutorials, as needed
+@app.route('/tutorials')
+def tutorials_page():
+    # If your TutorialManager has a method to fetch tutorials, use it.
+    tutorials = tutorial_manager.get_all() if hasattr(tutorial_manager, "get_all") else []
+    return render_template('tutorials.html', tutorials=tutorials)
+
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
