@@ -1,5 +1,7 @@
 import os
 import logging
+import webbrowser
+import threading
 from flask import Flask, render_template, request, jsonify
 from memory_manager import MemoryManager
 from tutorial_manager import TutorialManager
@@ -14,8 +16,8 @@ app.secret_key = os.environ.get("SESSION_SECRET", "memory-visualizer-secret")
 # Global instances
 memory_manager = None
 tutorial_manager = TutorialManager()
-if __name__ == "__main__":
-    app.run(debug=True, host="127.0.0.1", port=5000)
+# if __name__ == "__main__":
+#     app.run(debug=True, host="127.0.0.1", port=5000)
 
 @app.route('/')
 def index():
@@ -512,4 +514,16 @@ def get_current_tutorial_step():
             'message': f'Failed to get tutorial step: {str(e)}'
         }), 500
 if __name__ == "__main__":
-    app.run(debug=True, host="127.0.0.1", port=5000)
+    port = int(os.environ.get("PORT", 5000))
+    url = f"http://127.0.0.1:{port}/"
+
+    # When debug=True, the reloader spawns two processes.
+    # WERKZEUG_RUN_MAIN is set to "true" in the *reloader child* process.
+    should_open = os.environ.get("WERKZEUG_RUN_MAIN") == "true" or not app.debug
+
+    if should_open:
+        # open browser shortly after server starts (non-blocking)
+        threading.Timer(1.0, lambda: webbrowser.open(url)).start()
+
+    # Keep debug=True for autoreload and nicer tracebacks while developing
+    app.run(debug=True, host="127.0.0.1", port=port)

@@ -433,3 +433,1478 @@
 2025-03-26 21:40:36,825 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:36] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
 2025-03-26 21:40:36,908 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:36] "[36mGET /static/js/visualization.js HTTP/1.1[0m" 304 -
 2025-03-26 21:40:36,913 - INFO - 127.0.0.1 - - [26/Mar/2025 21:40:36] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-27 18:45:23,709 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-27 18:45:23,709 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-27 18:45:23,709 - INFO -  * Restarting with stat
+2025-03-27 18:45:23,963 - WARNING -  * Debugger is active!
+2025-03-27 18:45:23,978 - INFO -  * Debugger PIN: 123-794-879
+2025-03-27 18:46:40,725 - INFO - 127.0.0.1 - - [27/Mar/2025 18:46:40] "GET / HTTP/1.1" 200 -
+2025-03-27 18:46:40,869 - INFO - 127.0.0.1 - - [27/Mar/2025 18:46:40] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-03-27 18:46:43,950 - INFO - 127.0.0.1 - - [27/Mar/2025 18:46:43] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-27 18:46:47,083 - INFO - 127.0.0.1 - - [27/Mar/2025 18:46:47] "GET /dashboard HTTP/1.1" 200 -
+2025-03-27 18:46:47,305 - INFO - 127.0.0.1 - - [27/Mar/2025 18:46:47] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-27 18:46:47,474 - INFO - 127.0.0.1 - - [27/Mar/2025 18:46:47] "GET /static/js/charts.js HTTP/1.1" 200 -
+2025-03-27 18:46:47,480 - INFO - 127.0.0.1 - - [27/Mar/2025 18:46:47] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-03-27 18:46:47,562 - INFO - 127.0.0.1 - - [27/Mar/2025 18:46:47] "GET /static/js/visualization.js HTTP/1.1" 200 -
+2025-03-27 18:46:49,515 - DEBUG - Memory Manager initialized with paging, size: 1024, page size: 64, algorithm: FIFO
+2025-03-27 18:46:49,515 - INFO - Simulation started with: technique=paging, memory_size=1024, page_size=64, algorithm=FIFO
+2025-03-27 18:46:49,515 - INFO - 127.0.0.1 - - [27/Mar/2025 18:46:49] "POST /api/start_simulation HTTP/1.1" 200 -
+2025-03-27 18:46:52,455 - DEBUG - Memory Manager initialized with paging, size: 1024, page size: 64, algorithm: FIFO
+2025-03-27 18:46:52,455 - INFO - Simulation started with: technique=paging, memory_size=1024, page_size=64, algorithm=FIFO
+2025-03-27 18:46:52,456 - INFO - 127.0.0.1 - - [27/Mar/2025 18:46:52] "POST /api/start_simulation HTTP/1.1" 200 -
+2025-03-27 18:46:54,071 - DEBUG - Allocated 64 bytes (1 pages) for process 1 in frames [0]
+2025-03-27 18:46:54,071 - DEBUG - Successfully allocated 64 bytes
+2025-03-27 18:46:54,071 - INFO - 127.0.0.1 - - [27/Mar/2025 18:46:54] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-27 18:48:21,837 - INFO - 127.0.0.1 - - [27/Mar/2025 18:48:21] "GET / HTTP/1.1" 200 -
+2025-03-27 18:48:21,851 - INFO - 127.0.0.1 - - [27/Mar/2025 18:48:21] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-27 18:48:22,092 - INFO - 127.0.0.1 - - [27/Mar/2025 18:48:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-27 18:48:23,909 - INFO - 127.0.0.1 - - [27/Mar/2025 18:48:23] "GET /tutorials HTTP/1.1" 200 -
+2025-03-27 18:48:24,142 - INFO - 127.0.0.1 - - [27/Mar/2025 18:48:24] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-27 18:48:24,245 - INFO - 127.0.0.1 - - [27/Mar/2025 18:48:24] "[36mGET /static/js/visualization.js HTTP/1.1[0m" 304 -
+2025-03-27 18:48:24,250 - INFO - 127.0.0.1 - - [27/Mar/2025 18:48:24] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2025-03-27 18:48:24,261 - INFO - 127.0.0.1 - - [27/Mar/2025 18:48:24] "GET /api/tutorials HTTP/1.1" 200 -
+2025-03-27 18:48:30,438 - INFO - 127.0.0.1 - - [27/Mar/2025 18:48:30] "GET / HTTP/1.1" 200 -
+2025-03-27 18:48:30,773 - INFO - 127.0.0.1 - - [27/Mar/2025 18:48:30] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-27 18:48:33,718 - INFO - 127.0.0.1 - - [27/Mar/2025 18:48:33] "GET / HTTP/1.1" 200 -
+2025-03-27 18:48:34,025 - INFO - 127.0.0.1 - - [27/Mar/2025 18:48:34] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-27 18:48:35,484 - INFO - 127.0.0.1 - - [27/Mar/2025 18:48:35] "GET /dashboard HTTP/1.1" 200 -
+2025-03-27 18:48:35,702 - INFO - 127.0.0.1 - - [27/Mar/2025 18:48:35] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-27 18:48:35,703 - INFO - 127.0.0.1 - - [27/Mar/2025 18:48:35] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2025-03-27 18:48:35,851 - INFO - 127.0.0.1 - - [27/Mar/2025 18:48:35] "[36mGET /static/js/visualization.js HTTP/1.1[0m" 304 -
+2025-03-27 18:48:35,851 - INFO - 127.0.0.1 - - [27/Mar/2025 18:48:35] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-28 11:36:11,760 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-28 11:36:11,760 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-28 11:36:11,808 - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-28 11:36:12,061 - WARNING -  * Debugger is active!
+2025-03-28 11:36:12,150 - INFO -  * Debugger PIN: 454-356-781
+2025-03-28 11:36:23,051 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\argparse.py', reloading
+2025-03-28 11:36:23,210 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\hex_codec.py', reloading
+2025-03-28 11:36:23,433 - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-28 11:36:23,812 - WARNING -  * Debugger is active!
+2025-03-28 11:36:23,812 - INFO -  * Debugger PIN: 454-356-781
+2025-03-28 11:36:24,782 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\codecs.py', reloading
+2025-03-28 11:36:24,787 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\io.py', reloading
+2025-03-28 11:36:24,787 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\abc.py', reloading
+2025-03-28 11:36:24,791 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\site.py', reloading
+2025-03-28 11:36:24,794 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\os.py', reloading
+2025-03-28 11:36:24,796 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\stat.py', reloading
+2025-03-28 11:36:24,798 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\_collections_abc.py', reloading
+2025-03-28 11:36:24,798 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\ntpath.py', reloading
+2025-03-28 11:36:24,804 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\genericpath.py', reloading
+2025-03-28 11:36:24,807 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\_sitebuiltins.py', reloading
+2025-03-28 11:36:24,814 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\runpy.py', reloading
+2025-03-28 11:36:24,818 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\importlib\\machinery.py', reloading
+2025-03-28 11:36:24,822 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\importlib\\util.py', reloading
+2025-03-28 11:36:24,879 - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-28 11:36:25,235 - WARNING -  * Debugger is active!
+2025-03-28 11:36:25,239 - INFO -  * Debugger PIN: 454-356-781
+2025-03-28 11:36:43,460 - INFO -  * Detected change in 'C:\\Users\\laksh\\onedrive\\desktop\\MemoryMaster\\tutorial_manager.py', reloading
+2025-03-28 11:36:43,628 - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-28 11:36:44,301 - WARNING -  * Debugger is active!
+2025-03-28 11:36:44,309 - INFO -  * Debugger PIN: 454-356-781
+2025-03-28 11:36:49,580 - INFO -  * Detected change in 'C:\\Users\\laksh\\onedrive\\desktop\\MemoryMaster\\app.py', reloading
+2025-03-28 11:36:49,613 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\flask\\__init__.py', reloading
+2025-03-28 11:36:49,630 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\flask\\app.py', reloading
+2025-03-28 11:36:49,702 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\flask\\sansio\\app.py', reloading
+2025-03-28 11:36:49,715 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\flask\\sansio\\scaffold.py', reloading
+2025-03-28 11:36:49,925 - INFO -  * Detected change in 'C:\\Users\\laksh\\onedrive\\desktop\\MemoryMaster\\memory_manager.py', reloading
+2025-03-28 11:36:49,984 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\concurrent\\__init__.py', reloading
+2025-03-28 11:36:50,451 - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-28 11:36:50,834 - WARNING -  * Debugger is active!
+2025-03-28 11:36:50,834 - INFO -  * Debugger PIN: 454-356-781
+2025-03-28 11:36:50,958 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\altair\\__init__.py', reloading
+2025-03-28 11:36:51,110 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\altair\\vegalite\\__init__.py', reloading
+2025-03-28 11:36:51,165 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\altair\\vegalite\\v5\\__init__.py', reloading
+2025-03-28 11:36:51,179 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\altair\\vegalite\\v5\\api.py', reloading
+2025-03-28 11:36:51,257 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\altair\\vegalite\\v5\\schema\\__init__.py', reloading
+2025-03-28 11:36:51,257 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\altair\\vegalite\\v5\\schema\\channels.py', reloading
+2025-03-28 11:36:51,319 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\altair\\vegalite\\v5\\schema\\_typing.py', reloading
+2025-03-28 11:36:51,348 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\altair\\vegalite\\v5\\schema\\core.py', reloading
+2025-03-28 11:36:51,395 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\altair\\vegalite\\v5\\display.py', reloading
+2025-03-28 11:36:51,395 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\altair\\utils\\data.py', reloading
+2025-03-28 11:36:51,428 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\altair\\vegalite\\v5\\data.py', reloading
+2025-03-28 11:36:51,428 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\altair\\vegalite\\data.py', reloading
+2025-03-28 11:36:51,437 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\altair\\utils\\schemapi.py', reloading
+2025-03-28 11:36:51,442 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\altair\\expr\\core.py', reloading
+2025-03-28 11:36:51,458 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\altair\\vegalite\\v5\\compiler.py', reloading
+2025-03-28 11:36:51,458 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\altair\\jupyter\\__init__.py', reloading
+2025-03-28 11:36:51,458 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\altair\\jupyter\\jupyter_chart.py', reloading
+2025-03-28 11:36:51,458 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\altair\\expr\\__init__.py', reloading
+2025-03-28 11:36:51,474 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\altair\\utils\\__init__.py', reloading
+2025-03-28 11:36:51,474 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\altair\\utils\\deprecation.py', reloading
+2025-03-28 11:36:51,474 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\altair\\utils\\core.py', reloading
+2025-03-28 11:36:51,506 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\contourpy\\__init__.py', reloading
+2025-03-28 11:36:51,521 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\contourpy\\_version.py', reloading
+2025-03-28 11:36:51,521 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\contourpy\\convert.py', reloading
+2025-03-28 11:36:51,538 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\contourpy\\dechunk.py', reloading
+2025-03-28 11:36:51,538 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\cycler\\__init__.py', reloading
+2025-03-28 11:36:51,548 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\fontTools\\__init__.py', reloading
+2025-03-28 11:36:51,553 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\fontTools\\misc\\loggingTools.py', reloading
+2025-03-28 11:36:51,553 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\git\\__init__.py', reloading
+2025-03-28 11:36:51,569 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\gitdb\\util.py', reloading
+2025-03-28 11:36:51,587 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\git\\exc.py', reloading
+2025-03-28 11:36:51,587 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\gitdb\\exc.py', reloading
+2025-03-28 11:36:51,587 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\git\\types.py', reloading
+2025-03-28 11:36:51,595 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\git\\compat.py', reloading
+2025-03-28 11:36:51,600 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\git\\config.py', reloading
+2025-03-28 11:36:51,600 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\git\\objects\\__init__.py', reloading
+2025-03-28 11:36:51,606 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\git\\objects\\blob.py', reloading
+2025-03-28 11:36:51,610 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\git\\objects\\commit.py', reloading
+2025-03-28 11:36:51,616 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\git\\objects\\base.py', reloading
+2025-03-28 11:36:51,619 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\git\\objects\\submodule\\__init__.py', reloading
+2025-03-28 11:36:51,619 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\git\\objects\\submodule\\root.py', reloading
+2025-03-28 11:36:51,624 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\git\\objects\\submodule\\base.py', reloading
+2025-03-28 11:36:51,632 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\git\\objects\\tag.py', reloading
+2025-03-28 11:36:51,637 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\git\\objects\\tree.py', reloading
+2025-03-28 11:36:51,646 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\git\\refs\\__init__.py', reloading
+2025-03-28 11:36:51,648 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\git\\refs\\head.py', reloading
+2025-03-28 11:36:51,648 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\git\\refs\\log.py', reloading
+2025-03-28 11:36:51,652 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\git\\refs\\reference.py', reloading
+2025-03-28 11:36:51,652 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\git\\refs\\remote.py', reloading
+2025-03-28 11:36:51,652 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\git\\refs\\symbolic.py', reloading
+2025-03-28 11:36:51,652 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\git\\refs\\tag.py', reloading
+2025-03-28 11:36:51,664 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\git\\diff.py', reloading
+2025-03-28 11:36:51,669 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\git\\db.py', reloading
+2025-03-28 11:36:51,673 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\gitdb\\db\\__init__.py', reloading
+2025-03-28 11:36:51,675 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\gitdb\\db\\base.py', reloading
+2025-03-28 11:36:51,675 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\gitdb\\db\\loose.py', reloading
+2025-03-28 11:36:51,682 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\gitdb\\db\\mem.py', reloading
+2025-03-28 11:36:51,682 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\gitdb\\db\\pack.py', reloading
+2025-03-28 11:36:51,685 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\gitdb\\db\\git.py', reloading
+2025-03-28 11:36:51,687 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\gitdb\\db\\ref.py', reloading
+2025-03-28 11:36:51,690 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\git\\cmd.py', reloading
+2025-03-28 11:36:51,696 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\git\\repo\\__init__.py', reloading
+2025-03-28 11:36:51,696 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\git\\repo\\base.py', reloading
+2025-03-28 11:36:51,696 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\git\\remote.py', reloading
+2025-03-28 11:36:51,711 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\git\\util.py', reloading
+2025-03-28 11:36:51,713 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\git\\index\\__init__.py', reloading
+2025-03-28 11:36:51,720 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\git\\index\\typ.py', reloading
+2025-03-28 11:36:51,722 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\git\\index\\base.py', reloading
+2025-03-28 11:36:51,722 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\gitdb\\__init__.py', reloading
+2025-03-28 11:36:51,727 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\jsonschema_specifications\\__init__.py', reloading
+2025-03-28 11:36:51,730 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\kiwisolver\\__init__.py', reloading
+2025-03-28 11:36:51,734 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\kiwisolver\\exceptions.py', reloading
+2025-03-28 11:36:51,736 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\narwhals\\__init__.py', reloading
+2025-03-28 11:36:51,744 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\narwhals\\dataframe.py', reloading
+2025-03-28 11:36:51,757 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\narwhals\\dtypes.py', reloading
+2025-03-28 11:36:51,762 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\narwhals\\expr.py', reloading
+2025-03-28 11:36:51,768 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\narwhals\\functions.py', reloading
+2025-03-28 11:36:51,781 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\narwhals\\schema.py', reloading
+2025-03-28 11:36:51,785 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\narwhals\\series.py', reloading
+2025-03-28 11:36:51,795 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\narwhals\\translate.py', reloading
+2025-03-28 11:36:51,801 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\narwhals\\utils.py', reloading
+2025-03-28 11:36:51,907 - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-28 11:36:52,509 - WARNING -  * Debugger is active!
+2025-03-28 11:36:52,525 - INFO -  * Debugger PIN: 454-356-781
+2025-03-28 11:36:53,408 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\unicode_escape.py', reloading
+2025-03-28 11:36:53,408 - INFO - 127.0.0.1 - - [28/Mar/2025 11:36:53] "GET / HTTP/1.1" 200 -
+2025-03-28 11:36:53,656 - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-28 11:36:54,012 - WARNING -  * Debugger is active!
+2025-03-28 11:36:54,012 - INFO -  * Debugger PIN: 454-356-781
+2025-03-28 11:36:54,102 - INFO - 127.0.0.1 - - [28/Mar/2025 11:36:54] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-28 11:36:54,451 - INFO - 127.0.0.1 - - [28/Mar/2025 11:36:54] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-28 11:38:56,664 - INFO - 127.0.0.1 - - [28/Mar/2025 11:38:56] "GET /dashboard HTTP/1.1" 200 -
+2025-03-28 11:38:56,837 - INFO - 127.0.0.1 - - [28/Mar/2025 11:38:56] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-28 11:38:56,851 - INFO - 127.0.0.1 - - [28/Mar/2025 11:38:56] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2025-03-28 11:38:57,151 - INFO - 127.0.0.1 - - [28/Mar/2025 11:38:57] "[36mGET /static/js/visualization.js HTTP/1.1[0m" 304 -
+2025-03-28 11:38:57,176 - INFO - 127.0.0.1 - - [28/Mar/2025 11:38:57] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-28 11:39:07,993 - DEBUG - Memory Manager initialized with paging, size: 2048, page size: 64, algorithm: FIFO
+2025-03-28 11:39:07,994 - INFO - Simulation started with: technique=paging, memory_size=2048, page_size=64, algorithm=FIFO
+2025-03-28 11:39:07,995 - INFO - 127.0.0.1 - - [28/Mar/2025 11:39:07] "POST /api/start_simulation HTTP/1.1" 200 -
+2025-03-28 11:39:10,519 - DEBUG - Allocated 64 bytes (1 pages) for process 1 in frames [0]
+2025-03-28 11:39:10,520 - DEBUG - Successfully allocated 64 bytes
+2025-03-28 11:39:10,521 - INFO - 127.0.0.1 - - [28/Mar/2025 11:39:10] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-28 11:39:19,437 - DEBUG - Allocated 512 bytes (8 pages) for process 2 in frames [1, 2, 3, 4, 5, 6, 7, 8]
+2025-03-28 11:39:19,438 - DEBUG - Successfully allocated 512 bytes
+2025-03-28 11:39:19,439 - INFO - 127.0.0.1 - - [28/Mar/2025 11:39:19] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-28 11:39:29,408 - DEBUG - Page hit on address 64 (frame 1)
+2025-03-28 11:39:29,409 - DEBUG - Successfully accessed memory at address 64
+2025-03-28 11:39:29,410 - INFO - 127.0.0.1 - - [28/Mar/2025 11:39:29] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-28 11:39:36,886 - DEBUG - Deallocated memory for process 2 from frames [1, 2, 3, 4, 5, 6, 7, 8]
+2025-03-28 11:39:36,887 - DEBUG - Successfully deallocated memory at address 64
+2025-03-28 11:39:36,888 - INFO - 127.0.0.1 - - [28/Mar/2025 11:39:36] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-28 11:39:49,365 - DEBUG - Handled page fault by allocating frame 2 to process 3
+2025-03-28 11:39:49,367 - DEBUG - Page fault on address 128 (frame 2)
+2025-03-28 11:39:49,368 - DEBUG - Successfully accessed memory at address 128
+2025-03-28 11:39:49,369 - INFO - 127.0.0.1 - - [28/Mar/2025 11:39:49] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-28 11:40:10,915 - INFO - 127.0.0.1 - - [28/Mar/2025 11:40:10] "GET /tutorials HTTP/1.1" 200 -
+2025-03-28 11:40:11,172 - INFO - 127.0.0.1 - - [28/Mar/2025 11:40:11] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-28 11:40:11,248 - INFO - 127.0.0.1 - - [28/Mar/2025 11:40:11] "[36mGET /static/js/visualization.js HTTP/1.1[0m" 304 -
+2025-03-28 11:40:11,248 - INFO - 127.0.0.1 - - [28/Mar/2025 11:40:11] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2025-03-28 11:40:11,570 - INFO - 127.0.0.1 - - [28/Mar/2025 11:40:11] "GET /api/tutorials HTTP/1.1" 200 -
+2025-03-28 11:40:19,202 - INFO - 127.0.0.1 - - [28/Mar/2025 11:40:19] "GET /dashboard HTTP/1.1" 200 -
+2025-03-28 11:40:19,504 - INFO - 127.0.0.1 - - [28/Mar/2025 11:40:19] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-28 11:40:19,551 - INFO - 127.0.0.1 - - [28/Mar/2025 11:40:19] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-28 11:40:19,557 - INFO - 127.0.0.1 - - [28/Mar/2025 11:40:19] "[36mGET /static/js/visualization.js HTTP/1.1[0m" 304 -
+2025-03-28 11:40:19,558 - INFO - 127.0.0.1 - - [28/Mar/2025 11:40:19] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2025-03-28 11:40:24,981 - INFO - 127.0.0.1 - - [28/Mar/2025 11:40:24] "GET /tutorials HTTP/1.1" 200 -
+2025-03-28 11:40:25,279 - INFO - 127.0.0.1 - - [28/Mar/2025 11:40:25] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-28 11:40:25,328 - INFO - 127.0.0.1 - - [28/Mar/2025 11:40:25] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2025-03-28 11:40:25,329 - INFO - 127.0.0.1 - - [28/Mar/2025 11:40:25] "[36mGET /static/js/visualization.js HTTP/1.1[0m" 304 -
+2025-03-28 11:40:25,647 - INFO - 127.0.0.1 - - [28/Mar/2025 11:40:25] "GET /api/tutorials HTTP/1.1" 200 -
+2025-03-28 11:40:27,747 - INFO - Started tutorial: intro
+2025-03-28 11:40:27,747 - DEBUG - Memory Manager initialized with paging, size: 512, page size: 64, algorithm: FIFO
+2025-03-28 11:40:27,747 - INFO - Tutorial memory manager initialized with config: {'memory_size': 512, 'page_size': 64, 'technique': 'paging', 'algorithm': 'FIFO'}
+2025-03-28 11:40:27,748 - INFO - 127.0.0.1 - - [28/Mar/2025 11:40:27] "POST /api/tutorials/start HTTP/1.1" 200 -
+2025-03-28 11:40:29,852 - INFO - 127.0.0.1 - - [28/Mar/2025 11:40:29] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-03-28 11:40:33,484 - DEBUG - Allocated 64 bytes (1 pages) for process 1 in frames [0]
+2025-03-28 11:40:33,484 - DEBUG - Successfully allocated 64 bytes
+2025-03-28 11:40:33,485 - INFO - 127.0.0.1 - - [28/Mar/2025 11:40:33] "POST /api/next_step HTTP/1.1" 200 -
+2025-03-28 11:40:37,279 - INFO - 127.0.0.1 - - [28/Mar/2025 11:40:37] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-03-28 11:40:38,556 - INFO - 127.0.0.1 - - [28/Mar/2025 11:40:38] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-03-28 11:40:39,679 - INFO - 127.0.0.1 - - [28/Mar/2025 11:40:39] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-03-28 11:40:40,993 - INFO - 127.0.0.1 - - [28/Mar/2025 11:40:40] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-03-28 11:40:41,310 - INFO - Ended tutorial: intro
+2025-03-28 11:40:41,311 - INFO - 127.0.0.1 - - [28/Mar/2025 11:40:41] "POST /api/tutorials/end HTTP/1.1" 200 -
+2025-03-28 11:40:41,574 - INFO - 127.0.0.1 - - [28/Mar/2025 11:40:41] "GET /api/tutorials HTTP/1.1" 200 -
+2025-03-28 11:40:43,612 - INFO - Started tutorial: fragmentation
+2025-03-28 11:40:43,612 - DEBUG - Memory Manager initialized with segmentation, size: 1024, page size: 128, algorithm: FIFO
+2025-03-28 11:40:43,612 - INFO - Tutorial memory manager initialized with config: {'memory_size': 1024, 'page_size': 128, 'technique': 'segmentation', 'algorithm': 'FIFO'}
+2025-03-28 11:40:43,613 - INFO - 127.0.0.1 - - [28/Mar/2025 11:40:43] "POST /api/tutorials/start HTTP/1.1" 200 -
+2025-03-28 11:40:45,574 - INFO - 127.0.0.1 - - [28/Mar/2025 11:40:45] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-03-28 11:40:47,160 - INFO - 127.0.0.1 - - [28/Mar/2025 11:40:47] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-03-28 11:40:49,208 - INFO - 127.0.0.1 - - [28/Mar/2025 11:40:49] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-03-28 11:40:50,457 - INFO - 127.0.0.1 - - [28/Mar/2025 11:40:50] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-03-28 11:40:52,070 - INFO - 127.0.0.1 - - [28/Mar/2025 11:40:52] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-03-28 11:40:53,264 - INFO - 127.0.0.1 - - [28/Mar/2025 11:40:53] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-03-28 11:40:54,745 - INFO - 127.0.0.1 - - [28/Mar/2025 11:40:54] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-03-28 11:40:55,000 - INFO - Ended tutorial: fragmentation
+2025-03-28 11:40:55,001 - INFO - 127.0.0.1 - - [28/Mar/2025 11:40:55] "POST /api/tutorials/end HTTP/1.1" 200 -
+2025-03-28 11:40:55,064 - INFO - 127.0.0.1 - - [28/Mar/2025 11:40:55] "GET /api/tutorials HTTP/1.1" 200 -
+2025-03-28 11:40:57,636 - INFO - 127.0.0.1 - - [28/Mar/2025 11:40:57] "GET / HTTP/1.1" 200 -
+2025-03-28 11:40:57,947 - INFO - 127.0.0.1 - - [28/Mar/2025 11:40:57] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-28 14:33:59,482 - INFO - 127.0.0.1 - - [28/Mar/2025 14:33:59] "GET / HTTP/1.1" 200 -
+2025-03-28 14:33:59,503 - INFO - 127.0.0.1 - - [28/Mar/2025 14:33:59] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-28 14:34:00,737 - INFO - 127.0.0.1 - - [28/Mar/2025 14:34:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-28 14:34:02,832 - INFO - 127.0.0.1 - - [28/Mar/2025 14:34:02] "GET /dashboard HTTP/1.1" 200 -
+2025-03-28 14:34:02,875 - INFO - 127.0.0.1 - - [28/Mar/2025 14:34:02] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-28 14:34:03,087 - INFO - 127.0.0.1 - - [28/Mar/2025 14:34:03] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2025-03-28 14:34:03,184 - INFO - 127.0.0.1 - - [28/Mar/2025 14:34:03] "[36mGET /static/js/visualization.js HTTP/1.1[0m" 304 -
+2025-03-28 14:34:03,185 - INFO - 127.0.0.1 - - [28/Mar/2025 14:34:03] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-28 14:41:53,243 - INFO - 127.0.0.1 - - [28/Mar/2025 14:41:53] "GET / HTTP/1.1" 200 -
+2025-03-28 14:41:53,465 - INFO - 127.0.0.1 - - [28/Mar/2025 14:41:53] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-15 21:00:05,385 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-15 21:00:05,385 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-15 21:00:05,405 - INFO -  * Restarting with watchdog (windowsapi)
+2025-04-15 21:00:05,625 - WARNING -  * Debugger is active!
+2025-04-15 21:00:05,636 - INFO -  * Debugger PIN: 131-927-995
+2025-04-15 21:00:12,956 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\unicode_escape.py', reloading
+2025-04-15 21:00:12,956 - INFO - 127.0.0.1 - - [15/Apr/2025 21:00:12] "GET / HTTP/1.1" 200 -
+2025-04-15 21:00:13,033 - INFO - 127.0.0.1 - - [15/Apr/2025 21:00:13] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-04-15 21:00:13,787 - INFO -  * Restarting with watchdog (windowsapi)
+2025-04-15 21:00:14,055 - WARNING -  * Debugger is active!
+2025-04-15 21:00:14,060 - INFO -  * Debugger PIN: 131-927-995
+2025-04-15 21:00:15,076 - INFO - 127.0.0.1 - - [15/Apr/2025 21:00:15] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-15 21:00:20,865 - INFO - 127.0.0.1 - - [15/Apr/2025 21:00:20] "GET /dashboard HTTP/1.1" 200 -
+2025-04-15 21:00:21,265 - INFO - 127.0.0.1 - - [15/Apr/2025 21:00:21] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-15 21:00:21,377 - INFO - 127.0.0.1 - - [15/Apr/2025 21:00:21] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-04-15 21:00:21,395 - INFO - 127.0.0.1 - - [15/Apr/2025 21:00:21] "GET /static/js/visualization.js HTTP/1.1" 200 -
+2025-04-15 21:00:21,405 - INFO - 127.0.0.1 - - [15/Apr/2025 21:00:21] "GET /static/js/charts.js HTTP/1.1" 200 -
+2025-04-15 21:02:24,435 - DEBUG - Memory Manager initialized with segmentation, size: 2048, page size: 64, algorithm: LRU
+2025-04-15 21:02:24,435 - INFO - Simulation started with: technique=segmentation, memory_size=2048, page_size=64, algorithm=LRU
+2025-04-15 21:02:24,435 - INFO - 127.0.0.1 - - [15/Apr/2025 21:02:24] "POST /api/start_simulation HTTP/1.1" 200 -
+2025-04-15 21:02:30,865 - DEBUG - Allocated 64 bytes (1 pages) for process 1 in frames [0]
+2025-04-15 21:02:30,865 - DEBUG - Successfully allocated 64 bytes
+2025-04-15 21:02:30,865 - INFO - 127.0.0.1 - - [15/Apr/2025 21:02:30] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-15 21:02:49,636 - DEBUG - Allocated 1024 bytes (16 pages) for process 2 in frames [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+2025-04-15 21:02:49,638 - DEBUG - Successfully allocated 1024 bytes
+2025-04-15 21:02:49,638 - INFO - 127.0.0.1 - - [15/Apr/2025 21:02:49] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-15 21:03:52,315 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\argparse.py', reloading
+2025-04-15 21:03:52,698 - INFO -  * Restarting with watchdog (windowsapi)
+2025-04-15 21:03:52,982 - WARNING -  * Debugger is active!
+2025-04-15 21:03:52,985 - INFO -  * Debugger PIN: 131-927-995
+2025-04-15 21:04:23,385 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\werkzeug\\sansio\\request.py', reloading
+2025-04-15 21:04:23,400 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\werkzeug\\sansio\\response.py', reloading
+2025-04-15 21:04:23,424 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\werkzeug\\datastructures\\__init__.py', reloading
+2025-04-15 21:04:23,425 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\werkzeug\\datastructures\\headers.py', reloading
+2025-04-15 21:04:24,370 - INFO -  * Restarting with watchdog (windowsapi)
+2025-04-15 21:04:24,655 - WARNING -  * Debugger is active!
+2025-04-15 21:04:24,658 - INFO -  * Debugger PIN: 131-927-995
+2025-04-15 21:55:22,967 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-15 21:55:22,967 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-15 21:55:22,976 - INFO -  * Restarting with watchdog (windowsapi)
+2025-04-15 21:55:23,215 - WARNING -  * Debugger is active!
+2025-04-15 21:55:23,215 - INFO -  * Debugger PIN: 131-927-995
+2025-04-15 21:55:31,780 - INFO - 127.0.0.1 - - [15/Apr/2025 21:55:31] "GET / HTTP/1.1" 200 -
+2025-04-15 21:55:31,938 - INFO - 127.0.0.1 - - [15/Apr/2025 21:55:31] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-15 21:55:33,253 - INFO - 127.0.0.1 - - [15/Apr/2025 21:55:33] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-15 21:55:50,808 - INFO - 127.0.0.1 - - [15/Apr/2025 21:55:50] "GET /dashboard HTTP/1.1" 200 -
+2025-04-15 21:55:51,028 - INFO - 127.0.0.1 - - [15/Apr/2025 21:55:51] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-15 21:55:51,033 - INFO - 127.0.0.1 - - [15/Apr/2025 21:55:51] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2025-04-15 21:55:51,151 - INFO - 127.0.0.1 - - [15/Apr/2025 21:55:51] "[36mGET /static/js/visualization.js HTTP/1.1[0m" 304 -
+2025-04-15 21:55:51,151 - INFO - 127.0.0.1 - - [15/Apr/2025 21:55:51] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-15 21:55:55,444 - DEBUG - Memory Manager initialized with paging, size: 1024, page size: 64, algorithm: FIFO
+2025-04-15 21:55:55,445 - INFO - Simulation started with: technique=paging, memory_size=1024, page_size=64, algorithm=FIFO
+2025-04-15 21:55:55,446 - INFO - 127.0.0.1 - - [15/Apr/2025 21:55:55] "POST /api/start_simulation HTTP/1.1" 200 -
+2025-04-15 21:55:59,694 - DEBUG - Allocated 64 bytes (1 pages) for process 1 in frames [0]
+2025-04-15 21:55:59,694 - DEBUG - Successfully allocated 64 bytes
+2025-04-15 21:55:59,694 - INFO - 127.0.0.1 - - [15/Apr/2025 21:55:59] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-16 07:58:21,359 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-16 07:58:21,375 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-16 07:58:21,422 - INFO -  * Restarting with watchdog (windowsapi)
+2025-04-16 07:58:21,722 - WARNING -  * Debugger is active!
+2025-04-16 07:58:21,732 - INFO -  * Debugger PIN: 131-927-995
+2025-04-16 07:58:36,189 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\unicode_escape.py', reloading
+2025-04-16 07:58:36,192 - INFO - 127.0.0.1 - - [16/Apr/2025 07:58:36] "GET / HTTP/1.1" 200 -
+2025-04-16 07:58:36,455 - INFO - 127.0.0.1 - - [16/Apr/2025 07:58:36] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-16 07:58:37,032 - INFO -  * Restarting with watchdog (windowsapi)
+2025-04-16 07:58:37,734 - WARNING -  * Debugger is active!
+2025-04-16 07:58:37,744 - INFO -  * Debugger PIN: 131-927-995
+2025-04-16 07:58:37,793 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\flask\\sansio\\app.py', reloading
+2025-04-16 07:58:37,810 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\flask\\sansio\\scaffold.py', reloading
+2025-04-16 07:58:37,857 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\flask\\templating.py', reloading
+2025-04-16 07:58:37,857 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\jinja2\\__init__.py', reloading
+2025-04-16 07:58:37,877 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\jinja2\\environment.py', reloading
+2025-04-16 07:58:37,945 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\flask\\globals.py', reloading
+2025-04-16 07:58:37,950 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\flask\\wrappers.py', reloading
+2025-04-16 07:58:37,957 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\werkzeug\\wrappers\\__init__.py', reloading
+2025-04-16 07:58:37,960 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\werkzeug\\wrappers\\request.py', reloading
+2025-04-16 07:58:37,981 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\werkzeug\\sansio\\request.py', reloading
+2025-04-16 07:58:37,991 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\flask\\json\\__init__.py', reloading
+2025-04-16 07:58:37,991 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\werkzeug\\wrappers\\response.py', reloading
+2025-04-16 07:58:38,009 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\werkzeug\\sansio\\response.py', reloading
+2025-04-16 07:58:38,037 - INFO -  * Detected change in 'C:\\Users\\laksh\\OneDrive\\Desktop\\MemoryMaster\\memory_manager.py', reloading
+2025-04-16 07:58:38,057 - INFO -  * Detected change in 'C:\\Users\\laksh\\OneDrive\\Desktop\\MemoryMaster\\tutorial_manager.py', reloading
+2025-04-16 07:58:38,124 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\flask\\config.py', reloading
+2025-04-16 07:58:38,144 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\flask\\typing.py', reloading
+2025-04-16 07:58:38,157 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\werkzeug\\datastructures\\__init__.py', reloading
+2025-04-16 07:58:38,165 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\werkzeug\\datastructures\\headers.py', reloading
+2025-04-16 07:58:38,874 - INFO -  * Restarting with watchdog (windowsapi)
+2025-04-16 07:58:39,514 - WARNING -  * Debugger is active!
+2025-04-16 07:58:39,523 - INFO -  * Debugger PIN: 131-927-995
+2025-04-16 07:58:44,555 - INFO - 127.0.0.1 - - [16/Apr/2025 07:58:44] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-16 07:58:46,933 - INFO - 127.0.0.1 - - [16/Apr/2025 07:58:46] "GET /dashboard HTTP/1.1" 200 -
+2025-04-16 07:58:47,077 - INFO - 127.0.0.1 - - [16/Apr/2025 07:58:47] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-16 07:58:47,169 - INFO - 127.0.0.1 - - [16/Apr/2025 07:58:47] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2025-04-16 07:58:47,259 - INFO - 127.0.0.1 - - [16/Apr/2025 07:58:47] "[36mGET /static/js/visualization.js HTTP/1.1[0m" 304 -
+2025-04-16 07:58:47,259 - INFO - 127.0.0.1 - - [16/Apr/2025 07:58:47] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-16 08:00:11,919 - DEBUG - Memory Manager initialized with paging, size: 1024, page size: 64, algorithm: FIFO
+2025-04-16 08:00:11,920 - INFO - Simulation started with: technique=paging, memory_size=1024, page_size=64, algorithm=FIFO
+2025-04-16 08:00:11,920 - INFO - 127.0.0.1 - - [16/Apr/2025 08:00:11] "POST /api/start_simulation HTTP/1.1" 200 -
+2025-04-16 08:00:14,816 - DEBUG - Allocated 64 bytes (1 pages) for process 1 in frames [0]
+2025-04-16 08:00:14,816 - DEBUG - Successfully allocated 64 bytes
+2025-04-16 08:00:14,816 - INFO - 127.0.0.1 - - [16/Apr/2025 08:00:14] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-16 08:00:23,318 - DEBUG - Allocated 512 bytes (8 pages) for process 2 in frames [1, 2, 3, 4, 5, 6, 7, 8]
+2025-04-16 08:00:23,318 - DEBUG - Successfully allocated 512 bytes
+2025-04-16 08:00:23,322 - INFO - 127.0.0.1 - - [16/Apr/2025 08:00:23] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-16 08:00:32,474 - DEBUG - Deallocated memory for process 2 from frames [1, 2, 3, 4, 5, 6, 7, 8]
+2025-04-16 08:00:32,475 - DEBUG - Successfully deallocated memory at address 64
+2025-04-16 08:00:32,475 - INFO - 127.0.0.1 - - [16/Apr/2025 08:00:32] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-16 08:00:52,410 - DEBUG - Allocated 512 bytes (8 pages) for process 3 in frames [1, 2, 3, 4, 5, 6, 7, 8]
+2025-04-16 08:00:52,412 - DEBUG - Successfully allocated 512 bytes
+2025-04-16 08:00:52,413 - INFO - 127.0.0.1 - - [16/Apr/2025 08:00:52] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-16 08:01:00,028 - DEBUG - Allocated 256 bytes (4 pages) for process 4 in frames [9, 10, 11, 12]
+2025-04-16 08:01:00,028 - DEBUG - Successfully allocated 256 bytes
+2025-04-16 08:01:00,029 - INFO - 127.0.0.1 - - [16/Apr/2025 08:01:00] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-16 08:01:09,487 - DEBUG - Deallocated memory for process 3 from frames [1, 2, 3, 4, 5, 6, 7, 8]
+2025-04-16 08:01:09,487 - DEBUG - Successfully deallocated memory at address 256
+2025-04-16 08:01:09,489 - INFO - 127.0.0.1 - - [16/Apr/2025 08:01:09] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-16 08:01:20,987 - INFO - 127.0.0.1 - - [16/Apr/2025 08:01:20] "GET / HTTP/1.1" 200 -
+2025-04-16 08:01:21,287 - INFO - 127.0.0.1 - - [16/Apr/2025 08:01:21] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-16 08:01:38,608 - INFO - 127.0.0.1 - - [16/Apr/2025 08:01:38] "GET / HTTP/1.1" 200 -
+2025-04-16 08:01:38,883 - INFO - 127.0.0.1 - - [16/Apr/2025 08:01:38] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-16 08:01:40,247 - INFO - 127.0.0.1 - - [16/Apr/2025 08:01:40] "GET /dashboard HTTP/1.1" 200 -
+2025-04-16 08:01:40,550 - INFO - 127.0.0.1 - - [16/Apr/2025 08:01:40] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-16 08:01:40,619 - INFO - 127.0.0.1 - - [16/Apr/2025 08:01:40] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2025-04-16 08:01:40,626 - INFO - 127.0.0.1 - - [16/Apr/2025 08:01:40] "[36mGET /static/js/visualization.js HTTP/1.1[0m" 304 -
+2025-04-16 08:01:40,640 - INFO - 127.0.0.1 - - [16/Apr/2025 08:01:40] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-16 08:03:21,951 - INFO - 127.0.0.1 - - [16/Apr/2025 08:03:21] "POST /api/reset_simulation HTTP/1.1" 200 -
+2025-04-16 08:03:27,032 - DEBUG - Memory Manager initialized with paging, size: 1024, page size: 64, algorithm: FIFO
+2025-04-16 08:03:27,032 - INFO - Simulation started with: technique=paging, memory_size=1024, page_size=64, algorithm=FIFO
+2025-04-16 08:03:27,035 - INFO - 127.0.0.1 - - [16/Apr/2025 08:03:27] "POST /api/start_simulation HTTP/1.1" 200 -
+2025-04-16 08:03:29,261 - DEBUG - Allocated 64 bytes (1 pages) for process 1 in frames [0]
+2025-04-16 08:03:29,261 - DEBUG - Successfully allocated 64 bytes
+2025-04-16 08:03:29,261 - INFO - 127.0.0.1 - - [16/Apr/2025 08:03:29] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-16 14:01:58,690 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-16 14:01:58,690 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-16 14:01:58,736 - INFO -  * Restarting with watchdog (windowsapi)
+2025-04-16 14:01:59,192 - WARNING -  * Debugger is active!
+2025-04-16 14:01:59,271 - INFO -  * Debugger PIN: 131-927-995
+2025-04-16 14:02:04,222 - INFO -  * Detected change in 'C:\\Users\\laksh\\OneDrive\\Desktop\\MemoryMaster\\app.py', reloading
+2025-04-16 14:02:04,430 - INFO -  * Restarting with watchdog (windowsapi)
+2025-04-16 14:02:05,452 - WARNING -  * Debugger is active!
+2025-04-16 14:02:05,458 - INFO -  * Debugger PIN: 131-927-995
+2025-04-16 14:02:13,494 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\unicode_escape.py', reloading
+2025-04-16 14:02:13,508 - INFO - 127.0.0.1 - - [16/Apr/2025 14:02:13] "GET / HTTP/1.1" 200 -
+2025-04-16 14:02:13,772 - INFO -  * Restarting with watchdog (windowsapi)
+2025-04-16 14:02:14,502 - WARNING -  * Debugger is active!
+2025-04-16 14:02:14,510 - INFO -  * Debugger PIN: 131-927-995
+2025-04-16 14:02:14,673 - INFO - 127.0.0.1 - - [16/Apr/2025 14:02:14] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-16 14:02:19,465 - INFO - 127.0.0.1 - - [16/Apr/2025 14:02:19] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-16 14:02:26,284 - INFO - 127.0.0.1 - - [16/Apr/2025 14:02:26] "GET /dashboard HTTP/1.1" 200 -
+2025-04-16 14:02:26,504 - INFO - 127.0.0.1 - - [16/Apr/2025 14:02:26] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-16 14:02:26,526 - INFO - 127.0.0.1 - - [16/Apr/2025 14:02:26] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2025-04-16 14:02:26,758 - INFO - 127.0.0.1 - - [16/Apr/2025 14:02:26] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-16 14:02:26,759 - INFO - 127.0.0.1 - - [16/Apr/2025 14:02:26] "[36mGET /static/js/visualization.js HTTP/1.1[0m" 304 -
+2025-04-16 14:02:41,206 - DEBUG - Memory Manager initialized with paging, size: 1024, page size: 64, algorithm: FIFO
+2025-04-16 14:02:41,206 - INFO - Simulation started with: technique=paging, memory_size=1024, page_size=64, algorithm=FIFO
+2025-04-16 14:02:41,206 - INFO - 127.0.0.1 - - [16/Apr/2025 14:02:41] "POST /api/start_simulation HTTP/1.1" 200 -
+2025-04-16 14:02:56,590 - DEBUG - Allocated 512 bytes (8 pages) for process 1 in frames [0, 1, 2, 3, 4, 5, 6, 7]
+2025-04-16 14:02:56,592 - DEBUG - Successfully allocated 512 bytes
+2025-04-16 14:02:56,592 - INFO - 127.0.0.1 - - [16/Apr/2025 14:02:56] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-16 14:03:44,514 - INFO - 127.0.0.1 - - [16/Apr/2025 14:03:44] "GET /tutorials HTTP/1.1" 200 -
+2025-04-16 14:03:44,667 - INFO - 127.0.0.1 - - [16/Apr/2025 14:03:44] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-16 14:03:44,714 - INFO - 127.0.0.1 - - [16/Apr/2025 14:03:44] "[36mGET /static/js/visualization.js HTTP/1.1[0m" 304 -
+2025-04-16 14:03:45,016 - INFO - 127.0.0.1 - - [16/Apr/2025 14:03:45] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2025-04-16 14:03:45,065 - INFO - 127.0.0.1 - - [16/Apr/2025 14:03:45] "GET /api/tutorials HTTP/1.1" 200 -
+2025-04-16 14:04:22,785 - DEBUG - Page hit on address 64 (frame 1)
+2025-04-16 14:04:22,786 - DEBUG - Successfully accessed memory at address 64
+2025-04-16 14:04:22,786 - INFO - 127.0.0.1 - - [16/Apr/2025 14:04:22] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-16 14:04:50,213 - WARNING - Invalid address: 1024, choosing a valid frame instead
+2025-04-16 14:04:50,213 - DEBUG - Handled page fault by allocating frame 15 to process 2
+2025-04-16 14:04:50,213 - DEBUG - Page fault on address 1024 (frame 15)
+2025-04-16 14:04:50,219 - DEBUG - Successfully accessed memory at address 1024
+2025-04-16 14:04:50,219 - INFO - 127.0.0.1 - - [16/Apr/2025 14:04:50] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-16 19:17:31,426 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-16 19:17:31,426 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-16 19:17:31,453 - INFO -  * Restarting with watchdog (windowsapi)
+2025-04-16 19:17:31,717 - WARNING -  * Debugger is active!
+2025-04-16 19:17:31,717 - INFO -  * Debugger PIN: 131-927-995
+2025-04-16 19:17:42,691 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\unicode_escape.py', reloading
+2025-04-16 19:17:42,707 - INFO - 127.0.0.1 - - [16/Apr/2025 19:17:42] "GET / HTTP/1.1" 200 -
+2025-04-16 19:17:42,932 - INFO -  * Restarting with watchdog (windowsapi)
+2025-04-16 19:17:43,301 - WARNING -  * Debugger is active!
+2025-04-16 19:17:43,301 - INFO -  * Debugger PIN: 131-927-995
+2025-04-16 19:17:43,397 - INFO - 127.0.0.1 - - [16/Apr/2025 19:17:43] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-16 19:17:43,829 - INFO - 127.0.0.1 - - [16/Apr/2025 19:17:43] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-16 19:17:46,633 - INFO - 127.0.0.1 - - [16/Apr/2025 19:17:46] "GET /dashboard HTTP/1.1" 200 -
+2025-04-16 19:17:46,862 - INFO - 127.0.0.1 - - [16/Apr/2025 19:17:46] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-16 19:17:46,881 - INFO - 127.0.0.1 - - [16/Apr/2025 19:17:46] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2025-04-16 19:17:46,956 - INFO - 127.0.0.1 - - [16/Apr/2025 19:17:46] "[36mGET /static/js/visualization.js HTTP/1.1[0m" 304 -
+2025-04-16 19:17:46,956 - INFO - 127.0.0.1 - - [16/Apr/2025 19:17:46] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-16 19:18:13,677 - DEBUG - Memory Manager initialized with paging, size: 1024, page size: 64, algorithm: FIFO
+2025-04-16 19:18:13,677 - INFO - Simulation started with: technique=paging, memory_size=1024, page_size=64, algorithm=FIFO
+2025-04-16 19:18:13,678 - INFO - 127.0.0.1 - - [16/Apr/2025 19:18:13] "POST /api/start_simulation HTTP/1.1" 200 -
+2025-04-16 19:18:23,610 - DEBUG - Allocated 64 bytes (1 pages) for process 1 in frames [0]
+2025-04-16 19:18:23,610 - DEBUG - Successfully allocated 64 bytes
+2025-04-16 19:18:23,610 - INFO - 127.0.0.1 - - [16/Apr/2025 19:18:23] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-16 19:18:45,596 - DEBUG - Allocated 64 bytes (1 pages) for process 2 in frames [1]
+2025-04-16 19:18:45,596 - DEBUG - Successfully allocated 64 bytes
+2025-04-16 19:18:45,596 - INFO - 127.0.0.1 - - [16/Apr/2025 19:18:45] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-16 19:18:56,084 - DEBUG - Allocated 128 bytes (2 pages) for process 3 in frames [2, 3]
+2025-04-16 19:18:56,084 - DEBUG - Successfully allocated 128 bytes
+2025-04-16 19:18:56,086 - INFO - 127.0.0.1 - - [16/Apr/2025 19:18:56] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-16 19:19:08,259 - DEBUG - Allocated 100 bytes (2 pages) for process 4 in frames [4, 5]
+2025-04-16 19:19:08,259 - DEBUG - Successfully allocated 100 bytes
+2025-04-16 19:19:08,259 - INFO - 127.0.0.1 - - [16/Apr/2025 19:19:08] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-16 19:19:19,293 - DEBUG - Allocated 28 bytes (1 pages) for process 5 in frames [6]
+2025-04-16 19:19:19,293 - DEBUG - Successfully allocated 28 bytes
+2025-04-16 19:19:19,293 - INFO - 127.0.0.1 - - [16/Apr/2025 19:19:19] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-16 19:19:39,452 - WARNING - No allocated memory at address 512, using frame 0 instead
+2025-04-16 19:19:39,453 - DEBUG - Deallocated memory for process 1 from frames [0]
+2025-04-16 19:19:39,453 - DEBUG - Successfully deallocated memory at address 512
+2025-04-16 19:19:39,453 - INFO - 127.0.0.1 - - [16/Apr/2025 19:19:39] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-16 19:19:54,950 - DEBUG - Deallocated memory for process 2 from frames [1]
+2025-04-16 19:19:54,950 - DEBUG - Successfully deallocated memory at address 64
+2025-04-16 19:19:54,953 - INFO - 127.0.0.1 - - [16/Apr/2025 19:19:54] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-16 19:19:59,497 - WARNING - No allocated memory at address 64, using frame 2 instead
+2025-04-16 19:19:59,497 - DEBUG - Deallocated memory for process 3 from frames [2, 3]
+2025-04-16 19:19:59,498 - DEBUG - Successfully deallocated memory at address 64
+2025-04-16 19:19:59,501 - INFO - 127.0.0.1 - - [16/Apr/2025 19:19:59] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-16 19:20:02,356 - WARNING - No allocated memory at address 64, using frame 4 instead
+2025-04-16 19:20:02,356 - DEBUG - Deallocated memory for process 4 from frames [4, 5]
+2025-04-16 19:20:02,356 - DEBUG - Successfully deallocated memory at address 64
+2025-04-16 19:20:02,356 - INFO - 127.0.0.1 - - [16/Apr/2025 19:20:02] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-16 19:20:03,956 - WARNING - No allocated memory at address 64, using frame 6 instead
+2025-04-16 19:20:03,956 - DEBUG - Deallocated memory for process 5 from frames [6]
+2025-04-16 19:20:03,957 - DEBUG - Successfully deallocated memory at address 64
+2025-04-16 19:20:03,957 - INFO - 127.0.0.1 - - [16/Apr/2025 19:20:03] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-16 19:20:05,610 - ERROR - Error in deallocation: No allocated memory to deallocate
+2025-04-16 19:20:05,610 - INFO - 127.0.0.1 - - [16/Apr/2025 19:20:05] "[31m[1mPOST /api/next_step HTTP/1.1[0m" 400 -
+2025-04-16 19:20:05,973 - ERROR - Error in deallocation: No allocated memory to deallocate
+2025-04-16 19:20:05,974 - INFO - 127.0.0.1 - - [16/Apr/2025 19:20:05] "[31m[1mPOST /api/next_step HTTP/1.1[0m" 400 -
+2025-04-16 19:20:12,428 - DEBUG - Handled page fault by allocating frame 1 to process 6
+2025-04-16 19:20:12,429 - DEBUG - Page fault on address 64 (frame 1)
+2025-04-16 19:20:12,430 - DEBUG - Successfully accessed memory at address 64
+2025-04-16 19:20:12,430 - INFO - 127.0.0.1 - - [16/Apr/2025 19:20:12] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-18 12:06:34,168 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-18 12:06:34,168 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-18 12:06:34,200 - INFO -  * Restarting with watchdog (windowsapi)
+2025-04-18 12:06:34,548 - WARNING -  * Debugger is active!
+2025-04-18 12:06:34,548 - INFO -  * Debugger PIN: 131-927-995
+2025-04-18 12:06:43,813 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\unicode_escape.py', reloading
+2025-04-18 12:06:43,829 - INFO - 127.0.0.1 - - [18/Apr/2025 12:06:43] "GET / HTTP/1.1" 200 -
+2025-04-18 12:06:44,056 - INFO - 127.0.0.1 - - [18/Apr/2025 12:06:44] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-18 12:06:44,259 - INFO - 127.0.0.1 - - [18/Apr/2025 12:06:44] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-18 12:06:44,764 - INFO -  * Restarting with watchdog (windowsapi)
+2025-04-18 12:06:45,097 - WARNING -  * Debugger is active!
+2025-04-18 12:06:45,097 - INFO -  * Debugger PIN: 131-927-995
+2025-04-18 12:06:48,792 - INFO - 127.0.0.1 - - [18/Apr/2025 12:06:48] "GET /dashboard HTTP/1.1" 200 -
+2025-04-18 12:06:48,993 - INFO - 127.0.0.1 - - [18/Apr/2025 12:06:48] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-18 12:06:49,043 - INFO - 127.0.0.1 - - [18/Apr/2025 12:06:49] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2025-04-18 12:06:49,115 - INFO - 127.0.0.1 - - [18/Apr/2025 12:06:49] "[36mGET /static/js/visualization.js HTTP/1.1[0m" 304 -
+2025-04-18 12:06:49,115 - INFO - 127.0.0.1 - - [18/Apr/2025 12:06:49] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-18 12:06:59,668 - DEBUG - Memory Manager initialized with paging, size: 1024, page size: 64, algorithm: FIFO
+2025-04-18 12:06:59,672 - INFO - Simulation started with: technique=paging, memory_size=1024, page_size=64, algorithm=FIFO
+2025-04-18 12:06:59,674 - INFO - 127.0.0.1 - - [18/Apr/2025 12:06:59] "POST /api/start_simulation HTTP/1.1" 200 -
+2025-04-18 12:07:01,734 - DEBUG - Allocated 64 bytes (1 pages) for process 1 in frames [0]
+2025-04-18 12:07:01,735 - DEBUG - Successfully allocated 64 bytes
+2025-04-18 12:07:01,736 - INFO - 127.0.0.1 - - [18/Apr/2025 12:07:01] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-20 12:56:16,054 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-20 12:56:16,054 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-20 12:56:16,079 - INFO -  * Restarting with watchdog (windowsapi)
+2025-04-20 12:56:16,377 - WARNING -  * Debugger is active!
+2025-04-20 12:56:16,416 - INFO -  * Debugger PIN: 131-927-995
+2025-04-20 12:56:25,783 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\unicode_escape.py', reloading
+2025-04-20 12:56:25,788 - INFO - 127.0.0.1 - - [20/Apr/2025 12:56:25] "GET / HTTP/1.1" 200 -
+2025-04-20 12:56:25,967 - INFO - 127.0.0.1 - - [20/Apr/2025 12:56:25] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-20 12:56:26,194 - INFO - 127.0.0.1 - - [20/Apr/2025 12:56:26] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-20 12:56:26,665 - INFO -  * Restarting with watchdog (windowsapi)
+2025-04-20 12:56:26,961 - WARNING -  * Debugger is active!
+2025-04-20 12:56:26,968 - INFO -  * Debugger PIN: 131-927-995
+2025-04-20 13:00:08,952 - INFO - 127.0.0.1 - - [20/Apr/2025 13:00:08] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-20 13:02:49,466 - INFO - 127.0.0.1 - - [20/Apr/2025 13:02:49] "GET /dashboard HTTP/1.1" 200 -
+2025-04-20 13:02:49,637 - INFO - 127.0.0.1 - - [20/Apr/2025 13:02:49] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-20 13:02:49,677 - INFO - 127.0.0.1 - - [20/Apr/2025 13:02:49] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2025-04-20 13:02:49,847 - INFO - 127.0.0.1 - - [20/Apr/2025 13:02:49] "[36mGET /static/js/visualization.js HTTP/1.1[0m" 304 -
+2025-04-20 13:02:49,847 - INFO - 127.0.0.1 - - [20/Apr/2025 13:02:49] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-20 13:12:58,796 - DEBUG - Memory Manager initialized with paging, size: 1024, page size: 64, algorithm: FIFO
+2025-04-20 13:12:58,796 - INFO - Simulation started with: technique=paging, memory_size=1024, page_size=64, algorithm=FIFO
+2025-04-20 13:12:58,796 - INFO - 127.0.0.1 - - [20/Apr/2025 13:12:58] "POST /api/start_simulation HTTP/1.1" 200 -
+2025-04-20 13:12:59,825 - DEBUG - Memory Manager initialized with paging, size: 1024, page size: 64, algorithm: FIFO
+2025-04-20 13:12:59,826 - INFO - Simulation started with: technique=paging, memory_size=1024, page_size=64, algorithm=FIFO
+2025-04-20 13:12:59,826 - INFO - 127.0.0.1 - - [20/Apr/2025 13:12:59] "POST /api/start_simulation HTTP/1.1" 200 -
+2025-04-20 13:13:02,592 - DEBUG - Allocated 64 bytes (1 pages) for process 1 in frames [0]
+2025-04-20 13:13:02,592 - DEBUG - Successfully allocated 64 bytes
+2025-04-20 13:13:02,593 - INFO - 127.0.0.1 - - [20/Apr/2025 13:13:02] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-22 14:07:07,015 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-22 14:07:07,015 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-22 14:07:07,048 - INFO -  * Restarting with watchdog (windowsapi)
+2025-04-22 14:07:07,317 - WARNING -  * Debugger is active!
+2025-04-22 14:07:07,317 - INFO -  * Debugger PIN: 131-927-995
+2025-04-22 14:07:13,677 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\unicode_escape.py', reloading
+2025-04-22 14:07:13,677 - INFO - 127.0.0.1 - - [22/Apr/2025 14:07:13] "GET / HTTP/1.1" 200 -
+2025-04-22 14:07:13,830 - INFO - 127.0.0.1 - - [22/Apr/2025 14:07:13] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-22 14:07:14,421 - INFO -  * Restarting with watchdog (windowsapi)
+2025-04-22 14:07:14,707 - WARNING -  * Debugger is active!
+2025-04-22 14:07:14,707 - INFO -  * Debugger PIN: 131-927-995
+2025-04-22 14:07:57,057 - INFO - 127.0.0.1 - - [22/Apr/2025 14:07:57] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-22 14:09:06,913 - INFO - 127.0.0.1 - - [22/Apr/2025 14:09:06] "GET / HTTP/1.1" 200 -
+2025-04-22 14:09:07,051 - INFO - 127.0.0.1 - - [22/Apr/2025 14:09:07] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-22 14:09:37,316 - INFO - 127.0.0.1 - - [22/Apr/2025 14:09:37] "GET / HTTP/1.1" 200 -
+2025-04-22 14:09:37,330 - INFO - 127.0.0.1 - - [22/Apr/2025 14:09:37] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-22 14:10:11,828 - INFO - 127.0.0.1 - - [22/Apr/2025 14:10:11] "GET /dashboard HTTP/1.1" 200 -
+2025-04-22 14:10:12,098 - INFO - 127.0.0.1 - - [22/Apr/2025 14:10:12] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-22 14:10:12,227 - INFO - 127.0.0.1 - - [22/Apr/2025 14:10:12] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-22 14:10:12,243 - INFO - 127.0.0.1 - - [22/Apr/2025 14:10:12] "[36mGET /static/js/visualization.js HTTP/1.1[0m" 304 -
+2025-04-22 14:10:12,250 - INFO - 127.0.0.1 - - [22/Apr/2025 14:10:12] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2025-04-22 15:12:41,511 - DEBUG - Memory Manager initialized with paging, size: 1024, page size: 64, algorithm: FIFO
+2025-04-22 15:12:41,516 - INFO - Simulation started with: technique=paging, memory_size=1024, page_size=64, algorithm=FIFO
+2025-04-22 15:12:41,517 - INFO - 127.0.0.1 - - [22/Apr/2025 15:12:41] "POST /api/start_simulation HTTP/1.1" 200 -
+2025-04-22 15:12:45,430 - DEBUG - Allocated 64 bytes (1 pages) for process 1 in frames [0]
+2025-04-22 15:12:45,430 - DEBUG - Successfully allocated 64 bytes
+2025-04-22 15:12:45,431 - INFO - 127.0.0.1 - - [22/Apr/2025 15:12:45] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-22 15:12:52,472 - DEBUG - Allocated 64 bytes (1 pages) for process 2 in frames [1]
+2025-04-22 15:12:52,473 - DEBUG - Successfully allocated 64 bytes
+2025-04-22 15:12:52,474 - INFO - 127.0.0.1 - - [22/Apr/2025 15:12:52] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-22 15:12:57,672 - DEBUG - Deallocated memory for process 1 from frames [0]
+2025-04-22 15:12:57,673 - DEBUG - Successfully deallocated memory at address 0
+2025-04-22 15:12:57,675 - INFO - 127.0.0.1 - - [22/Apr/2025 15:12:57] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-22 15:12:59,876 - WARNING - No allocated memory at address 0, using frame 1 instead
+2025-04-22 15:12:59,876 - DEBUG - Deallocated memory for process 2 from frames [1]
+2025-04-22 15:12:59,876 - DEBUG - Successfully deallocated memory at address 0
+2025-04-22 15:12:59,877 - INFO - 127.0.0.1 - - [22/Apr/2025 15:12:59] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-22 15:16:19,577 - DEBUG - Memory Manager initialized with paging, size: 1024, page size: 64, algorithm: FIFO
+2025-04-22 15:16:19,578 - INFO - Simulation started with: technique=paging, memory_size=1024, page_size=64, algorithm=FIFO
+2025-04-22 15:16:19,579 - INFO - 127.0.0.1 - - [22/Apr/2025 15:16:19] "POST /api/start_simulation HTTP/1.1" 200 -
+2025-04-22 15:16:20,775 - ERROR - Error in deallocation: No allocated memory to deallocate
+2025-04-22 15:16:20,776 - INFO - 127.0.0.1 - - [22/Apr/2025 15:16:20] "[31m[1mPOST /api/next_step HTTP/1.1[0m" 400 -
+2025-04-22 15:16:26,053 - ERROR - Error in deallocation: No allocated memory to deallocate
+2025-04-22 15:16:26,054 - INFO - 127.0.0.1 - - [22/Apr/2025 15:16:26] "[31m[1mPOST /api/next_step HTTP/1.1[0m" 400 -
+2025-04-22 15:17:13,970 - DEBUG - Memory Manager initialized with segmentation, size: 1024, page size: 64, algorithm: LRU
+2025-04-22 15:17:13,972 - INFO - Simulation started with: technique=segmentation, memory_size=1024, page_size=64, algorithm=LRU
+2025-04-22 15:17:13,973 - INFO - 127.0.0.1 - - [22/Apr/2025 15:17:13] "POST /api/start_simulation HTTP/1.1" 200 -
+2025-04-22 15:17:32,555 - DEBUG - Memory Manager initialized with paging, size: 1024, page size: 64, algorithm: FIFO
+2025-04-22 15:17:32,556 - INFO - Simulation started with: technique=paging, memory_size=1024, page_size=64, algorithm=FIFO
+2025-04-22 15:17:32,557 - INFO - 127.0.0.1 - - [22/Apr/2025 15:17:32] "POST /api/start_simulation HTTP/1.1" 200 -
+2025-04-22 15:17:36,500 - DEBUG - Memory Manager initialized with paging, size: 1024, page size: 64, algorithm: FIFO
+2025-04-22 15:17:36,500 - INFO - Simulation started with: technique=paging, memory_size=1024, page_size=64, algorithm=FIFO
+2025-04-22 15:17:36,501 - INFO - 127.0.0.1 - - [22/Apr/2025 15:17:36] "POST /api/start_simulation HTTP/1.1" 200 -
+2025-04-22 15:29:15,733 - DEBUG - Memory Manager initialized with paging, size: 1024, page size: 64, algorithm: FIFO
+2025-04-22 15:29:15,733 - INFO - Simulation started with: technique=paging, memory_size=1024, page_size=64, algorithm=FIFO
+2025-04-22 15:29:15,733 - INFO - 127.0.0.1 - - [22/Apr/2025 15:29:15] "POST /api/start_simulation HTTP/1.1" 200 -
+2025-04-22 15:29:18,830 - DEBUG - Allocated 64 bytes (1 pages) for process 1 in frames [0]
+2025-04-22 15:29:18,830 - DEBUG - Successfully allocated 64 bytes
+2025-04-22 15:29:18,830 - INFO - 127.0.0.1 - - [22/Apr/2025 15:29:18] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-22 15:29:25,643 - DEBUG - Allocated 64 bytes (1 pages) for process 2 in frames [1]
+2025-04-22 15:29:25,643 - DEBUG - Successfully allocated 64 bytes
+2025-04-22 15:29:25,643 - INFO - 127.0.0.1 - - [22/Apr/2025 15:29:25] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-22 15:29:34,683 - DEBUG - Deallocated memory for process 1 from frames [0]
+2025-04-22 15:29:34,683 - DEBUG - Successfully deallocated memory at address 0
+2025-04-22 15:29:34,683 - INFO - 127.0.0.1 - - [22/Apr/2025 15:29:34] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-22 15:29:35,986 - WARNING - No allocated memory at address 0, using frame 1 instead
+2025-04-22 15:29:35,986 - DEBUG - Deallocated memory for process 2 from frames [1]
+2025-04-22 15:29:35,986 - DEBUG - Successfully deallocated memory at address 0
+2025-04-22 15:29:35,986 - INFO - 127.0.0.1 - - [22/Apr/2025 15:29:35] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-22 15:32:45,734 - DEBUG - Memory Manager initialized with paging, size: 1024, page size: 64, algorithm: FIFO
+2025-04-22 15:32:45,734 - INFO - Simulation started with: technique=paging, memory_size=1024, page_size=64, algorithm=FIFO
+2025-04-22 15:32:45,734 - INFO - 127.0.0.1 - - [22/Apr/2025 15:32:45] "POST /api/start_simulation HTTP/1.1" 200 -
+2025-04-22 15:32:51,127 - DEBUG - Allocated 64 bytes (1 pages) for process 1 in frames [0]
+2025-04-22 15:32:51,128 - DEBUG - Successfully allocated 64 bytes
+2025-04-22 15:32:51,128 - INFO - 127.0.0.1 - - [22/Apr/2025 15:32:51] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-22 15:35:04,442 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\__init__.py', reloading
+2025-04-22 15:35:04,443 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\aliases.py', reloading
+2025-04-22 15:35:04,443 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\utf_8.py', reloading
+2025-04-22 15:35:04,444 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\cp1252.py', reloading
+2025-04-22 15:35:04,445 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\warnings.py', reloading
+2025-04-22 15:35:04,456 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\ast.py', reloading
+2025-04-22 15:35:04,463 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\contextlib.py', reloading
+2025-04-22 15:35:04,465 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\collections\\__init__.py', reloading
+2025-04-22 15:35:04,466 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\keyword.py', reloading
+2025-04-22 15:35:04,466 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\operator.py', reloading
+2025-04-22 15:35:04,468 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\reprlib.py', reloading
+2025-04-22 15:35:04,469 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\functools.py', reloading
+2025-04-22 15:35:04,470 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\types.py', reloading
+2025-04-22 15:35:04,471 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\enum.py', reloading
+2025-04-22 15:35:04,471 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\importlib\\__init__.py', reloading
+2025-04-22 15:35:04,471 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\inspect.py', reloading
+2025-04-22 15:35:04,475 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\dis.py', reloading
+2025-04-22 15:35:04,476 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\opcode.py', reloading
+2025-04-22 15:35:04,479 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\collections\\abc.py', reloading
+2025-04-22 15:35:04,488 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\linecache.py', reloading
+2025-04-22 15:35:04,490 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\tokenize.py', reloading
+2025-04-22 15:35:04,491 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\re\\__init__.py', reloading
+2025-04-22 15:35:04,492 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\re\\_compiler.py', reloading
+2025-04-22 15:35:04,492 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\re\\_parser.py', reloading
+2025-04-22 15:35:04,494 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\re\\_constants.py', reloading
+2025-04-22 15:35:04,495 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\re\\_casefix.py', reloading
+2025-04-22 15:35:04,496 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\copyreg.py', reloading
+2025-04-22 15:35:04,497 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\token.py', reloading
+2025-04-22 15:35:04,606 - INFO -  * Restarting with watchdog (windowsapi)
+2025-04-22 15:35:05,052 - WARNING -  * Debugger is active!
+2025-04-22 15:35:05,054 - INFO -  * Debugger PIN: 131-927-995
+2025-04-23 14:30:14,063 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-23 14:30:14,081 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-23 14:30:14,089 - INFO -  * Restarting with watchdog (windowsapi)
+2025-04-23 14:30:14,332 - WARNING -  * Debugger is active!
+2025-04-23 14:30:14,332 - INFO -  * Debugger PIN: 131-927-995
+2025-04-23 14:30:22,535 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\unicode_escape.py', reloading
+2025-04-23 14:30:22,537 - INFO - 127.0.0.1 - - [23/Apr/2025 14:30:22] "GET / HTTP/1.1" 200 -
+2025-04-23 14:30:22,923 - INFO - 127.0.0.1 - - [23/Apr/2025 14:30:22] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-23 14:30:23,114 - INFO - 127.0.0.1 - - [23/Apr/2025 14:30:23] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-23 14:30:23,444 - INFO -  * Restarting with watchdog (windowsapi)
+2025-04-23 14:30:23,676 - WARNING -  * Debugger is active!
+2025-04-23 14:30:23,676 - INFO -  * Debugger PIN: 131-927-995
+2025-04-23 14:30:26,629 - INFO - 127.0.0.1 - - [23/Apr/2025 14:30:26] "GET /dashboard HTTP/1.1" 200 -
+2025-04-23 14:30:26,939 - INFO - 127.0.0.1 - - [23/Apr/2025 14:30:26] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-23 14:30:26,957 - INFO - 127.0.0.1 - - [23/Apr/2025 14:30:26] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2025-04-23 14:30:26,963 - INFO - 127.0.0.1 - - [23/Apr/2025 14:30:26] "[36mGET /static/js/visualization.js HTTP/1.1[0m" 304 -
+2025-04-23 14:30:26,964 - INFO - 127.0.0.1 - - [23/Apr/2025 14:30:26] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-23 14:31:01,166 - DEBUG - Memory Manager initialized with paging, size: 1024, page size: 64, algorithm: FIFO
+2025-04-23 14:31:01,166 - INFO - Simulation started with: technique=paging, memory_size=1024, page_size=64, algorithm=FIFO
+2025-04-23 14:31:01,166 - INFO - 127.0.0.1 - - [23/Apr/2025 14:31:01] "POST /api/start_simulation HTTP/1.1" 200 -
+2025-04-23 14:31:03,384 - DEBUG - Allocated 64 bytes (1 pages) for process 1 in frames [0]
+2025-04-23 14:31:03,384 - DEBUG - Successfully allocated 64 bytes
+2025-04-23 14:31:03,384 - INFO - 127.0.0.1 - - [23/Apr/2025 14:31:03] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-23 14:31:17,196 - WARNING - No allocated memory at address 64, using frame 0 instead
+2025-04-23 14:31:17,196 - DEBUG - Deallocated memory for process 1 from frames [0]
+2025-04-23 14:31:17,196 - DEBUG - Successfully deallocated memory at address 64
+2025-04-23 14:31:17,196 - INFO - 127.0.0.1 - - [23/Apr/2025 14:31:17] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-24 08:21:07,377 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-24 08:21:07,377 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-24 08:21:07,433 - INFO -  * Restarting with watchdog (windowsapi)
+2025-04-24 08:21:07,875 - WARNING -  * Debugger is active!
+2025-04-24 08:21:07,888 - INFO -  * Debugger PIN: 871-840-945
+2025-04-24 08:21:10,601 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\flask\\templating.py', reloading
+2025-04-24 08:21:10,634 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\jinja2\\__init__.py', reloading
+2025-04-24 08:21:10,643 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\jinja2\\environment.py', reloading
+2025-04-24 08:21:10,763 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\flask\\globals.py', reloading
+2025-04-24 08:21:10,775 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\flask\\wrappers.py', reloading
+2025-04-24 08:21:10,784 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\werkzeug\\wrappers\\__init__.py', reloading
+2025-04-24 08:21:10,787 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\werkzeug\\wrappers\\request.py', reloading
+2025-04-24 08:21:10,812 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\werkzeug\\sansio\\request.py', reloading
+2025-04-24 08:21:10,823 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\flask\\json\\__init__.py', reloading
+2025-04-24 08:21:10,827 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\werkzeug\\wrappers\\response.py', reloading
+2025-04-24 08:21:10,852 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\werkzeug\\sansio\\response.py', reloading
+2025-04-24 08:21:10,905 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\flask\\config.py', reloading
+2025-04-24 08:21:10,922 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\flask\\typing.py', reloading
+2025-04-24 08:21:10,931 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\werkzeug\\datastructures\\__init__.py', reloading
+2025-04-24 08:21:10,936 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\werkzeug\\datastructures\\headers.py', reloading
+2025-04-24 08:21:11,008 - INFO -  * Restarting with watchdog (windowsapi)
+2025-04-24 08:21:11,512 - WARNING -  * Debugger is active!
+2025-04-24 08:21:11,516 - INFO -  * Debugger PIN: 871-840-945
+2025-04-24 08:21:16,493 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\unicode_escape.py', reloading
+2025-04-24 08:21:16,506 - INFO - 127.0.0.1 - - [24/Apr/2025 08:21:16] "GET / HTTP/1.1" 200 -
+2025-04-24 08:21:16,620 - INFO -  * Restarting with watchdog (windowsapi)
+2025-04-24 08:21:17,052 - WARNING -  * Debugger is active!
+2025-04-24 08:21:17,059 - INFO -  * Debugger PIN: 871-840-945
+2025-04-24 08:21:17,167 - INFO - 127.0.0.1 - - [24/Apr/2025 08:21:17] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-24 08:21:17,568 - INFO - 127.0.0.1 - - [24/Apr/2025 08:21:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-24 08:21:41,482 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-24 08:21:41,482 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-24 08:21:41,482 - INFO -  * Restarting with watchdog (windowsapi)
+2025-04-24 08:21:41,773 - WARNING -  * Debugger is active!
+2025-04-24 08:21:41,775 - INFO -  * Debugger PIN: 871-840-945
+2025-04-24 08:21:51,230 - INFO - 127.0.0.1 - - [24/Apr/2025 08:21:51] "GET / HTTP/1.1" 200 -
+2025-04-24 08:21:51,251 - INFO - 127.0.0.1 - - [24/Apr/2025 08:21:51] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-24 08:21:51,496 - INFO - 127.0.0.1 - - [24/Apr/2025 08:21:51] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-24 08:22:05,664 - INFO - 127.0.0.1 - - [24/Apr/2025 08:22:05] "GET / HTTP/1.1" 200 -
+2025-04-24 08:22:05,681 - INFO - 127.0.0.1 - - [24/Apr/2025 08:22:05] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-24 08:22:05,926 - INFO - 127.0.0.1 - - [24/Apr/2025 08:22:05] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-24 08:22:18,875 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-24 08:22:18,875 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-24 08:22:18,894 - INFO -  * Restarting with watchdog (windowsapi)
+2025-04-24 08:22:19,173 - WARNING -  * Debugger is active!
+2025-04-24 08:22:19,189 - INFO -  * Debugger PIN: 871-840-945
+2025-04-24 08:22:27,992 - INFO - 127.0.0.1 - - [24/Apr/2025 08:22:27] "GET / HTTP/1.1" 200 -
+2025-04-24 08:22:28,018 - INFO - 127.0.0.1 - - [24/Apr/2025 08:22:28] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-24 08:22:28,250 - INFO - 127.0.0.1 - - [24/Apr/2025 08:22:28] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-24 08:23:40,042 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-24 08:23:40,042 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-24 08:23:40,059 - INFO -  * Restarting with watchdog (windowsapi)
+2025-04-24 08:23:40,574 - WARNING -  * Debugger is active!
+2025-04-24 08:23:40,574 - INFO -  * Debugger PIN: 871-840-945
+2025-04-24 08:23:48,854 - INFO - 127.0.0.1 - - [24/Apr/2025 08:23:48] "GET / HTTP/1.1" 200 -
+2025-04-24 08:23:49,113 - INFO - 127.0.0.1 - - [24/Apr/2025 08:23:49] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-24 08:23:53,135 - INFO - 127.0.0.1 - - [24/Apr/2025 08:23:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-24 08:23:57,577 - INFO - 127.0.0.1 - - [24/Apr/2025 08:23:57] "GET /dashboard HTTP/1.1" 200 -
+2025-04-24 08:23:57,715 - INFO - 127.0.0.1 - - [24/Apr/2025 08:23:57] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-24 08:23:57,904 - INFO - 127.0.0.1 - - [24/Apr/2025 08:23:57] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2025-04-24 08:23:57,907 - INFO - 127.0.0.1 - - [24/Apr/2025 08:23:57] "[36mGET /static/js/visualization.js HTTP/1.1[0m" 304 -
+2025-04-24 08:23:57,907 - INFO - 127.0.0.1 - - [24/Apr/2025 08:23:57] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-24 09:09:13,855 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-24 09:09:13,855 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-24 09:09:13,878 - INFO -  * Restarting with watchdog (windowsapi)
+2025-04-24 09:09:14,212 - WARNING -  * Debugger is active!
+2025-04-24 09:09:14,222 - INFO -  * Debugger PIN: 871-840-945
+2025-04-24 09:09:21,569 - INFO - 127.0.0.1 - - [24/Apr/2025 09:09:21] "GET / HTTP/1.1" 200 -
+2025-04-24 09:09:21,841 - INFO - 127.0.0.1 - - [24/Apr/2025 09:09:21] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-24 09:09:27,191 - INFO - 127.0.0.1 - - [24/Apr/2025 09:09:27] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-24 09:19:05,884 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-24 09:19:05,884 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-24 09:19:05,900 - INFO -  * Restarting with watchdog (windowsapi)
+2025-04-24 09:19:06,135 - WARNING -  * Debugger is active!
+2025-04-24 09:19:06,135 - INFO -  * Debugger PIN: 871-840-945
+2025-04-24 09:19:13,008 - INFO - 127.0.0.1 - - [24/Apr/2025 09:19:13] "GET / HTTP/1.1" 200 -
+2025-04-24 09:19:13,220 - INFO - 127.0.0.1 - - [24/Apr/2025 09:19:13] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-24 09:19:14,032 - INFO - 127.0.0.1 - - [24/Apr/2025 09:19:14] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-24 09:19:25,477 - INFO - 127.0.0.1 - - [24/Apr/2025 09:19:25] "GET /dashboard HTTP/1.1" 200 -
+2025-04-24 09:19:25,625 - INFO - 127.0.0.1 - - [24/Apr/2025 09:19:25] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-24 09:19:25,738 - INFO - 127.0.0.1 - - [24/Apr/2025 09:19:25] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2025-04-24 09:19:25,852 - INFO - 127.0.0.1 - - [24/Apr/2025 09:19:25] "[36mGET /static/js/visualization.js HTTP/1.1[0m" 304 -
+2025-04-24 09:19:25,852 - INFO - 127.0.0.1 - - [24/Apr/2025 09:19:25] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-24 09:19:37,295 - INFO - 127.0.0.1 - - [24/Apr/2025 09:19:37] "GET /tutorials HTTP/1.1" 200 -
+2025-04-24 09:19:37,520 - INFO - 127.0.0.1 - - [24/Apr/2025 09:19:37] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-24 09:19:37,667 - INFO - 127.0.0.1 - - [24/Apr/2025 09:19:37] "[36mGET /static/js/visualization.js HTTP/1.1[0m" 304 -
+2025-04-24 09:19:37,667 - INFO - 127.0.0.1 - - [24/Apr/2025 09:19:37] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2025-04-24 09:19:37,988 - INFO - 127.0.0.1 - - [24/Apr/2025 09:19:37] "GET /api/tutorials HTTP/1.1" 200 -
+2025-04-24 09:19:40,918 - INFO - Started tutorial: intro
+2025-04-24 09:19:40,918 - DEBUG - Memory Manager initialized with paging, size: 512, page size: 64, algorithm: FIFO
+2025-04-24 09:19:40,918 - INFO - Tutorial memory manager initialized with config: {'memory_size': 512, 'page_size': 64, 'technique': 'paging', 'algorithm': 'FIFO'}
+2025-04-24 09:19:40,918 - INFO - 127.0.0.1 - - [24/Apr/2025 09:19:40] "POST /api/tutorials/start HTTP/1.1" 200 -
+2025-04-24 09:19:47,299 - INFO - 127.0.0.1 - - [24/Apr/2025 09:19:47] "GET /dashboard HTTP/1.1" 200 -
+2025-04-24 09:19:47,614 - INFO - 127.0.0.1 - - [24/Apr/2025 09:19:47] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-24 09:19:47,661 - INFO - 127.0.0.1 - - [24/Apr/2025 09:19:47] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-24 09:19:47,675 - INFO - 127.0.0.1 - - [24/Apr/2025 09:19:47] "[36mGET /static/js/visualization.js HTTP/1.1[0m" 304 -
+2025-04-24 09:19:47,677 - INFO - 127.0.0.1 - - [24/Apr/2025 09:19:47] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2025-04-24 09:19:57,149 - INFO - 127.0.0.1 - - [24/Apr/2025 09:19:57] "GET / HTTP/1.1" 200 -
+2025-04-24 09:19:57,397 - INFO - 127.0.0.1 - - [24/Apr/2025 09:19:57] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-24 15:04:24,755 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-24 15:04:24,755 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-24 15:04:24,781 - INFO -  * Restarting with watchdog (windowsapi)
+2025-04-24 15:04:25,097 - WARNING -  * Debugger is active!
+2025-04-24 15:04:25,175 - INFO -  * Debugger PIN: 871-840-945
+2025-04-24 15:04:33,594 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\unicode_escape.py', reloading
+2025-04-24 15:04:33,599 - INFO - 127.0.0.1 - - [24/Apr/2025 15:04:33] "GET / HTTP/1.1" 200 -
+2025-04-24 15:04:33,771 - INFO - 127.0.0.1 - - [24/Apr/2025 15:04:33] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-24 15:04:34,411 - INFO -  * Restarting with watchdog (windowsapi)
+2025-04-24 15:04:34,712 - WARNING -  * Debugger is active!
+2025-04-24 15:04:34,712 - INFO -  * Debugger PIN: 871-840-945
+2025-04-24 15:04:35,604 - INFO - 127.0.0.1 - - [24/Apr/2025 15:04:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-24 15:04:37,953 - INFO - 127.0.0.1 - - [24/Apr/2025 15:04:37] "GET /dashboard HTTP/1.1" 200 -
+2025-04-24 15:04:38,185 - INFO - 127.0.0.1 - - [24/Apr/2025 15:04:38] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-24 15:04:38,197 - INFO - 127.0.0.1 - - [24/Apr/2025 15:04:38] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2025-04-24 15:04:38,278 - INFO - 127.0.0.1 - - [24/Apr/2025 15:04:38] "[36mGET /static/js/visualization.js HTTP/1.1[0m" 304 -
+2025-04-24 15:04:38,278 - INFO - 127.0.0.1 - - [24/Apr/2025 15:04:38] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-24 15:05:03,468 - INFO - 127.0.0.1 - - [24/Apr/2025 15:05:03] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-24 15:31:02,013 - INFO - 127.0.0.1 - - [24/Apr/2025 15:31:02] "GET / HTTP/1.1" 200 -
+2025-04-24 15:31:02,053 - INFO - 127.0.0.1 - - [24/Apr/2025 15:31:02] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-24 15:31:02,605 - INFO - 127.0.0.1 - - [24/Apr/2025 15:31:02] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-24 15:31:44,547 - INFO - 127.0.0.1 - - [24/Apr/2025 15:31:44] "GET /dashboard HTTP/1.1" 200 -
+2025-04-24 15:31:44,719 - INFO - 127.0.0.1 - - [24/Apr/2025 15:31:44] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-24 15:31:44,829 - INFO - 127.0.0.1 - - [24/Apr/2025 15:31:44] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2025-04-24 15:31:45,009 - INFO - 127.0.0.1 - - [24/Apr/2025 15:31:45] "[36mGET /static/js/visualization.js HTTP/1.1[0m" 304 -
+2025-04-24 15:31:45,009 - INFO - 127.0.0.1 - - [24/Apr/2025 15:31:45] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-24 15:32:16,772 - DEBUG - Memory Manager initialized with paging, size: 1024, page size: 64, algorithm: FIFO
+2025-04-24 15:32:16,772 - INFO - Simulation started with: technique=paging, memory_size=1024, page_size=64, algorithm=FIFO
+2025-04-24 15:32:16,772 - INFO - 127.0.0.1 - - [24/Apr/2025 15:32:16] "POST /api/start_simulation HTTP/1.1" 200 -
+2025-04-24 15:32:21,965 - DEBUG - Allocated 64 bytes (1 pages) for process 1 in frames [0]
+2025-04-24 15:32:21,965 - DEBUG - Successfully allocated 64 bytes
+2025-04-24 15:32:21,965 - INFO - 127.0.0.1 - - [24/Apr/2025 15:32:21] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-24 15:33:43,335 - DEBUG - Allocated 900 bytes (15 pages) for process 2 in frames [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+2025-04-24 15:33:43,335 - DEBUG - Successfully allocated 900 bytes
+2025-04-24 15:33:43,335 - INFO - 127.0.0.1 - - [24/Apr/2025 15:33:43] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-24 15:34:05,271 - DEBUG - Replaced page in frame 0 for process 1 using FIFO
+2025-04-24 15:34:05,271 - DEBUG - Replaced page in frame 1 for process 2 using FIFO
+2025-04-24 15:34:05,271 - DEBUG - Replaced page in frame 2 for process 2 using FIFO
+2025-04-24 15:34:05,271 - DEBUG - Replaced page in frame 3 for process 2 using FIFO
+2025-04-24 15:34:05,271 - DEBUG - Replaced page in frame 4 for process 2 using FIFO
+2025-04-24 15:34:05,271 - DEBUG - Replaced page in frame 5 for process 2 using FIFO
+2025-04-24 15:34:05,271 - DEBUG - Replaced page in frame 6 for process 2 using FIFO
+2025-04-24 15:34:05,271 - DEBUG - Replaced page in frame 7 for process 2 using FIFO
+2025-04-24 15:34:05,271 - DEBUG - Replaced page in frame 8 for process 2 using FIFO
+2025-04-24 15:34:05,271 - DEBUG - Replaced page in frame 9 for process 2 using FIFO
+2025-04-24 15:34:05,271 - DEBUG - Replaced page in frame 10 for process 2 using FIFO
+2025-04-24 15:34:05,271 - DEBUG - Replaced page in frame 11 for process 2 using FIFO
+2025-04-24 15:34:05,271 - DEBUG - Replaced page in frame 12 for process 2 using FIFO
+2025-04-24 15:34:05,271 - DEBUG - Replaced page in frame 13 for process 2 using FIFO
+2025-04-24 15:34:05,271 - DEBUG - Replaced page in frame 14 for process 2 using FIFO
+2025-04-24 15:34:05,271 - DEBUG - Allocated 909 bytes (15 pages) for process 3 in frames [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+2025-04-24 15:34:05,271 - DEBUG - Successfully allocated 909 bytes
+2025-04-24 15:34:05,271 - INFO - 127.0.0.1 - - [24/Apr/2025 15:34:05] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-24 15:34:27,387 - DEBUG - Replaced page in frame 15 for process 2 using FIFO
+2025-04-24 15:34:27,387 - DEBUG - Replaced page in frame 0 for process 3 using FIFO
+2025-04-24 15:34:27,387 - DEBUG - Replaced page in frame 1 for process 3 using FIFO
+2025-04-24 15:34:27,387 - DEBUG - Replaced page in frame 2 for process 3 using FIFO
+2025-04-24 15:34:27,387 - DEBUG - Replaced page in frame 3 for process 3 using FIFO
+2025-04-24 15:34:27,387 - DEBUG - Replaced page in frame 4 for process 3 using FIFO
+2025-04-24 15:34:27,387 - DEBUG - Replaced page in frame 5 for process 3 using FIFO
+2025-04-24 15:34:27,387 - DEBUG - Replaced page in frame 6 for process 3 using FIFO
+2025-04-24 15:34:27,387 - DEBUG - Replaced page in frame 7 for process 3 using FIFO
+2025-04-24 15:34:27,387 - DEBUG - Replaced page in frame 8 for process 3 using FIFO
+2025-04-24 15:34:27,387 - DEBUG - Replaced page in frame 9 for process 3 using FIFO
+2025-04-24 15:34:27,387 - DEBUG - Replaced page in frame 10 for process 3 using FIFO
+2025-04-24 15:34:27,387 - DEBUG - Replaced page in frame 11 for process 3 using FIFO
+2025-04-24 15:34:27,387 - DEBUG - Replaced page in frame 12 for process 3 using FIFO
+2025-04-24 15:34:27,387 - DEBUG - Replaced page in frame 13 for process 3 using FIFO
+2025-04-24 15:34:27,387 - DEBUG - Replaced page in frame 14 for process 3 using FIFO
+2025-04-24 15:34:27,387 - DEBUG - Allocated 1024 bytes (16 pages) for process 4 in frames [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+2025-04-24 15:34:27,387 - DEBUG - Successfully allocated 1024 bytes
+2025-04-24 15:34:27,387 - INFO - 127.0.0.1 - - [24/Apr/2025 15:34:27] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-24 15:34:38,751 - DEBUG - Deallocated memory for process 4 from frames [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+2025-04-24 15:34:38,752 - DEBUG - Successfully deallocated memory at address 50
+2025-04-24 15:34:38,752 - INFO - 127.0.0.1 - - [24/Apr/2025 15:34:38] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-24 15:34:52,772 - DEBUG - Memory Manager initialized with paging, size: 1024, page size: 64, algorithm: LRU
+2025-04-24 15:34:52,772 - INFO - Simulation started with: technique=paging, memory_size=1024, page_size=64, algorithm=LRU
+2025-04-24 15:34:52,772 - INFO - 127.0.0.1 - - [24/Apr/2025 15:34:52] "POST /api/start_simulation HTTP/1.1" 200 -
+2025-04-24 15:34:59,832 - ERROR - Error in deallocation: No allocated memory to deallocate
+2025-04-24 15:34:59,832 - INFO - 127.0.0.1 - - [24/Apr/2025 15:34:59] "[31m[1mPOST /api/next_step HTTP/1.1[0m" 400 -
+2025-04-24 15:35:04,707 - ERROR - Error in deallocation: No allocated memory to deallocate
+2025-04-24 15:35:04,707 - INFO - 127.0.0.1 - - [24/Apr/2025 15:35:04] "[31m[1mPOST /api/next_step HTTP/1.1[0m" 400 -
+2025-04-24 15:35:12,744 - ERROR - Error in deallocation: No allocated memory to deallocate
+2025-04-24 15:35:12,744 - INFO - 127.0.0.1 - - [24/Apr/2025 15:35:12] "[31m[1mPOST /api/next_step HTTP/1.1[0m" 400 -
+2025-04-24 15:35:17,485 - DEBUG - Allocated 1024 bytes (16 pages) for process 1 in frames [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+2025-04-24 15:35:17,485 - DEBUG - Successfully allocated 1024 bytes
+2025-04-24 15:35:17,485 - INFO - 127.0.0.1 - - [24/Apr/2025 15:35:17] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-24 15:35:27,888 - INFO - 127.0.0.1 - - [24/Apr/2025 15:35:27] "POST /api/reset_simulation HTTP/1.1" 200 -
+2025-04-24 15:35:29,983 - INFO - 127.0.0.1 - - [24/Apr/2025 15:35:29] "POST /api/reset_simulation HTTP/1.1" 200 -
+2025-04-24 15:35:30,704 - DEBUG - Memory Manager initialized with paging, size: 1024, page size: 64, algorithm: LRU
+2025-04-24 15:35:30,705 - INFO - Simulation started with: technique=paging, memory_size=1024, page_size=64, algorithm=LRU
+2025-04-24 15:35:30,705 - INFO - 127.0.0.1 - - [24/Apr/2025 15:35:30] "POST /api/start_simulation HTTP/1.1" 200 -
+2025-04-24 15:35:37,263 - DEBUG - Allocated 512 bytes (8 pages) for process 1 in frames [0, 1, 2, 3, 4, 5, 6, 7]
+2025-04-24 15:35:37,263 - DEBUG - Successfully allocated 512 bytes
+2025-04-24 15:35:37,263 - INFO - 127.0.0.1 - - [24/Apr/2025 15:35:37] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-24 15:35:48,548 - DEBUG - Handled page fault by allocating frame 9 to process 2
+2025-04-24 15:35:48,548 - DEBUG - Page fault on address 618 (frame 9)
+2025-04-24 15:35:48,548 - DEBUG - Successfully accessed memory at address 618
+2025-04-24 15:35:48,548 - INFO - 127.0.0.1 - - [24/Apr/2025 15:35:48] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-24 15:37:02,634 - DEBUG - Page hit on address 64 (frame 1)
+2025-04-24 15:37:02,634 - DEBUG - Successfully accessed memory at address 64
+2025-04-24 15:37:02,634 - INFO - 127.0.0.1 - - [24/Apr/2025 15:37:02] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-24 15:37:12,721 - DEBUG - Page hit on address 32 (frame 0)
+2025-04-24 15:37:12,722 - DEBUG - Successfully accessed memory at address 32
+2025-04-24 15:37:12,722 - INFO - 127.0.0.1 - - [24/Apr/2025 15:37:12] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-24 15:37:20,513 - DEBUG - Handled page fault by allocating frame 8 to process 3
+2025-04-24 15:37:20,513 - DEBUG - Page fault on address 512 (frame 8)
+2025-04-24 15:37:20,513 - DEBUG - Successfully accessed memory at address 512
+2025-04-24 15:37:20,513 - INFO - 127.0.0.1 - - [24/Apr/2025 15:37:20] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-24 15:40:19,119 - DEBUG - Page hit on address 512 (frame 8)
+2025-04-24 15:40:19,119 - DEBUG - Successfully accessed memory at address 512
+2025-04-24 15:40:19,119 - INFO - 127.0.0.1 - - [24/Apr/2025 15:40:19] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-24 15:45:53,686 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\argparse.py', reloading
+2025-04-24 15:45:53,748 - INFO -  * Restarting with watchdog (windowsapi)
+2025-04-24 15:45:54,027 - WARNING -  * Debugger is active!
+2025-04-24 15:45:54,027 - INFO -  * Debugger PIN: 871-840-945
+2025-04-24 15:50:52,014 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\os.py', reloading
+2025-04-24 15:50:52,769 - INFO -  * Restarting with watchdog (windowsapi)
+2025-04-24 15:50:53,019 - WARNING -  * Debugger is active!
+2025-04-24 15:50:53,019 - INFO -  * Debugger PIN: 871-840-945
+2025-04-24 15:52:34,635 - INFO - 127.0.0.1 - - [24/Apr/2025 15:52:34] "GET /dashboard HTTP/1.1" 200 -
+2025-04-24 15:52:34,747 - INFO - 127.0.0.1 - - [24/Apr/2025 15:52:34] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-24 15:52:34,887 - INFO - 127.0.0.1 - - [24/Apr/2025 15:52:34] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2025-04-24 15:52:34,962 - INFO - 127.0.0.1 - - [24/Apr/2025 15:52:34] "[36mGET /static/js/visualization.js HTTP/1.1[0m" 304 -
+2025-04-24 15:52:34,968 - INFO - 127.0.0.1 - - [24/Apr/2025 15:52:34] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-24 15:52:46,583 - INFO - 127.0.0.1 - - [24/Apr/2025 15:52:46] "GET / HTTP/1.1" 200 -
+2025-04-24 15:52:46,817 - INFO - 127.0.0.1 - - [24/Apr/2025 15:52:46] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-24 15:53:24,819 - INFO - 127.0.0.1 - - [24/Apr/2025 15:53:24] "GET /dashboard HTTP/1.1" 200 -
+2025-04-24 15:53:25,124 - INFO - 127.0.0.1 - - [24/Apr/2025 15:53:25] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-24 15:53:25,142 - INFO - 127.0.0.1 - - [24/Apr/2025 15:53:25] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2025-04-24 15:53:25,145 - INFO - 127.0.0.1 - - [24/Apr/2025 15:53:25] "[36mGET /static/js/visualization.js HTTP/1.1[0m" 304 -
+2025-04-24 15:53:25,150 - INFO - 127.0.0.1 - - [24/Apr/2025 15:53:25] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-24 15:53:46,447 - INFO - 127.0.0.1 - - [24/Apr/2025 15:53:46] "GET / HTTP/1.1" 200 -
+2025-04-24 15:53:46,673 - INFO - 127.0.0.1 - - [24/Apr/2025 15:53:46] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-24 15:57:44,546 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-24 15:57:44,546 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-24 15:57:44,552 - INFO -  * Restarting with watchdog (windowsapi)
+2025-04-24 15:57:44,841 - WARNING -  * Debugger is active!
+2025-04-24 15:57:44,841 - INFO -  * Debugger PIN: 871-840-945
+2025-04-24 15:57:50,217 - INFO - 127.0.0.1 - - [24/Apr/2025 15:57:50] "GET / HTTP/1.1" 200 -
+2025-04-24 15:57:50,414 - INFO - 127.0.0.1 - - [24/Apr/2025 15:57:50] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-24 15:57:50,517 - INFO - 127.0.0.1 - - [24/Apr/2025 15:57:50] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-24 16:03:59,054 - INFO - 127.0.0.1 - - [24/Apr/2025 16:03:59] "GET /dashboard HTTP/1.1" 200 -
+2025-04-24 16:03:59,294 - INFO - 127.0.0.1 - - [24/Apr/2025 16:03:59] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-24 16:03:59,303 - INFO - 127.0.0.1 - - [24/Apr/2025 16:03:59] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2025-04-24 16:03:59,388 - INFO - 127.0.0.1 - - [24/Apr/2025 16:03:59] "[36mGET /static/js/visualization.js HTTP/1.1[0m" 304 -
+2025-04-24 16:03:59,388 - INFO - 127.0.0.1 - - [24/Apr/2025 16:03:59] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-24 16:04:46,560 - DEBUG - Memory Manager initialized with paging, size: 1024, page size: 64, algorithm: FIFO
+2025-04-24 16:04:46,561 - INFO - Simulation started with: technique=paging, memory_size=1024, page_size=64, algorithm=FIFO
+2025-04-24 16:04:46,563 - INFO - 127.0.0.1 - - [24/Apr/2025 16:04:46] "POST /api/start_simulation HTTP/1.1" 200 -
+2025-04-24 16:04:49,503 - DEBUG - Allocated 512 bytes (8 pages) for process 1 in frames [0, 1, 2, 3, 4, 5, 6, 7]
+2025-04-24 16:04:49,503 - DEBUG - Successfully allocated 512 bytes
+2025-04-24 16:04:49,507 - INFO - 127.0.0.1 - - [24/Apr/2025 16:04:49] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-24 16:05:46,856 - DEBUG - Memory Manager initialized with paging, size: 1024, page size: 64, algorithm: FIFO
+2025-04-24 16:05:46,856 - INFO - Simulation started with: technique=paging, memory_size=1024, page_size=64, algorithm=FIFO
+2025-04-24 16:05:46,860 - INFO - 127.0.0.1 - - [24/Apr/2025 16:05:46] "POST /api/start_simulation HTTP/1.1" 200 -
+2025-04-24 16:05:48,975 - DEBUG - Allocated 1024 bytes (16 pages) for process 1 in frames [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+2025-04-24 16:05:48,975 - DEBUG - Successfully allocated 1024 bytes
+2025-04-24 16:05:48,975 - INFO - 127.0.0.1 - - [24/Apr/2025 16:05:48] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-24 16:05:52,517 - DEBUG - Replaced page in frame 0 for process 1 using FIFO
+2025-04-24 16:05:52,517 - DEBUG - Replaced page in frame 1 for process 1 using FIFO
+2025-04-24 16:05:52,518 - DEBUG - Replaced page in frame 2 for process 1 using FIFO
+2025-04-24 16:05:52,518 - DEBUG - Replaced page in frame 3 for process 1 using FIFO
+2025-04-24 16:05:52,519 - DEBUG - Replaced page in frame 4 for process 1 using FIFO
+2025-04-24 16:05:52,520 - DEBUG - Replaced page in frame 5 for process 1 using FIFO
+2025-04-24 16:05:52,521 - DEBUG - Replaced page in frame 6 for process 1 using FIFO
+2025-04-24 16:05:52,521 - DEBUG - Replaced page in frame 7 for process 1 using FIFO
+2025-04-24 16:05:52,522 - DEBUG - Replaced page in frame 8 for process 1 using FIFO
+2025-04-24 16:05:52,522 - DEBUG - Replaced page in frame 9 for process 1 using FIFO
+2025-04-24 16:05:52,522 - DEBUG - Replaced page in frame 10 for process 1 using FIFO
+2025-04-24 16:05:52,523 - DEBUG - Replaced page in frame 11 for process 1 using FIFO
+2025-04-24 16:05:52,523 - DEBUG - Replaced page in frame 12 for process 1 using FIFO
+2025-04-24 16:05:52,523 - DEBUG - Replaced page in frame 13 for process 1 using FIFO
+2025-04-24 16:05:52,524 - DEBUG - Replaced page in frame 14 for process 1 using FIFO
+2025-04-24 16:05:52,524 - DEBUG - Replaced page in frame 15 for process 1 using FIFO
+2025-04-24 16:05:52,524 - DEBUG - Allocated 1024 bytes (16 pages) for process 2 in frames [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+2025-04-24 16:05:52,524 - DEBUG - Successfully allocated 1024 bytes
+2025-04-24 16:05:52,530 - INFO - 127.0.0.1 - - [24/Apr/2025 16:05:52] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-29 14:16:33,911 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-29 14:16:33,913 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-29 14:16:33,932 - INFO -  * Restarting with watchdog (windowsapi)
+2025-04-29 14:16:34,231 - WARNING -  * Debugger is active!
+2025-04-29 14:16:34,231 - INFO -  * Debugger PIN: 600-902-152
+2025-04-29 14:17:03,497 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\unicode_escape.py', reloading
+2025-04-29 14:17:03,497 - INFO - 127.0.0.1 - - [29/Apr/2025 14:17:03] "GET / HTTP/1.1" 200 -
+2025-04-29 14:17:03,645 - INFO - 127.0.0.1 - - [29/Apr/2025 14:17:03] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-04-29 14:17:04,477 - INFO -  * Restarting with watchdog (windowsapi)
+2025-04-29 14:17:04,728 - WARNING -  * Debugger is active!
+2025-04-29 14:17:04,730 - INFO -  * Debugger PIN: 600-902-152
+2025-04-29 14:17:10,902 - INFO - 127.0.0.1 - - [29/Apr/2025 14:17:10] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-29 14:17:48,442 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-29 14:17:48,442 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-29 14:17:48,450 - INFO -  * Restarting with watchdog (windowsapi)
+2025-04-29 14:17:48,727 - WARNING -  * Debugger is active!
+2025-04-29 14:17:48,727 - INFO -  * Debugger PIN: 600-902-152
+2025-04-29 14:18:09,716 - INFO - 127.0.0.1 - - [29/Apr/2025 14:18:09] "GET / HTTP/1.1" 200 -
+2025-04-29 14:18:09,837 - INFO - 127.0.0.1 - - [29/Apr/2025 14:18:09] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-29 14:18:11,481 - INFO - 127.0.0.1 - - [29/Apr/2025 14:18:11] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-29 14:18:17,384 - INFO - 127.0.0.1 - - [29/Apr/2025 14:18:17] "GET /dashboard HTTP/1.1" 200 -
+2025-04-29 14:18:17,513 - INFO - 127.0.0.1 - - [29/Apr/2025 14:18:17] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-29 14:18:17,530 - INFO - 127.0.0.1 - - [29/Apr/2025 14:18:17] "GET /static/js/charts.js HTTP/1.1" 200 -
+2025-04-29 14:18:17,717 - INFO - 127.0.0.1 - - [29/Apr/2025 14:18:17] "GET /static/js/visualization.js HTTP/1.1" 200 -
+2025-04-29 14:18:17,717 - INFO - 127.0.0.1 - - [29/Apr/2025 14:18:17] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-04-29 14:22:35,876 - DEBUG - Memory Manager initialized with segmentation, size: 1024, page size: 64, algorithm: FIFO
+2025-04-29 14:22:35,876 - INFO - Simulation started with: technique=segmentation, memory_size=1024, page_size=64, algorithm=FIFO
+2025-04-29 14:22:35,876 - INFO - 127.0.0.1 - - [29/Apr/2025 14:22:35] "POST /api/start_simulation HTTP/1.1" 200 -
+2025-04-29 14:22:37,211 - DEBUG - Allocated 64 bytes (1 pages) for process 1 in frames [0]
+2025-04-29 14:22:37,211 - DEBUG - Successfully allocated 64 bytes
+2025-04-29 14:22:37,211 - INFO - 127.0.0.1 - - [29/Apr/2025 14:22:37] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-29 14:22:49,090 - DEBUG - Allocated 60 bytes (1 pages) for process 2 in frames [1]
+2025-04-29 14:22:49,090 - DEBUG - Successfully allocated 60 bytes
+2025-04-29 14:22:49,090 - INFO - 127.0.0.1 - - [29/Apr/2025 14:22:49] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-29 14:22:50,358 - DEBUG - Memory Manager initialized with segmentation, size: 1024, page size: 64, algorithm: FIFO
+2025-04-29 14:22:50,359 - INFO - Simulation started with: technique=segmentation, memory_size=1024, page_size=64, algorithm=FIFO
+2025-04-29 14:22:50,359 - INFO - 127.0.0.1 - - [29/Apr/2025 14:22:50] "POST /api/start_simulation HTTP/1.1" 200 -
+2025-04-29 14:37:08,254 - INFO - 127.0.0.1 - - [29/Apr/2025 14:37:08] "GET /dashboard HTTP/1.1" 200 -
+2025-04-29 14:37:08,416 - INFO - 127.0.0.1 - - [29/Apr/2025 14:37:08] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-29 14:37:08,512 - INFO - 127.0.0.1 - - [29/Apr/2025 14:37:08] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2025-04-29 14:37:08,632 - INFO - 127.0.0.1 - - [29/Apr/2025 14:37:08] "[36mGET /static/js/visualization.js HTTP/1.1[0m" 304 -
+2025-04-29 14:37:08,632 - INFO - 127.0.0.1 - - [29/Apr/2025 14:37:08] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-29 14:37:28,225 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-29 14:37:28,225 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-29 14:37:28,248 - INFO -  * Restarting with watchdog (windowsapi)
+2025-04-29 14:37:28,524 - WARNING -  * Debugger is active!
+2025-04-29 14:37:28,524 - INFO -  * Debugger PIN: 600-902-152
+2025-04-29 14:37:34,637 - INFO - 127.0.0.1 - - [29/Apr/2025 14:37:34] "GET / HTTP/1.1" 200 -
+2025-04-29 14:37:34,758 - INFO - 127.0.0.1 - - [29/Apr/2025 14:37:34] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-29 14:37:34,925 - INFO - 127.0.0.1 - - [29/Apr/2025 14:37:34] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-29 14:38:58,644 - INFO - 127.0.0.1 - - [29/Apr/2025 14:38:58] "GET / HTTP/1.1" 200 -
+2025-04-29 14:38:58,867 - INFO - 127.0.0.1 - - [29/Apr/2025 14:38:58] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-29 14:39:00,074 - INFO - 127.0.0.1 - - [29/Apr/2025 14:39:00] "GET /dashboard HTTP/1.1" 200 -
+2025-04-29 14:39:00,372 - INFO - 127.0.0.1 - - [29/Apr/2025 14:39:00] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-29 14:39:00,454 - INFO - 127.0.0.1 - - [29/Apr/2025 14:39:00] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-29 14:39:00,456 - INFO - 127.0.0.1 - - [29/Apr/2025 14:39:00] "[36mGET /static/js/visualization.js HTTP/1.1[0m" 304 -
+2025-04-29 14:39:00,462 - INFO - 127.0.0.1 - - [29/Apr/2025 14:39:00] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2025-04-29 14:39:04,109 - INFO - 127.0.0.1 - - [29/Apr/2025 14:39:04] "GET / HTTP/1.1" 200 -
+2025-04-29 14:39:04,393 - INFO - 127.0.0.1 - - [29/Apr/2025 14:39:04] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-29 14:39:07,199 - INFO - 127.0.0.1 - - [29/Apr/2025 14:39:07] "GET /tutorials HTTP/1.1" 200 -
+2025-04-29 14:39:07,498 - INFO - 127.0.0.1 - - [29/Apr/2025 14:39:07] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-29 14:39:07,572 - INFO - 127.0.0.1 - - [29/Apr/2025 14:39:07] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2025-04-29 14:39:07,576 - INFO - 127.0.0.1 - - [29/Apr/2025 14:39:07] "[36mGET /static/js/visualization.js HTTP/1.1[0m" 304 -
+2025-04-29 14:39:07,894 - INFO - 127.0.0.1 - - [29/Apr/2025 14:39:07] "GET /api/tutorials HTTP/1.1" 200 -
+2025-04-29 14:39:13,280 - INFO - 127.0.0.1 - - [29/Apr/2025 14:39:13] "GET / HTTP/1.1" 200 -
+2025-04-29 14:39:13,647 - INFO - 127.0.0.1 - - [29/Apr/2025 14:39:13] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-29 14:39:52,362 - INFO - 127.0.0.1 - - [29/Apr/2025 14:39:52] "GET /dashboard HTTP/1.1" 200 -
+2025-04-29 14:39:52,597 - INFO - 127.0.0.1 - - [29/Apr/2025 14:39:52] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-29 14:39:52,633 - INFO - 127.0.0.1 - - [29/Apr/2025 14:39:52] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2025-04-29 14:39:52,747 - INFO - 127.0.0.1 - - [29/Apr/2025 14:39:52] "[36mGET /static/js/visualization.js HTTP/1.1[0m" 304 -
+2025-04-29 14:39:52,751 - INFO - 127.0.0.1 - - [29/Apr/2025 14:39:52] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-29 14:46:26,772 - INFO - 127.0.0.1 - - [29/Apr/2025 14:46:26] "GET /dashboard HTTP/1.1" 200 -
+2025-04-29 14:46:26,812 - INFO - 127.0.0.1 - - [29/Apr/2025 14:46:26] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-29 14:46:27,049 - INFO - 127.0.0.1 - - [29/Apr/2025 14:46:27] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2025-04-29 14:46:27,114 - INFO - 127.0.0.1 - - [29/Apr/2025 14:46:27] "[36mGET /static/js/visualization.js HTTP/1.1[0m" 304 -
+2025-04-29 14:46:27,115 - INFO - 127.0.0.1 - - [29/Apr/2025 14:46:27] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-29 14:51:39,058 - DEBUG - Memory Manager initialized with paging, size: 1024, page size: 64, algorithm: FIFO
+2025-04-29 14:51:39,058 - INFO - Simulation started with: technique=paging, memory_size=1024, page_size=64, algorithm=FIFO
+2025-04-29 14:51:39,059 - INFO - 127.0.0.1 - - [29/Apr/2025 14:51:39] "POST /api/start_simulation HTTP/1.1" 200 -
+2025-04-29 14:51:40,261 - DEBUG - Allocated 64 bytes (1 pages) for process 1 in frames [0]
+2025-04-29 14:51:40,261 - DEBUG - Successfully allocated 64 bytes
+2025-04-29 14:51:40,262 - INFO - 127.0.0.1 - - [29/Apr/2025 14:51:40] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-29 14:51:49,189 - DEBUG - Replaced page in frame 0 for process 1 using FIFO
+2025-04-29 14:51:49,189 - DEBUG - Allocated 1024 bytes (16 pages) for process 2 in frames [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+2025-04-29 14:51:49,189 - DEBUG - Successfully allocated 1024 bytes
+2025-04-29 14:51:49,189 - INFO - 127.0.0.1 - - [29/Apr/2025 14:51:49] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-29 14:51:59,157 - DEBUG - Deallocated memory for process 2 from frames [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+2025-04-29 14:51:59,157 - DEBUG - Successfully deallocated memory at address 64
+2025-04-29 14:51:59,157 - INFO - 127.0.0.1 - - [29/Apr/2025 14:51:59] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-29 14:52:24,791 - ERROR - Error in deallocation: No allocated memory to deallocate
+2025-04-29 14:52:24,791 - INFO - 127.0.0.1 - - [29/Apr/2025 14:52:24] "[31m[1mPOST /api/next_step HTTP/1.1[0m" 400 -
+2025-04-29 14:52:27,930 - DEBUG - Memory Manager initialized with paging, size: 1024, page size: 64, algorithm: LRU
+2025-04-29 14:52:27,930 - INFO - Simulation started with: technique=paging, memory_size=1024, page_size=64, algorithm=LRU
+2025-04-29 14:52:27,931 - INFO - 127.0.0.1 - - [29/Apr/2025 14:52:27] "POST /api/start_simulation HTTP/1.1" 200 -
+2025-04-29 14:52:32,524 - ERROR - Error in deallocation: No allocated memory to deallocate
+2025-04-29 14:52:32,524 - INFO - 127.0.0.1 - - [29/Apr/2025 14:52:32] "[31m[1mPOST /api/next_step HTTP/1.1[0m" 400 -
+2025-04-29 14:52:40,107 - DEBUG - Handled page fault by allocating frame 1 to process 1
+2025-04-29 14:52:40,107 - DEBUG - Page fault on address 64 (frame 1)
+2025-04-29 14:52:40,107 - DEBUG - Successfully accessed memory at address 64
+2025-04-29 14:52:40,107 - INFO - 127.0.0.1 - - [29/Apr/2025 14:52:40] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-29 14:52:48,336 - DEBUG - Page hit on address 64 (frame 1)
+2025-04-29 14:52:48,336 - DEBUG - Successfully accessed memory at address 64
+2025-04-29 14:52:48,336 - INFO - 127.0.0.1 - - [29/Apr/2025 14:52:48] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-29 14:53:07,031 - DEBUG - Handled page fault by allocating frame 2 to process 2
+2025-04-29 14:53:07,031 - DEBUG - Page fault on address 128 (frame 2)
+2025-04-29 14:53:07,031 - DEBUG - Successfully accessed memory at address 128
+2025-04-29 14:53:07,031 - INFO - 127.0.0.1 - - [29/Apr/2025 14:53:07] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-29 14:53:09,779 - DEBUG - Page hit on address 128 (frame 2)
+2025-04-29 14:53:09,779 - DEBUG - Successfully accessed memory at address 128
+2025-04-29 14:53:09,779 - INFO - 127.0.0.1 - - [29/Apr/2025 14:53:09] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-29 14:53:50,604 - INFO - 127.0.0.1 - - [29/Apr/2025 14:53:50] "GET /dashboard HTTP/1.1" 200 -
+2025-04-29 14:53:50,914 - INFO - 127.0.0.1 - - [29/Apr/2025 14:53:50] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-29 14:53:51,008 - INFO - 127.0.0.1 - - [29/Apr/2025 14:53:51] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-29 14:53:51,010 - INFO - 127.0.0.1 - - [29/Apr/2025 14:53:51] "[36mGET /static/js/visualization.js HTTP/1.1[0m" 304 -
+2025-04-29 14:53:51,014 - INFO - 127.0.0.1 - - [29/Apr/2025 14:53:51] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2025-04-29 14:53:55,762 - INFO - 127.0.0.1 - - [29/Apr/2025 14:53:55] "GET / HTTP/1.1" 200 -
+2025-04-29 14:53:56,083 - INFO - 127.0.0.1 - - [29/Apr/2025 14:53:56] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-30 14:33:17,489 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-30 14:33:17,489 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-30 14:33:17,515 - INFO -  * Restarting with watchdog (windowsapi)
+2025-04-30 14:33:17,918 - WARNING -  * Debugger is active!
+2025-04-30 14:33:17,934 - INFO -  * Debugger PIN: 607-533-664
+2025-04-30 14:33:26,760 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\unicode_escape.py', reloading
+2025-04-30 14:33:26,760 - INFO - 127.0.0.1 - - [30/Apr/2025 14:33:26] "GET / HTTP/1.1" 200 -
+2025-04-30 14:33:27,011 - INFO - 127.0.0.1 - - [30/Apr/2025 14:33:27] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-04-30 14:33:27,103 - INFO -  * Restarting with watchdog (windowsapi)
+2025-04-30 14:33:27,597 - WARNING -  * Debugger is active!
+2025-04-30 14:33:27,605 - INFO -  * Debugger PIN: 607-533-664
+2025-04-30 14:33:35,053 - INFO - 127.0.0.1 - - [30/Apr/2025 14:33:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-30 14:34:06,346 - INFO - 127.0.0.1 - - [30/Apr/2025 14:34:06] "GET /dashboard HTTP/1.1" 200 -
+2025-04-30 14:34:06,950 - INFO - 127.0.0.1 - - [30/Apr/2025 14:34:06] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-30 14:34:06,950 - INFO - 127.0.0.1 - - [30/Apr/2025 14:34:06] "GET /static/js/charts.js HTTP/1.1" 200 -
+2025-04-30 14:34:07,205 - INFO - 127.0.0.1 - - [30/Apr/2025 14:34:07] "GET /static/js/visualization.js HTTP/1.1" 200 -
+2025-04-30 14:34:07,205 - INFO - 127.0.0.1 - - [30/Apr/2025 14:34:07] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-04-30 14:34:35,229 - DEBUG - Memory Manager initialized with segmentation, size: 1024, page size: 64, algorithm: FIFO
+2025-04-30 14:34:35,229 - INFO - Simulation started with: technique=segmentation, memory_size=1024, page_size=64, algorithm=FIFO
+2025-04-30 14:34:35,229 - INFO - 127.0.0.1 - - [30/Apr/2025 14:34:35] "POST /api/start_simulation HTTP/1.1" 200 -
+2025-04-30 14:34:46,125 - DEBUG - Allocated 128 bytes (2 pages) for process 1 in frames [0, 1]
+2025-04-30 14:34:46,127 - DEBUG - Successfully allocated 128 bytes
+2025-04-30 14:34:46,128 - INFO - 127.0.0.1 - - [30/Apr/2025 14:34:46] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-30 14:35:58,469 - DEBUG - Memory Manager initialized with paging, size: 1024, page size: 64, algorithm: FIFO
+2025-04-30 14:35:58,469 - INFO - Simulation started with: technique=paging, memory_size=1024, page_size=64, algorithm=FIFO
+2025-04-30 14:35:58,469 - INFO - 127.0.0.1 - - [30/Apr/2025 14:35:58] "POST /api/start_simulation HTTP/1.1" 200 -
+2025-04-30 14:36:03,161 - DEBUG - Allocated 64 bytes (1 pages) for process 1 in frames [0]
+2025-04-30 14:36:03,162 - DEBUG - Successfully allocated 64 bytes
+2025-04-30 14:36:03,162 - INFO - 127.0.0.1 - - [30/Apr/2025 14:36:03] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-30 14:36:08,453 - DEBUG - Memory Manager initialized with paging, size: 1024, page size: 64, algorithm: FIFO
+2025-04-30 14:36:08,454 - INFO - Simulation started with: technique=paging, memory_size=1024, page_size=64, algorithm=FIFO
+2025-04-30 14:36:08,454 - INFO - 127.0.0.1 - - [30/Apr/2025 14:36:08] "POST /api/start_simulation HTTP/1.1" 200 -
+2025-04-30 14:36:18,009 - DEBUG - Memory Manager initialized with segmentation, size: 1024, page size: 64, algorithm: FIFO
+2025-04-30 14:36:18,011 - INFO - Simulation started with: technique=segmentation, memory_size=1024, page_size=64, algorithm=FIFO
+2025-04-30 14:36:18,012 - INFO - 127.0.0.1 - - [30/Apr/2025 14:36:18] "POST /api/start_simulation HTTP/1.1" 200 -
+2025-04-30 14:36:22,061 - DEBUG - Allocated 64 bytes (1 pages) for process 1 in frames [0]
+2025-04-30 14:36:22,061 - DEBUG - Successfully allocated 64 bytes
+2025-04-30 14:36:22,061 - INFO - 127.0.0.1 - - [30/Apr/2025 14:36:22] "POST /api/next_step HTTP/1.1" 200 -
+2025-04-30 14:36:25,987 - INFO - 127.0.0.1 - - [30/Apr/2025 14:36:25] "POST /api/reset_simulation HTTP/1.1" 200 -
+2025-04-30 14:36:39,360 - INFO - 127.0.0.1 - - [30/Apr/2025 14:36:39] "POST /api/reset_simulation HTTP/1.1" 200 -
+2025-11-10 21:23:43,892 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-10 21:23:43,917 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-10 21:23:43,928 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-10 21:23:44,202 - WARNING -  * Debugger is active!
+2025-11-10 21:23:44,205 - INFO -  * Debugger PIN: 143-498-448
+2025-11-10 21:27:37,890 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-10 21:27:37,890 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-10 21:27:37,903 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-10 21:27:38,211 - WARNING -  * Debugger is active!
+2025-11-10 21:27:38,215 - INFO -  * Debugger PIN: 143-498-448
+2025-11-10 21:27:48,194 - INFO -  * Detected change in 'C:\\Users\\laksh\\OneDrive\\Desktop\\MemoryMaster\\memory_manager.py', reloading
+2025-11-10 21:27:48,220 - INFO -  * Detected change in 'C:\\Users\\laksh\\OneDrive\\Desktop\\MemoryMaster\\tutorial_manager.py', reloading
+2025-11-10 21:27:48,426 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-10 21:27:49,252 - WARNING -  * Debugger is active!
+2025-11-10 21:27:49,258 - INFO -  * Debugger PIN: 143-498-448
+2025-11-10 21:27:49,334 - INFO -  * Detected change in 'C:\\Users\\laksh\\OneDrive\\Desktop\\MemoryMaster\\main.py', reloading
+2025-11-10 21:27:50,364 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-10 21:27:50,919 - WARNING -  * Debugger is active!
+2025-11-10 21:27:50,923 - INFO -  * Debugger PIN: 143-498-448
+2025-11-10 21:34:15,797 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-10 21:34:15,798 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-10 21:34:15,807 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-10 21:34:16,090 - WARNING -  * Debugger is active!
+2025-11-10 21:34:16,100 - INFO -  * Debugger PIN: 143-498-448
+2025-11-10 21:36:29,241 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-10 21:36:29,242 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-10 21:36:29,250 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-10 21:36:29,526 - WARNING -  * Debugger is active!
+2025-11-10 21:36:29,529 - INFO -  * Debugger PIN: 143-498-448
+2025-11-10 21:42:53,115 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-10 21:42:53,116 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-10 21:42:53,127 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-10 21:42:53,413 - WARNING -  * Debugger is active!
+2025-11-10 21:42:53,417 - INFO -  * Debugger PIN: 143-498-448
+2025-11-10 21:43:20,840 - INFO - 127.0.0.1 - - [10/Nov/2025 21:43:20] "GET / HTTP/1.1" 200 -
+2025-11-10 21:43:21,773 - INFO - 127.0.0.1 - - [10/Nov/2025 21:43:21] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-10 21:43:22,226 - INFO - 127.0.0.1 - - [10/Nov/2025 21:43:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-11-10 21:43:25,556 - INFO - 127.0.0.1 - - [10/Nov/2025 21:43:25] "GET /dashboard HTTP/1.1" 200 -
+2025-11-10 21:43:25,573 - INFO - 127.0.0.1 - - [10/Nov/2025 21:43:25] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-10 21:43:25,821 - INFO - 127.0.0.1 - - [10/Nov/2025 21:43:25] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2025-11-10 21:43:25,943 - INFO - 127.0.0.1 - - [10/Nov/2025 21:43:25] "[36mGET /static/js/visualization.js HTTP/1.1[0m" 304 -
+2025-11-10 21:43:25,961 - INFO - 127.0.0.1 - - [10/Nov/2025 21:43:25] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-11-10 21:43:35,589 - DEBUG - Memory Manager initialized with paging, size: 1024, page size: 64, algorithm: FIFO
+2025-11-10 21:43:35,590 - INFO - Simulation started with: technique=paging, memory_size=1024, page_size=64, algorithm=FIFO
+2025-11-10 21:43:35,592 - INFO - 127.0.0.1 - - [10/Nov/2025 21:43:35] "POST /api/start_simulation HTTP/1.1" 200 -
+2025-11-10 21:43:38,123 - DEBUG - Allocated 64 bytes (1 pages) for process 1 in frames [0]
+2025-11-10 21:43:38,123 - DEBUG - Successfully allocated 64 bytes
+2025-11-10 21:43:38,125 - INFO - 127.0.0.1 - - [10/Nov/2025 21:43:38] "POST /api/next_step HTTP/1.1" 200 -
+2025-11-10 21:43:40,497 - DEBUG - Allocated 64 bytes (1 pages) for process 2 in frames [1]
+2025-11-10 21:43:40,497 - DEBUG - Successfully allocated 64 bytes
+2025-11-10 21:43:40,498 - INFO - 127.0.0.1 - - [10/Nov/2025 21:43:40] "POST /api/next_step HTTP/1.1" 200 -
+2025-11-10 21:43:40,863 - DEBUG - Allocated 64 bytes (1 pages) for process 3 in frames [2]
+2025-11-10 21:43:41,074 - DEBUG - Successfully allocated 64 bytes
+2025-11-10 21:43:41,076 - INFO - 127.0.0.1 - - [10/Nov/2025 21:43:41] "POST /api/next_step HTTP/1.1" 200 -
+2025-11-10 21:43:41,620 - DEBUG - Allocated 64 bytes (1 pages) for process 4 in frames [3]
+2025-11-10 21:43:41,620 - DEBUG - Successfully allocated 64 bytes
+2025-11-10 21:43:41,621 - INFO - 127.0.0.1 - - [10/Nov/2025 21:43:41] "POST /api/next_step HTTP/1.1" 200 -
+2025-11-10 21:43:41,917 - DEBUG - Allocated 64 bytes (1 pages) for process 5 in frames [4]
+2025-11-10 21:43:41,917 - DEBUG - Successfully allocated 64 bytes
+2025-11-10 21:43:41,918 - INFO - 127.0.0.1 - - [10/Nov/2025 21:43:41] "POST /api/next_step HTTP/1.1" 200 -
+2025-11-10 21:43:42,355 - DEBUG - Allocated 64 bytes (1 pages) for process 6 in frames [5]
+2025-11-10 21:43:42,355 - DEBUG - Successfully allocated 64 bytes
+2025-11-10 21:43:42,358 - INFO - 127.0.0.1 - - [10/Nov/2025 21:43:42] "POST /api/next_step HTTP/1.1" 200 -
+2025-11-10 21:43:42,646 - DEBUG - Allocated 64 bytes (1 pages) for process 7 in frames [6]
+2025-11-10 21:43:42,646 - DEBUG - Successfully allocated 64 bytes
+2025-11-10 21:43:42,649 - INFO - 127.0.0.1 - - [10/Nov/2025 21:43:42] "POST /api/next_step HTTP/1.1" 200 -
+2025-11-10 21:43:42,870 - DEBUG - Allocated 64 bytes (1 pages) for process 8 in frames [7]
+2025-11-10 21:43:42,870 - DEBUG - Successfully allocated 64 bytes
+2025-11-10 21:43:42,872 - INFO - 127.0.0.1 - - [10/Nov/2025 21:43:42] "POST /api/next_step HTTP/1.1" 200 -
+2025-11-10 21:43:43,484 - DEBUG - Allocated 64 bytes (1 pages) for process 9 in frames [8]
+2025-11-10 21:43:43,611 - DEBUG - Successfully allocated 64 bytes
+2025-11-10 21:43:43,613 - INFO - 127.0.0.1 - - [10/Nov/2025 21:43:43] "POST /api/next_step HTTP/1.1" 200 -
+2025-11-10 21:43:43,925 - DEBUG - Allocated 64 bytes (1 pages) for process 10 in frames [9]
+2025-11-10 21:43:43,925 - DEBUG - Successfully allocated 64 bytes
+2025-11-10 21:43:43,929 - INFO - 127.0.0.1 - - [10/Nov/2025 21:43:43] "POST /api/next_step HTTP/1.1" 200 -
+2025-11-10 21:43:44,700 - DEBUG - Allocated 64 bytes (1 pages) for process 11 in frames [10]
+2025-11-10 21:43:44,700 - DEBUG - Successfully allocated 64 bytes
+2025-11-10 21:43:44,718 - INFO - 127.0.0.1 - - [10/Nov/2025 21:43:44] "POST /api/next_step HTTP/1.1" 200 -
+2025-11-10 21:43:44,983 - DEBUG - Allocated 64 bytes (1 pages) for process 12 in frames [11]
+2025-11-10 21:43:44,986 - DEBUG - Successfully allocated 64 bytes
+2025-11-10 21:43:44,988 - INFO - 127.0.0.1 - - [10/Nov/2025 21:43:44] "POST /api/next_step HTTP/1.1" 200 -
+2025-11-10 21:43:45,619 - DEBUG - Allocated 64 bytes (1 pages) for process 13 in frames [12]
+2025-11-10 21:43:45,619 - DEBUG - Successfully allocated 64 bytes
+2025-11-10 21:43:45,633 - INFO - 127.0.0.1 - - [10/Nov/2025 21:43:45] "POST /api/next_step HTTP/1.1" 200 -
+2025-11-10 21:43:46,031 - DEBUG - Allocated 64 bytes (1 pages) for process 14 in frames [13]
+2025-11-10 21:43:46,033 - DEBUG - Successfully allocated 64 bytes
+2025-11-10 21:43:46,034 - INFO - 127.0.0.1 - - [10/Nov/2025 21:43:46] "POST /api/next_step HTTP/1.1" 200 -
+2025-11-10 21:43:46,532 - DEBUG - Allocated 64 bytes (1 pages) for process 15 in frames [14]
+2025-11-10 21:43:46,625 - DEBUG - Successfully allocated 64 bytes
+2025-11-10 21:43:46,627 - INFO - 127.0.0.1 - - [10/Nov/2025 21:43:46] "POST /api/next_step HTTP/1.1" 200 -
+2025-11-10 21:43:46,885 - DEBUG - Allocated 64 bytes (1 pages) for process 16 in frames [15]
+2025-11-10 21:43:46,885 - DEBUG - Successfully allocated 64 bytes
+2025-11-10 21:43:46,886 - INFO - 127.0.0.1 - - [10/Nov/2025 21:43:46] "POST /api/next_step HTTP/1.1" 200 -
+2025-11-10 21:43:47,526 - DEBUG - Replaced page in frame 0 for process 1 using FIFO
+2025-11-10 21:43:47,526 - DEBUG - Allocated 64 bytes (1 pages) for process 17 in frames [0]
+2025-11-10 21:43:47,526 - DEBUG - Successfully allocated 64 bytes
+2025-11-10 21:43:47,528 - INFO - 127.0.0.1 - - [10/Nov/2025 21:43:47] "POST /api/next_step HTTP/1.1" 200 -
+2025-11-10 21:43:48,446 - DEBUG - Replaced page in frame 1 for process 2 using FIFO
+2025-11-10 21:43:48,447 - DEBUG - Allocated 64 bytes (1 pages) for process 18 in frames [1]
+2025-11-10 21:43:48,447 - DEBUG - Successfully allocated 64 bytes
+2025-11-10 21:43:48,543 - INFO - 127.0.0.1 - - [10/Nov/2025 21:43:48] "POST /api/next_step HTTP/1.1" 200 -
+2025-11-10 21:43:50,963 - DEBUG - Replaced page in frame 2 for process 3 using FIFO
+2025-11-10 21:43:50,964 - DEBUG - Allocated 64 bytes (1 pages) for process 19 in frames [2]
+2025-11-10 21:43:50,964 - DEBUG - Successfully allocated 64 bytes
+2025-11-10 21:43:50,965 - INFO - 127.0.0.1 - - [10/Nov/2025 21:43:50] "POST /api/next_step HTTP/1.1" 200 -
+2025-11-10 21:43:59,877 - DEBUG - Replaced page in frame 3 for process 4 using FIFO
+2025-11-10 21:43:59,877 - DEBUG - Allocated 64 bytes (1 pages) for process 20 in frames [3]
+2025-11-10 21:43:59,877 - DEBUG - Successfully allocated 64 bytes
+2025-11-10 21:43:59,880 - INFO - 127.0.0.1 - - [10/Nov/2025 21:43:59] "POST /api/next_step HTTP/1.1" 200 -
+2025-11-10 21:44:05,336 - INFO - 127.0.0.1 - - [10/Nov/2025 21:44:05] "POST /api/reset_simulation HTTP/1.1" 200 -
+2025-11-10 21:44:15,676 - DEBUG - Memory Manager initialized with paging, size: 2048, page size: 64, algorithm: FIFO
+2025-11-10 21:44:15,676 - INFO - Simulation started with: technique=paging, memory_size=2048, page_size=64, algorithm=FIFO
+2025-11-10 21:44:15,677 - INFO - 127.0.0.1 - - [10/Nov/2025 21:44:15] "POST /api/start_simulation HTTP/1.1" 200 -
+2025-11-10 21:44:18,415 - DEBUG - Memory Manager initialized with paging, size: 2048, page size: 64, algorithm: FIFO
+2025-11-10 21:44:18,415 - INFO - Simulation started with: technique=paging, memory_size=2048, page_size=64, algorithm=FIFO
+2025-11-10 21:44:18,417 - INFO - 127.0.0.1 - - [10/Nov/2025 21:44:18] "POST /api/start_simulation HTTP/1.1" 200 -
+2025-11-10 21:44:26,810 - DEBUG - Allocated 64 bytes (1 pages) for process 1 in frames [0]
+2025-11-10 21:44:26,810 - DEBUG - Successfully allocated 64 bytes
+2025-11-10 21:44:26,811 - INFO - 127.0.0.1 - - [10/Nov/2025 21:44:26] "POST /api/next_step HTTP/1.1" 200 -
+2025-11-10 21:44:29,070 - DEBUG - Allocated 64 bytes (1 pages) for process 2 in frames [1]
+2025-11-10 21:44:29,070 - DEBUG - Successfully allocated 64 bytes
+2025-11-10 21:44:29,071 - INFO - 127.0.0.1 - - [10/Nov/2025 21:44:29] "POST /api/next_step HTTP/1.1" 200 -
+2025-11-10 21:44:30,238 - DEBUG - Allocated 64 bytes (1 pages) for process 3 in frames [2]
+2025-11-10 21:44:30,239 - DEBUG - Successfully allocated 64 bytes
+2025-11-10 21:44:30,248 - INFO - 127.0.0.1 - - [10/Nov/2025 21:44:30] "POST /api/next_step HTTP/1.1" 200 -
+2025-11-10 21:44:31,854 - DEBUG - Allocated 64 bytes (1 pages) for process 4 in frames [3]
+2025-11-10 21:44:31,854 - DEBUG - Successfully allocated 64 bytes
+2025-11-10 21:44:31,855 - INFO - 127.0.0.1 - - [10/Nov/2025 21:44:31] "POST /api/next_step HTTP/1.1" 200 -
+2025-11-10 21:44:32,328 - DEBUG - Allocated 64 bytes (1 pages) for process 5 in frames [4]
+2025-11-10 21:44:32,328 - DEBUG - Successfully allocated 64 bytes
+2025-11-10 21:44:32,329 - INFO - 127.0.0.1 - - [10/Nov/2025 21:44:32] "POST /api/next_step HTTP/1.1" 200 -
+2025-11-10 21:44:32,819 - DEBUG - Allocated 64 bytes (1 pages) for process 6 in frames [5]
+2025-11-10 21:44:32,819 - DEBUG - Successfully allocated 64 bytes
+2025-11-10 21:44:32,821 - INFO - 127.0.0.1 - - [10/Nov/2025 21:44:32] "POST /api/next_step HTTP/1.1" 200 -
+2025-11-10 21:44:33,180 - DEBUG - Allocated 64 bytes (1 pages) for process 7 in frames [6]
+2025-11-10 21:44:33,180 - DEBUG - Successfully allocated 64 bytes
+2025-11-10 21:44:33,182 - INFO - 127.0.0.1 - - [10/Nov/2025 21:44:33] "POST /api/next_step HTTP/1.1" 200 -
+2025-11-10 21:44:34,205 - DEBUG - Allocated 64 bytes (1 pages) for process 8 in frames [7]
+2025-11-10 21:44:34,205 - DEBUG - Successfully allocated 64 bytes
+2025-11-10 21:44:34,205 - INFO - 127.0.0.1 - - [10/Nov/2025 21:44:34] "POST /api/next_step HTTP/1.1" 200 -
+2025-11-10 21:44:34,581 - DEBUG - Allocated 64 bytes (1 pages) for process 9 in frames [8]
+2025-11-10 21:44:34,581 - DEBUG - Successfully allocated 64 bytes
+2025-11-10 21:44:34,583 - INFO - 127.0.0.1 - - [10/Nov/2025 21:44:34] "POST /api/next_step HTTP/1.1" 200 -
+2025-11-10 21:44:35,018 - DEBUG - Allocated 64 bytes (1 pages) for process 10 in frames [9]
+2025-11-10 21:44:35,020 - DEBUG - Successfully allocated 64 bytes
+2025-11-10 21:44:35,020 - INFO - 127.0.0.1 - - [10/Nov/2025 21:44:35] "POST /api/next_step HTTP/1.1" 200 -
+2025-11-10 21:44:35,280 - DEBUG - Allocated 64 bytes (1 pages) for process 11 in frames [10]
+2025-11-10 21:44:35,302 - DEBUG - Successfully allocated 64 bytes
+2025-11-10 21:44:35,303 - INFO - 127.0.0.1 - - [10/Nov/2025 21:44:35] "POST /api/next_step HTTP/1.1" 200 -
+2025-11-10 21:44:35,437 - DEBUG - Allocated 64 bytes (1 pages) for process 12 in frames [11]
+2025-11-10 21:44:35,437 - DEBUG - Successfully allocated 64 bytes
+2025-11-10 21:44:35,438 - INFO - 127.0.0.1 - - [10/Nov/2025 21:44:35] "POST /api/next_step HTTP/1.1" 200 -
+2025-11-10 21:44:37,514 - DEBUG - Allocated 64 bytes (1 pages) for process 13 in frames [12]
+2025-11-10 21:44:37,514 - DEBUG - Successfully allocated 64 bytes
+2025-11-10 21:44:37,517 - INFO - 127.0.0.1 - - [10/Nov/2025 21:44:37] "POST /api/next_step HTTP/1.1" 200 -
+2025-11-10 21:44:38,183 - DEBUG - Allocated 64 bytes (1 pages) for process 14 in frames [13]
+2025-11-10 21:44:38,183 - DEBUG - Successfully allocated 64 bytes
+2025-11-10 21:44:38,185 - INFO - 127.0.0.1 - - [10/Nov/2025 21:44:38] "POST /api/next_step HTTP/1.1" 200 -
+2025-11-10 21:44:38,448 - DEBUG - Allocated 64 bytes (1 pages) for process 15 in frames [14]
+2025-11-10 21:44:38,448 - DEBUG - Successfully allocated 64 bytes
+2025-11-10 21:44:38,450 - INFO - 127.0.0.1 - - [10/Nov/2025 21:44:38] "POST /api/next_step HTTP/1.1" 200 -
+2025-11-10 21:44:38,888 - DEBUG - Allocated 64 bytes (1 pages) for process 16 in frames [15]
+2025-11-10 21:44:38,892 - DEBUG - Successfully allocated 64 bytes
+2025-11-10 21:44:38,894 - INFO - 127.0.0.1 - - [10/Nov/2025 21:44:38] "POST /api/next_step HTTP/1.1" 200 -
+2025-11-10 21:44:39,223 - DEBUG - Allocated 64 bytes (1 pages) for process 17 in frames [16]
+2025-11-10 21:44:39,223 - DEBUG - Successfully allocated 64 bytes
+2025-11-10 21:44:39,225 - INFO - 127.0.0.1 - - [10/Nov/2025 21:44:39] "POST /api/next_step HTTP/1.1" 200 -
+2025-11-10 21:44:39,711 - DEBUG - Allocated 64 bytes (1 pages) for process 18 in frames [17]
+2025-11-10 21:44:39,711 - DEBUG - Successfully allocated 64 bytes
+2025-11-10 21:44:39,712 - INFO - 127.0.0.1 - - [10/Nov/2025 21:44:39] "POST /api/next_step HTTP/1.1" 200 -
+2025-11-10 21:44:39,975 - DEBUG - Allocated 64 bytes (1 pages) for process 19 in frames [18]
+2025-11-10 21:44:39,975 - DEBUG - Successfully allocated 64 bytes
+2025-11-10 21:44:39,976 - INFO - 127.0.0.1 - - [10/Nov/2025 21:44:39] "POST /api/next_step HTTP/1.1" 200 -
+2025-11-10 21:44:40,277 - DEBUG - Allocated 64 bytes (1 pages) for process 20 in frames [19]
+2025-11-10 21:44:40,277 - DEBUG - Successfully allocated 64 bytes
+2025-11-10 21:44:40,278 - INFO - 127.0.0.1 - - [10/Nov/2025 21:44:40] "POST /api/next_step HTTP/1.1" 200 -
+2025-11-10 21:44:40,551 - DEBUG - Allocated 64 bytes (1 pages) for process 21 in frames [20]
+2025-11-10 21:44:40,552 - DEBUG - Successfully allocated 64 bytes
+2025-11-10 21:44:40,555 - INFO - 127.0.0.1 - - [10/Nov/2025 21:44:40] "POST /api/next_step HTTP/1.1" 200 -
+2025-11-10 21:44:41,211 - DEBUG - Allocated 64 bytes (1 pages) for process 22 in frames [21]
+2025-11-10 21:44:41,211 - DEBUG - Successfully allocated 64 bytes
+2025-11-10 21:44:41,213 - INFO - 127.0.0.1 - - [10/Nov/2025 21:44:41] "POST /api/next_step HTTP/1.1" 200 -
+2025-11-10 21:44:41,492 - DEBUG - Allocated 64 bytes (1 pages) for process 23 in frames [22]
+2025-11-10 21:44:41,493 - DEBUG - Successfully allocated 64 bytes
+2025-11-10 21:44:41,494 - INFO - 127.0.0.1 - - [10/Nov/2025 21:44:41] "POST /api/next_step HTTP/1.1" 200 -
+2025-11-10 21:44:42,005 - DEBUG - Allocated 64 bytes (1 pages) for process 24 in frames [23]
+2025-11-10 21:44:42,005 - DEBUG - Successfully allocated 64 bytes
+2025-11-10 21:44:42,007 - INFO - 127.0.0.1 - - [10/Nov/2025 21:44:42] "POST /api/next_step HTTP/1.1" 200 -
+2025-11-10 21:44:42,276 - DEBUG - Allocated 64 bytes (1 pages) for process 25 in frames [24]
+2025-11-10 21:44:42,276 - DEBUG - Successfully allocated 64 bytes
+2025-11-10 21:44:42,277 - INFO - 127.0.0.1 - - [10/Nov/2025 21:44:42] "POST /api/next_step HTTP/1.1" 200 -
+2025-11-10 21:44:42,570 - DEBUG - Allocated 64 bytes (1 pages) for process 26 in frames [25]
+2025-11-10 21:44:42,570 - DEBUG - Successfully allocated 64 bytes
+2025-11-10 21:44:42,573 - INFO - 127.0.0.1 - - [10/Nov/2025 21:44:42] "POST /api/next_step HTTP/1.1" 200 -
+2025-11-10 21:44:42,851 - DEBUG - Allocated 64 bytes (1 pages) for process 27 in frames [26]
+2025-11-10 21:44:42,851 - DEBUG - Successfully allocated 64 bytes
+2025-11-10 21:44:42,852 - INFO - 127.0.0.1 - - [10/Nov/2025 21:44:42] "POST /api/next_step HTTP/1.1" 200 -
+2025-11-10 21:44:43,383 - DEBUG - Allocated 64 bytes (1 pages) for process 28 in frames [27]
+2025-11-10 21:44:43,383 - DEBUG - Successfully allocated 64 bytes
+2025-11-10 21:44:43,385 - INFO - 127.0.0.1 - - [10/Nov/2025 21:44:43] "POST /api/next_step HTTP/1.1" 200 -
+2025-11-10 21:44:45,000 - DEBUG - Allocated 64 bytes (1 pages) for process 29 in frames [28]
+2025-11-10 21:44:45,000 - DEBUG - Successfully allocated 64 bytes
+2025-11-10 21:44:45,007 - INFO - 127.0.0.1 - - [10/Nov/2025 21:44:45] "POST /api/next_step HTTP/1.1" 200 -
+2025-11-10 21:44:45,490 - DEBUG - Allocated 64 bytes (1 pages) for process 30 in frames [29]
+2025-11-10 21:44:45,490 - DEBUG - Successfully allocated 64 bytes
+2025-11-10 21:44:45,492 - INFO - 127.0.0.1 - - [10/Nov/2025 21:44:45] "POST /api/next_step HTTP/1.1" 200 -
+2025-11-10 21:44:45,922 - DEBUG - Allocated 64 bytes (1 pages) for process 31 in frames [30]
+2025-11-10 21:44:45,922 - DEBUG - Successfully allocated 64 bytes
+2025-11-10 21:44:45,929 - INFO - 127.0.0.1 - - [10/Nov/2025 21:44:45] "POST /api/next_step HTTP/1.1" 200 -
+2025-11-10 21:44:46,462 - DEBUG - Allocated 64 bytes (1 pages) for process 32 in frames [31]
+2025-11-10 21:44:46,463 - DEBUG - Successfully allocated 64 bytes
+2025-11-10 21:44:46,464 - INFO - 127.0.0.1 - - [10/Nov/2025 21:44:46] "POST /api/next_step HTTP/1.1" 200 -
+2025-11-10 21:44:58,923 - INFO - 127.0.0.1 - - [10/Nov/2025 21:44:58] "GET / HTTP/1.1" 200 -
+2025-11-10 21:44:59,222 - INFO - 127.0.0.1 - - [10/Nov/2025 21:44:59] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-10 21:52:54,023 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-10 21:52:54,024 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-10 21:52:54,035 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-10 21:52:54,315 - WARNING -  * Debugger is active!
+2025-11-10 21:52:54,319 - INFO -  * Debugger PIN: 143-498-448
+2025-11-10 21:53:01,680 - INFO - 127.0.0.1 - - [10/Nov/2025 21:53:01] "GET / HTTP/1.1" 200 -
+2025-11-10 21:53:01,850 - INFO - 127.0.0.1 - - [10/Nov/2025 21:53:01] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-10 21:53:05,252 - INFO - 127.0.0.1 - - [10/Nov/2025 21:53:05] "GET /dashboard HTTP/1.1" 200 -
+2025-11-10 21:53:05,573 - INFO - 127.0.0.1 - - [10/Nov/2025 21:53:05] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-10 21:53:05,586 - INFO - 127.0.0.1 - - [10/Nov/2025 21:53:05] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2025-11-10 21:53:05,616 - INFO - 127.0.0.1 - - [10/Nov/2025 21:53:05] "[36mGET /static/js/visualization.js HTTP/1.1[0m" 304 -
+2025-11-10 21:53:05,639 - INFO - 127.0.0.1 - - [10/Nov/2025 21:53:05] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-11-10 21:53:32,180 - INFO - 127.0.0.1 - - [10/Nov/2025 21:53:32] "GET / HTTP/1.1" 200 -
+2025-11-10 21:53:32,693 - INFO - 127.0.0.1 - - [10/Nov/2025 21:53:32] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-10 21:53:32,903 - INFO - 127.0.0.1 - - [10/Nov/2025 21:53:32] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-11-10 21:53:39,571 - INFO - 127.0.0.1 - - [10/Nov/2025 21:53:39] "GET / HTTP/1.1" 200 -
+2025-11-10 21:53:39,809 - INFO - 127.0.0.1 - - [10/Nov/2025 21:53:39] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-10 21:53:41,550 - INFO - 127.0.0.1 - - [10/Nov/2025 21:53:41] "GET /dashboard HTTP/1.1" 200 -
+2025-11-10 21:53:41,851 - INFO - 127.0.0.1 - - [10/Nov/2025 21:53:41] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-10 21:53:41,900 - INFO - 127.0.0.1 - - [10/Nov/2025 21:53:41] "[36mGET /static/js/visualization.js HTTP/1.1[0m" 304 -
+2025-11-10 21:53:41,900 - INFO - 127.0.0.1 - - [10/Nov/2025 21:53:41] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2025-11-10 21:53:41,918 - INFO - 127.0.0.1 - - [10/Nov/2025 21:53:41] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-11-10 21:53:45,211 - INFO - 127.0.0.1 - - [10/Nov/2025 21:53:45] "GET /tutorials HTTP/1.1" 200 -
+2025-11-10 21:53:45,417 - INFO - 127.0.0.1 - - [10/Nov/2025 21:53:45] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-10 21:53:45,558 - INFO - 127.0.0.1 - - [10/Nov/2025 21:53:45] "[36mGET /static/js/visualization.js HTTP/1.1[0m" 304 -
+2025-11-10 21:53:45,570 - INFO - 127.0.0.1 - - [10/Nov/2025 21:53:45] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2025-11-10 21:53:46,346 - INFO - 127.0.0.1 - - [10/Nov/2025 21:53:46] "GET /api/tutorials HTTP/1.1" 200 -
+2025-11-10 21:55:51,333 - INFO - Started tutorial: intro
+2025-11-10 21:55:51,333 - DEBUG - Memory Manager initialized with paging, size: 512, page size: 64, algorithm: FIFO
+2025-11-10 21:55:51,333 - INFO - Tutorial memory manager initialized with config: {'memory_size': 512, 'page_size': 64, 'technique': 'paging', 'algorithm': 'FIFO'}
+2025-11-10 21:55:51,334 - INFO - 127.0.0.1 - - [10/Nov/2025 21:55:51] "POST /api/tutorials/start HTTP/1.1" 200 -
+2025-11-10 21:55:54,858 - INFO - 127.0.0.1 - - [10/Nov/2025 21:55:54] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-11-10 21:55:56,393 - INFO - 127.0.0.1 - - [10/Nov/2025 21:55:56] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-11-10 21:55:57,562 - INFO - 127.0.0.1 - - [10/Nov/2025 21:55:57] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-11-10 21:55:59,057 - INFO - 127.0.0.1 - - [10/Nov/2025 21:55:59] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-11-10 21:56:01,191 - INFO - 127.0.0.1 - - [10/Nov/2025 21:56:01] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-11-10 21:56:01,501 - INFO - Ended tutorial: intro
+2025-11-10 21:56:01,501 - INFO - 127.0.0.1 - - [10/Nov/2025 21:56:01] "POST /api/tutorials/end HTTP/1.1" 200 -
+2025-11-10 21:56:01,765 - INFO - 127.0.0.1 - - [10/Nov/2025 21:56:01] "GET /api/tutorials HTTP/1.1" 200 -
+2025-11-10 21:56:03,491 - INFO - Started tutorial: fragmentation
+2025-11-10 21:56:03,492 - DEBUG - Memory Manager initialized with segmentation, size: 1024, page size: 128, algorithm: FIFO
+2025-11-10 21:56:03,492 - INFO - Tutorial memory manager initialized with config: {'memory_size': 1024, 'page_size': 128, 'technique': 'segmentation', 'algorithm': 'FIFO'}
+2025-11-10 21:56:03,493 - INFO - 127.0.0.1 - - [10/Nov/2025 21:56:03] "POST /api/tutorials/start HTTP/1.1" 200 -
+2025-11-10 21:56:05,569 - INFO - 127.0.0.1 - - [10/Nov/2025 21:56:05] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-11-10 21:56:06,704 - INFO - 127.0.0.1 - - [10/Nov/2025 21:56:06] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-11-10 21:56:08,224 - INFO - 127.0.0.1 - - [10/Nov/2025 21:56:08] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-11-10 21:56:09,498 - INFO - 127.0.0.1 - - [10/Nov/2025 21:56:09] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-11-10 21:56:11,121 - INFO - 127.0.0.1 - - [10/Nov/2025 21:56:11] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-11-10 21:56:13,334 - INFO - 127.0.0.1 - - [10/Nov/2025 21:56:13] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-11-10 21:56:19,455 - INFO - 127.0.0.1 - - [10/Nov/2025 21:56:19] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-11-10 21:56:19,718 - INFO - Ended tutorial: fragmentation
+2025-11-10 21:56:19,718 - INFO - 127.0.0.1 - - [10/Nov/2025 21:56:19] "POST /api/tutorials/end HTTP/1.1" 200 -
+2025-11-10 21:56:19,765 - INFO - 127.0.0.1 - - [10/Nov/2025 21:56:19] "GET /api/tutorials HTTP/1.1" 200 -
+2025-11-10 21:56:21,743 - INFO - Started tutorial: page_replacement
+2025-11-10 21:56:21,743 - DEBUG - Memory Manager initialized with paging, size: 512, page size: 64, algorithm: FIFO
+2025-11-10 21:56:21,743 - INFO - Tutorial memory manager initialized with config: {'memory_size': 512, 'page_size': 64, 'technique': 'paging', 'algorithm': 'FIFO'}
+2025-11-10 21:56:21,744 - INFO - 127.0.0.1 - - [10/Nov/2025 21:56:21] "POST /api/tutorials/start HTTP/1.1" 200 -
+2025-11-10 21:56:23,238 - INFO - 127.0.0.1 - - [10/Nov/2025 21:56:23] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-11-10 21:56:24,489 - INFO - 127.0.0.1 - - [10/Nov/2025 21:56:24] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-11-10 21:56:26,044 - INFO - 127.0.0.1 - - [10/Nov/2025 21:56:26] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-11-10 21:56:26,966 - INFO - 127.0.0.1 - - [10/Nov/2025 21:56:26] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-11-10 21:56:28,101 - INFO - 127.0.0.1 - - [10/Nov/2025 21:56:28] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-11-10 21:56:28,802 - INFO - 127.0.0.1 - - [10/Nov/2025 21:56:28] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-11-10 21:56:30,463 - INFO - 127.0.0.1 - - [10/Nov/2025 21:56:30] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-11-10 21:56:30,727 - INFO - Ended tutorial: page_replacement
+2025-11-10 21:56:30,727 - INFO - 127.0.0.1 - - [10/Nov/2025 21:56:30] "POST /api/tutorials/end HTTP/1.1" 200 -
+2025-11-10 21:56:30,774 - INFO - 127.0.0.1 - - [10/Nov/2025 21:56:30] "GET /api/tutorials HTTP/1.1" 200 -
+2025-11-10 21:56:32,555 - INFO - Started tutorial: optimization
+2025-11-10 21:56:32,556 - DEBUG - Memory Manager initialized with paging, size: 1024, page size: 64, algorithm: LRU
+2025-11-10 21:56:32,556 - INFO - Tutorial memory manager initialized with config: {'memory_size': 1024, 'page_size': 64, 'technique': 'paging', 'algorithm': 'LRU'}
+2025-11-10 21:56:32,556 - INFO - 127.0.0.1 - - [10/Nov/2025 21:56:32] "POST /api/tutorials/start HTTP/1.1" 200 -
+2025-11-10 21:56:34,533 - INFO - 127.0.0.1 - - [10/Nov/2025 21:56:34] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-11-10 21:56:35,653 - INFO - 127.0.0.1 - - [10/Nov/2025 21:56:35] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-11-10 21:56:36,765 - INFO - 127.0.0.1 - - [10/Nov/2025 21:56:36] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-11-10 21:56:37,443 - INFO - 127.0.0.1 - - [10/Nov/2025 21:56:37] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-11-10 21:56:39,044 - INFO - 127.0.0.1 - - [10/Nov/2025 21:56:39] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-11-10 21:56:40,198 - INFO - 127.0.0.1 - - [10/Nov/2025 21:56:40] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-11-10 21:56:41,716 - INFO - 127.0.0.1 - - [10/Nov/2025 21:56:41] "POST /api/tutorials/next HTTP/1.1" 200 -
+2025-11-10 21:56:41,978 - INFO - Ended tutorial: optimization
+2025-11-10 21:56:41,978 - INFO - 127.0.0.1 - - [10/Nov/2025 21:56:41] "POST /api/tutorials/end HTTP/1.1" 200 -
+2025-11-10 21:56:42,038 - INFO - 127.0.0.1 - - [10/Nov/2025 21:56:42] "GET /api/tutorials HTTP/1.1" 200 -
+2025-11-10 21:56:44,783 - INFO - 127.0.0.1 - - [10/Nov/2025 21:56:44] "GET / HTTP/1.1" 200 -
+2025-11-10 21:56:45,152 - INFO - 127.0.0.1 - - [10/Nov/2025 21:56:45] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-10 21:59:52,568 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\argparse.py', reloading
+2025-11-10 21:59:52,796 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-10 21:59:53,245 - WARNING -  * Debugger is active!
+2025-11-10 21:59:53,249 - INFO -  * Debugger PIN: 143-498-448
+2025-11-10 22:11:22,059 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\flask\\__init__.py', reloading
+2025-11-10 22:11:22,074 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\flask\\app.py', reloading
+2025-11-10 22:11:22,102 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\flask\\sansio\\app.py', reloading
+2025-11-10 22:11:22,114 - INFO -  * Detected change in 'C:\\Users\\laksh\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\flask\\sansio\\scaffold.py', reloading
+2025-11-10 22:11:22,901 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-10 22:11:23,246 - WARNING -  * Debugger is active!
+2025-11-10 22:11:23,249 - INFO -  * Debugger PIN: 143-498-448
+2025-11-10 22:11:41,681 - INFO -  * Detected change in 'C:\\Users\\laksh\\OneDrive\\Desktop\\MemoryMaster\\app.py', reloading
+2025-11-10 22:11:42,631 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-10 22:11:44,198 - WARNING -  * Debugger is active!
+2025-11-10 22:11:44,210 - INFO -  * Debugger PIN: 143-498-448
+2025-11-10 22:12:05,250 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\os.py', reloading
+2025-11-10 22:12:05,575 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-10 22:12:05,928 - WARNING -  * Debugger is active!
+2025-11-10 22:12:05,933 - INFO -  * Debugger PIN: 143-498-448
+2025-11-10 22:12:38,489 - INFO -  * Detected change in 'C:\\Users\\laksh\\OneDrive\\Desktop\\MemoryMaster\\app.py', reloading
+2025-11-10 22:12:38,490 - INFO -  * Detected change in 'C:\\Users\\laksh\\OneDrive\\Desktop\\MemoryMaster\\app.py', reloading
+2025-11-10 22:12:53,287 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-10 22:12:53,288 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-10 22:12:53,297 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-10 22:12:53,572 - WARNING -  * Debugger is active!
+2025-11-10 22:12:53,577 - INFO -  * Debugger PIN: 143-498-448
+2025-11-10 22:12:54,567 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\unicode_escape.py', reloading
+2025-11-10 22:12:54,582 - INFO - 127.0.0.1 - - [10/Nov/2025 22:12:54] "GET / HTTP/1.1" 200 -
+2025-11-10 22:12:54,858 - INFO - 127.0.0.1 - - [10/Nov/2025 22:12:54] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-11-10 22:12:55,280 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-10 22:12:56,135 - WARNING -  * Debugger is active!
+2025-11-10 22:12:56,149 - INFO -  * Debugger PIN: 143-498-448
+2025-11-10 22:12:56,202 - INFO - 127.0.0.1 - - [10/Nov/2025 22:12:56] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-11-10 22:12:56,223 - INFO - 127.0.0.1 - - [10/Nov/2025 22:12:56] "GET / HTTP/1.1" 200 -
+2025-11-10 22:12:56,364 - INFO - 127.0.0.1 - - [10/Nov/2025 22:12:56] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-10 22:12:57,456 - INFO - 127.0.0.1 - - [10/Nov/2025 22:12:57] "GET / HTTP/1.1" 200 -
+2025-11-10 22:12:57,478 - INFO - 127.0.0.1 - - [10/Nov/2025 22:12:57] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-10 22:13:14,206 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-10 22:13:14,207 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-10 22:13:14,217 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-10 22:13:14,550 - WARNING -  * Debugger is active!
+2025-11-10 22:13:14,555 - INFO -  * Debugger PIN: 143-498-448
+2025-11-10 22:13:15,487 - INFO - 127.0.0.1 - - [10/Nov/2025 22:13:15] "GET / HTTP/1.1" 200 -
+2025-11-10 22:13:15,753 - INFO - 127.0.0.1 - - [10/Nov/2025 22:13:15] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-11-10 22:13:16,090 - INFO - 127.0.0.1 - - [10/Nov/2025 22:13:16] "GET / HTTP/1.1" 200 -
+2025-11-10 22:13:16,116 - INFO - 127.0.0.1 - - [10/Nov/2025 22:13:16] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
