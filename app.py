@@ -104,17 +104,16 @@ def tutorials_page():
     return render_template('tutorials.html', tutorials=tutorials)
 
 
+def open_in_browser(url, delay=1.0):
+    threading.Timer(delay, lambda: webbrowser.open(url)).start()
+
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     url = f"http://127.0.0.1:{port}/"
 
-    # When debug=True, the reloader spawns two processes.
-    # WERKZEUG_RUN_MAIN is set to "true" in the *reloader child* process.
-    should_open = os.environ.get("WERKZEUG_RUN_MAIN") == "true" or not app.debug
+    # Only open in the reloader *child* process to avoid double tabs
+    if os.environ.get("WERKZEUG_RUN_MAIN") == "true":
+        open_in_browser(url, delay=1.0)
 
-    if should_open:
-        # open browser shortly after server starts (non-blocking)
-        threading.Timer(1.0, lambda: webbrowser.open(url)).start()
-
-    # Keep debug=True for autoreload and nicer tracebacks while developing
+    # Keep debug=True so you still get autoreload and nice tracebacks
     app.run(debug=True, host="127.0.0.1", port=port)
